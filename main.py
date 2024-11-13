@@ -183,9 +183,7 @@ text = """
 
 # refer to here if u wann change the color :3 
 # https://github.com/venaxyt/fade
-
 faded_text = fade.pinkred(text)
-
 # just come basic [-] for color coding with different meanings!
 # makes my life so much fucking easier
 
@@ -194,7 +192,9 @@ red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
 
 async def main():
-    threading.Thread(target=update_title, daemon=True).start()
+  # threading.Thread(target=update_title, daemon=True).start()
+  # currently running into problems with linux where this causes an error so i need to find a work around for this  ^^^
+    clear_console() # This is for if its being ran in console. Itll clear the previous commands so itll be clear :3
     print(Center.XCenter(faded_text))
     try:
         async with aiohttp.ClientSession() as session:
