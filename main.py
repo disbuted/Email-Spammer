@@ -211,7 +211,7 @@ async def main():
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
-                    "https://raw.githubusercontent.com/Inkthirsty/cute-email-spammer/main/functions.json"
+                    "https://raw.githack.com/disbuted/Email-Spammer/refs/heads/main/functions.json"
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
