@@ -1,12 +1,12 @@
 # ███╗   ██╗ ██████╗ ████████╗███████╗███████╗    ██╗  ██╗    ███╗   ███╗ █████╗ ██╗  ██╗
 # ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝    ██║  ██║    ████╗ ████║██╔══██╗╚██╗██╔╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝ 
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗ 
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗
 # ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║         ██║    ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗
 # ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝         ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 # What Ive Worked On:
 # Removed the sys.exit() function and replaced with a return to main/restarting the main function
-# Title bar function for linux is now working!
+# Linux title bar still not working :(
 
 # Email lists they work on:
 # mail.tm
@@ -42,9 +42,9 @@ def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(random.choices("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30))
         if platform.system() == "Windows":
-            os.system(f"title {title}")  
+            os.system(f"title {title}")
         elif platform.system() == "Linux":
-            print(f"\033]0;{title}\007")  
+            print(f"\033]0;{title}\007")
         else:
             print("Title Bar Function Is Not Supported")
             break
@@ -197,20 +197,20 @@ async def fetch(
         pass
     return update_progress()
 
-text = """   
-                        ███████╗██████╗  █████╗ ███╗   ███╗███╗   ███╗███████╗██████╗ 
-                        ██╔════╝██╔══██╗██╔══██╗████╗ ████║████╗ ████║██╔════╝██╔══██╗
-                        ███████╗██████╔╝███████║██╔████╔██║██╔████╔██║█████╗  ██████╔╝
-                        ╚════██║██╔═══╝ ██╔══██║██║╚██╔╝██║██║╚██╔╝██║██╔══╝  ██╔══██╗
-                        ███████║██║     ██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║  ██║
-                        ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-                                                                    t.me/influenceable
-                                                                      pls use a vpn :)
+text = """
+                              ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗
+                              ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                              █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                              ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                              ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                              ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                                                           t.me/influenceable
+                                                               use a vpn :)
 """
 faded_text = fade.purpleblue(text)
 
 async def main():
-    threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
+ #  threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -219,8 +219,8 @@ async def main():
             try:
                 with open(os.path.join(directory, "functions.json"), "r") as file:
                     functions = json.load(file)
-            except Exception:
-                print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")  
+            except Exception:                          
+                print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
                 time.sleep(0.5)
                 clear_console()
                 print(Center.XCenter(faded_text))
@@ -260,7 +260,7 @@ async def main():
             email = None
             while True:
                 email = (
-                    input(f"\r[{yellow_dash}] Enter Your Email Address: ") 
+                    input(f"\r[{yellow_dash}] Enter Your Email Address: ")
                     .strip()
                     .lower()
                 )
