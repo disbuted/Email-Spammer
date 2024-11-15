@@ -1,0 +1,403 @@
+nude project -- POST -- 403 -- FAILURE
+URL: https://nude-project.com/contact
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+pink boutique -- POST -- 429 -- FAILURE
+URL: https://www.pinkboutique.co.uk/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+wh smith -- POST -- 403 -- FAILURE
+URL: https://www.whsmith.co.uk/register-customer
+RESPONSE: <!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;max-width:60rem;padding-left:1.5rem}@media (width <= 720px){.main-content{margin-top:4rem}}.h2{font-size:1.5rem;font-weight:500;line-height:2.25rem}@media (width <= 720px){.h2{font-size:1.25rem;line-height:1.5rem}}#challenge-error-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0i
+
+solgar -- POST -- 429 -- FAILURE
+URL: https://solgar.co.uk/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+semilac -- POST -- 429 -- FAILURE
+URL: https://semilac.co.uk/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+wyse london -- POST -- 429 -- FAILURE
+URL: https://www.wyselondon.com/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+united nude -- POST -- 429 -- FAILURE
+URL: https://unitednude.com/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+void.cat -- POST -- 404 -- FAILURE
+URL: https://void.cat/auth/register
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta name="color-scheme" content="light dark">    <title>404 Not Found</title></head><body align="center">    <div role="main" align="center">        <h1>404: Not Found</h1>        <p>The requested resource could not be found.</p>        <hr />    </div>    <div role="contentinfo" align="center">        <small>Rocket</small>    </div></body></html>
+
+bakingmad -- POST -- 401 -- FAILURE
+URL: https://www.bakingmad.com/api/newsletter
+RESPONSE: {"message":"Unauthorized"}
+
+trashmail -- POST -- 200 -- SUCCESS
+URL: https://trashmail.com/?api=1&cmd=register_account&lang=en
+RESPONSE: {"success":true,"error_code":0}
+
+ilcentres -- POST -- 200 -- SUCCESS
+URL: https://smtpjs.com/v3/smtpjs.aspx?
+RESPONSE: Unexpected character encountered while parsing value: %. Path '', line 0, position 0.
+
+avogel -- POST -- 403 -- FAILURE
+URL: https://www.avogel.co.uk/my-avogel/
+RESPONSE: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"><TITLE>ERROR: The request could not be satisfied</TITLE></HEAD><BODY><H1>403 ERROR</H1><H2>The request could not be satisfied.</H2><HR noshade size="1px">Request blocked.We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.<BR clear="all">If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.<BR clear="all"><HR noshade size="1px"><PRE>Generated by cloudfront (CloudFront)Request ID: UBzXGFXGmXKTPPoXvdlsySGLcMDO6aWHHdwwCenBZ-Qsysbh_MQL_A==</PRE><ADDRESS></ADDRESS></BODY></HTML>
+
+falconcomputers -- POST -- 200 -- SUCCESS
+URL: https://www.falconcomputers.co.uk/myaccount/register
+RESPONSE: 
+
+justgeek -- POST -- 429 -- FAILURE
+URL: https://www.justgeek.com/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+american treasures -- POST -- 429 -- FAILURE
+URL: https://americantreasures.co.uk/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+lemonde -- POST -- 406 -- FAILURE
+URL: https://secure.lemonde.fr/sfuser/register
+RESPONSE: 406 Not Acceptable
+
+eldon square -- POST -- 403 -- FAILURE
+URL: https://r1.ddlnk.net/signup.ashx
+RESPONSE: <!DOCTYPE html><html><head>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    <title>403</title>    <style type="text/css">        @font-face {            font-family: 'museo_sans300';            src: url("/resources/fonts/museosans-300-webfont.eot");            src: url("/resources/fonts/museosans-300-webfont.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/museosans-300-webfont.svg#museo_sans300") format("svg"), url("/resources/fonts/museosans-300-webfont.woff") format("woff"), url("/resources/fonts/museosans-300-webfont.ttf") format("truetype");            font-weight: 200;            font-style: normal;        }        html, body, div, span, applet, object, iframe, h1, h2,, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, 
+
+bondara -- POST -- 200 -- SUCCESS
+URL: https://newsletters.bondara.co.uk/public/quickstart/signup_footer.jsp
+RESPONSE: <html lang="en"><head><link rel="stylesheet" type="text/css" href="../../css/ecmDebug.css" /></head><body>        <script type="text/javascript">            window.onload = function() {                setTimeout(function() {                     window.parent.location.href = 'https://www.bondara.co.uk/newsletter-confirmation';                }, 1000);            }        </script>    </body></html>
+
+chezbogato -- POST -- 404 -- FAILURE
+URL: https://chezbogato.fr/module/leoquicklogin/leocustomer
+RESPONSE: "La page que vous cherchez n'a pas \u00e9t\u00e9 trouv\u00e9e."
+
+hubspot -- POST -- 429 -- FAILURE
+URL: https://app.hubspot.com/api/signup/v1/crm/initialInterest?hs_static_app=signup-ui-lego&hs_static_app_version=1.15010
+RESPONSE: {"status":"service disabled","message":"service disabled","correlationId":"2d1e3c17-b636-4a8a-acb8-4ad340d560e8"}
+
+bbc news -- POST -- 201 -- SUCCESS
+URL: https://account.bbc.com/auth/v2/register?ab=o13&action=register&clientId=Account&isCasso=false&lang=en-GB&nonce=byboJgSb-4O3GvcZHwj2AdTgy18S6QeXX0MY&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2F&realm=%2F&redirectUri=https%3A%2F%2Fsession.bbc.co.uk%2Fsession%2Fcallback%3Frealm%3D%2F&sequenceId=fba4af75-c4d5-453d-8a9a-3151e4626c9b&service=IdSignInService
+RESPONSE: {"success":true}
+
+pixlr -- POST -- 200 -- SUCCESS
+URL: https://pixlr.com/auth/register
+RESPONSE: {"status":true,"message":"Registration success; Check your inbox for verification email!"}
+
+moss -- GET -- 200 -- SUCCESS
+URL: https://www.moss.co.uk/ajax/newsletter
+RESPONSE: {"message":"Thank you for subscribing. You\u2019ll begin receiving our emails shortly"}
+
+speedrun -- POST -- 429 -- FAILURE
+URL: https://www.speedrun.com/api/v2/PutAuthSignup
+RESPONSE: {"error":"Rate limited. Please try again later."}
+
+bloq -- POST -- 401 -- FAILURE
+URL: https://futureplc.eu.auth0.com/dbconnections/signup
+RESPONSE: {"statusCode":401,"description":"Suspicious request requires verification","name":"requires_verification","code":"requires_verification"}
+
+onepagelove -- POST -- 200 -- SUCCESS
+URL: https://assets.mailerlite.com/jsonp/329724/forms/101631485514089599/subscribe
+RESPONSE: /**/jQuery18307765256266183702_1727373695399({"success":true});
+
+genius -- POST -- 403 -- FAILURE
+URL: https://genius.com/api/users
+RESPONSE: <!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]--><!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]--><head><title>Attention Required! | Cloudflare</title><meta charset="UTF-8" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="robots" content="noindex, nofollow" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" /><!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]--><style>body{margin:0;padding:0}</style><!--[if gte IE 10]><!--><script>  if (!navigator.cookieEnabled) {    window.addEventListener('DOMContentLoaded', function () {      va
+
+part two -- POST -- 200 -- SUCCESS
+URL: https://notification.parttwo.com/api/v1.0/Notification/CreateNewLead
+RESPONSE: true
+
+pubmeeple -- POST -- 200 -- SUCCESS
+URL: https://pubapi.pubmeeple.com/user/
+RESPONSE: {"error":{"status":103,"message":"turnstileToken parameter is required"}}
+
+cvetochka.by -- POST -- 200 -- SUCCESS
+URL: https://cvetochka.by/auth/register
+RESPONSE: {"result":0,"message":"An error occured during registration"}
+
+email your future self -- POST -- 400 -- FAILURE
+URL: https://www.emailyourfutureself.com/email
+RESPONSE: {"message":"CAPTCHA verification failed"}
+
+indiamart -- POST -- 200 -- SUCCESS
+URL: https://utils.imimg.com/header/js/login.php
+RESPONSE: {"DataCookie":{"fn":"","ln":"","em":"","phcc":"91","iso":"IN","mb1":"ug.h@gmail.com","pct":"","ctid":"","glid":"129210809246","cd":"19\/OCT\/2023","cmid":"","utyp":"N","ev":"","uv":"","usts":"","admln":"0","admsales":0,"pwl":"0"},"code":"200","msg":"New User created via User creation service"}
+
+yell -- POST -- 401 -- FAILURE
+URL: https://login.yell.com/dbconnections/signup
+RESPONSE: {"statusCode":401,"description":"Suspicious request requires verification","name":"requires_verification","code":"requires_verification"}
+
+yoto -- POST -- 200 -- SUCCESS
+URL: https://login.yotoplay.com/dbconnections/signup
+RESPONSE: {"name":"_anonymous_","_id":"67375a41453fecb739941fa3","email":"ug.h@gmail.com","email_verified":false,"user_metadata":{"language":"en","consentTerms":"I agree to Yoto <a href='https://www.yotoplay.com/pages/terms-conditions' target='_blank'>Terms and conditions</a> and <a href='https://www.yotoplay.com/pages/privacy-policy'  target='_blank'>Privacy policy</a>","sourceDomain":"uk.yotoplay.com","sourceUrl":"https://uk.yotoplay.com/my-account"}}
+
+delli market -- POST -- 429 -- FAILURE
+URL: https://delli.market/account
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Verifying your connection...</title>    <style type="text/css">        *{box-sizing:border-box;margin:0;padding:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#FFF;font-size:62.5%;color:#303030;min-height:100%}body{padding:0;margin:0;line-height:2.7rem}a{color:#303030;border-bottom:1px solid #303030;text-decoration:none;padding-bottom:1rem;transition:border-color 0.2s ease-in}svg{width:40%}a:hover{border-bottom-color:#A9A9A9}h1{font-weight:400;margin:0 0 1.4rem 0}p{font-size:1.5rem;margin:0}.page{padding:4rem 3.5rem;margin:0;display:flex;min-height:100vh;flex-direction:column}.text-container--main{flex:1;display:flex;align-items:start;margin-bottom:1.6rem;margin:auto}.action{border:1px solid #A9A9A9;padding:1.2rem 2.5rem;border-radius:6px;text-decoration:none;margin-top:1.6rem;display:inline-block;font-size:1.
+
+pitchfork -- POST -- 200 -- SUCCESS
+URL: https://pitchfork.com/api/savePreference
+RESPONSE: {"savePreference":{"status":200,"message":null,"response":null,"success":true},"featureFlags":{"enableEntitlementProxy":false,"enableEntitlementValidation":false,"enableLinkStack":true,"enableRecipeRatings":false,"enableUserContext":true,"hideHomepageHeader":false,"hideRelatedOnHomepage":true,"recentWorkTeaser":"rubric-only","bundleTeaser":"channel-only","contentTeaser":"channel-only","tagTeaser":"rubric-only","preferCollectionGrid":false,"overrideBodyContentHeadings":true,"enableSponsoredContentInRelated":false,"personalizeRecircMostPopular":true,"videoPersistable":false,"google":{"swgEnabled":false,"signInEnabled":false},"featureOnboarding":{},"hideRelatedOnBundles":true,"useMultipleGenre":true,"enableAccounts":true,"enableActionBar":true,"enableBookmarking":true,"enableConsent":true,"enableDropcap":false,"enableInfinityId":true,"enableMediaOverridesV2":true,"enableVirtuosoGallery":true,"personalizeRecircList":true}}
+
+get pronounce -- POST -- 400 -- FAILURE
+URL: https://kapi.getpronounce.com/auth
+RESPONSE: {"message":"Http message not readable: JSON parse error: Instantiation of [simple type, class com.getpronounce.model.web.AuthRequest] value failed for JSON property captchaToken due to missing (therefore NULL) value for creator parameter captchaToken which is a non-nullable type, uri=/auth","error":"Bad Request","requestId":"a6aeb1e7-fa2f-4ae3-b5a6-13260c033962"}
+
+workflowy -- POST -- 200 -- SUCCESS
+URL: https://workflowy.com/signup-landing-form/
+RESPONSE: <!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta http-equiv="X-UA-Compatible" content="ie=edge">  <link rel="icon" type="image/png" href="/media/i/favicon.ico">  <title>          </title>  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>  <style>    html {height: 100%;}    body {      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";      font-size: 13px;      line-height: 21px;      /* color: #2A3135; */      color: #333;      height: 100%;      margin: 0;    }    form {      display: flex;      flex-direction: column;      align-items: stretch;      -webkit-box-align: stretch;      position: relative;      text-align: center;      font-size: 13px;    }    h2 {      font-style: normal;      font-weight: 400;      font-size: 16px;      line
+
+clockify -- POST -- 200 -- SUCCESS
+URL: https://eu-central-1.api.clockify.me/auth/verification/code/ug.h@gmail.com
+RESPONSE: 
+
+lush -- POST -- 200 -- SUCCESS
+URL: https://auth.lush.com/dbconnections/signup
+RESPONSE: {"_id":"67375a41453fecb739941fa4","email":"ug.h@gmail.com","email_verified":false,"app_metadata":{},"user_metadata":{"newsletter":"true","channel":"uk"}}
+
+freefy -- POST -- 403 -- FAILURE
+URL: https://freefy.app/auth/register
+RESPONSE: <html><head><title>403 Forbidden</title></head><body><center><h1>403 Forbidden</h1></center><hr><center>nginx/1.27.1</center></body></html>
+
+firehouse subs -- POST -- 200 -- SUCCESS
+URL: https://use1-prod-fhs-gateway.rbictg.com/graphql
+RESPONSE: {"errors":[{"message":"Request throttled for entity 'signUp:undefined'","path":["signUp"],"extensions":{"statusCode":429,"code":"TOO_MANY_REQUESTS","serviceName":"user"}}],"data":{"signUp":null}}
+
+i am midnight -- POST -- 403 -- FAILURE
+URL: https://www.iammidnight.com/_api/wix-forms/v1/submit-form
+RESPONSE: {"message":"Permission Denied for permission: SubmitForm","details":{}}
+
+yellow tom -- POST -- 200 -- SUCCESS
+URL: https://www.yellowtom.co.uk/review_new_advertiser.php
+RESPONSE: 
+
+seal france -- POST -- 200 -- SUCCESS
+URL: https://www.seal-france.shop/private
+RESPONSE: {"errors":0,"message":"<p>Bonjour,<\/p>\n<p>Nous avons re\u00e7u votre demande de cr\u00e9ation de compte, nous allons l'\u00e9tudier dans les plus brefs d\u00e9lais et vous contacter.<\/p>\n<p>L'\u00e9quipe Seal France<\/p>","html":"","redirect":false,"redirect_url":"https:\/\/www.seal-france.shop\/mon-compte"}
+
+mykeeper -- POST -- 403 -- FAILURE
+URL: https://api.prod.keeper.memorial/v1/auth/user/signup
+RESPONSE: {"appId":"PX4oaQZWAK","jsClientSrc":"/4oaQZWAK/init.js","customLogo":"","firstPartyEnabled":true,"vid":"","uuid":"b4c64c86-a35d-11ef-8626-47bcd0b3b7ad","hostUrl":"/4oaQZWAK/xhr","blockScript":"/4oaQZWAK/captcha/captcha.js?a=c&u=b4c64c86-a35d-11ef-8626-47bcd0b3b7ad&v=&m=0&b=aHR0cHM6Ly9hcGkucHJvZC5rZWVwZXIubWVtb3JpYWwvdjEvYXV0aC91c2VyL3NpZ251cA==&h=UE9TVA==","altBlockScript":"https://captcha.px-cloud.net/PX4oaQZWAK/captcha.js?a=c&u=b4c64c86-a35d-11ef-8626-47bcd0b3b7ad&v=&m=0&b=aHR0cHM6Ly9hcGkucHJvZC5rZWVwZXIubWVtb3JpYWwvdjEvYXV0aC91c2VyL3NpZ251cA==&h=UE9TVA=="}
+
+cnet -- POST -- 200 -- SUCCESS
+URL: https://login.cnet.com/dbconnections/signup
+RESPONSE: {"_id":"67375a4191c26fc56f92d506","email":"ug.h@gmail.com","email_verified":false}
+
+barbican -- POST -- 200 -- SUCCESS
+URL: https://spektrix.barbican.org.uk/barbicancentre/api/v3/customer?$expand=AgreedStatements,AllStatements,subscriptions/membership,tags,storedCards
+RESPONSE: {"age":null,"allStatements":[{"id":"201AGBHDRLQHNHPHKKMPKLGPMDRDTDMVL","text":"News and events from the Barbican","agreed":true},{"id":"204AMVQJPJQPLKPMLKLBQGRHMGCBDJBQQ","text":"Email about ways to support and news about the Barbican Centre Trust","agreed":false}],"agreedStatements":[{"id":"201AGBHDRLQHNHPHKKMPKLGPMDRDTDMVL","text":"News and events from the Barbican","agreed":true}],"billingAddress":null,"deliveryAddress":null,"birthDate":null,"email":"ug.h@gmail.com","firstName":"Kill","lastName":"Yourself","mobile":null,"name":"Kill Yourself","phone":null,"tags":[],"title":"","passwordSet":true,"giftAidDeclarationRequired":true,"subscriptions":[],"storedCards":[],"id":"I-W433-BRJ6","creditBalance":0.0,"attribute_EntaId":"","attribute_CreditAs":"","attribute_Organisation":"","attribute_GDPRAccountDeletionDate":null,"attribute_MindsetsSegment":"","attribute_CustomerZT":false,"attribute_Agency":"","attribute_Agent":"","attribute_CustomerRecoveryTriggered":""}
+
+enfield council -- POST -- 200 -- SUCCESS
+URL: https://enfield-council.msgfocus.com/k/Enfield-Council/sign_up
+RESPONSE: <!DOCTYPE html><html><head><title>Sign up</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://www.msgfocus.com/files/cmi_dev/workspace_804/apc_form/js/parsley.min.js"></script><link rel="stylesheet" href="https://www.msgfocus.com/files/cmi_dev/workspace_804/apc_form/css/parsley.css" /><meta name="viewport" content="width=device-width, initial-scale=1.0">    <style type="text/css">        @font-face {        font-family: 'Enfield font';        src: url(/files/cmi_dev/workspace_804/Enfield/fonts/MyriadPro-Regular.woff) format('woff'), url(/files/cmi_dev/workspace_804/Enfield/fonts/MyriadPro-Regular.ttf) format('truetype')    }    body {        font
+
+cbn -- POST -- 200 -- SUCCESS
+URL: https://www2.cbn.com/register?_wrapper_format=drupal_modal&_wrapper_format=drupal_ajax&ajax_form=1
+RESPONSE: [{"command":"insert","method":"prepend","selector":null,"data":"  \u003Cdiv aria-label=\u0022error\u0022 class=\u0022container-medium\u0022\u003E\n          \u003Cdiv role=\u0022alert\u0022\u003E\n              \u003Ch2 class=\u0022visually-hidden\u0022\u003Eerror\u003C\/h2\u003E\n          \u003Cul  class=\u0022status__list list-none py-5\u0022\u003E\n                              \u003Cli  class=\u0022status status--error p-4 mb-2 block\u0022\u003EAn unrecoverable error occurred. The uploaded file likely exceeded the maximum file size (100 MB) that this server supports.\u003C\/li\u003E\n                        \u003C\/ul\u003E\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n","settings":null}]
+
+wizishop -- POST -- 200 -- SUCCESS
+URL: https://wizishop.com/api/shops
+RESPONSE: {"id":"67375a4133c18318b255093a","email":"ug.h@gmail.com","referer":"","cci":false,"monoproduct":false,"utm_source":"","utm_medium":"","utm_campaign":"","utm_content":"","first_utm_source":"","first_utm_medium":"","first_utm_campaign":"","first_utm_content":"","form":"","form_url":"","utm_tracking":[],"created_at":"2024-11-15T14:27:13.160Z","background":"#fff","secondary":"#252626","primary":"#06476D","firstname":"adam","lastname":"gay","type":"wz_default","tracking":[],"browser":"undefined undefined - undefined","password":"^+TWsf47En=?rGE","completed":false,"updated_at":"2024-11-15T14:27:13.160Z","site":{"id":"60c333ef5dbbab0418e603ba","name":"WiziShop-Com","domain":"wizishop.com","full_domain":"https://wizishop.com","image_link":"/static/images/favicons/wizishop.ico","image_white_link":"/static/images/favicons/wizishop.ico","image_blog_link":"/static/images/favicons/wizishop.ico","lang":"en_GB","image_white_blog_link":"/static/images/favicons/wizishop.ico","favicon":"/static/images/
+
+alton towers -- POST -- 200 -- SUCCESS
+URL: https://www.altontowers.com/umbraco/api/signupform/submit
+RESPONSE: "ok"
+
+jo cooks -- POST -- 200 -- SUCCESS
+URL: https://jocooks.us10.list-manage.com/subscribe/post-json
+RESPONSE: jQuery19009157912783843248_1727375939161({"result":"error","msg":"There was an error, please try again later"})
+
+mang inasal -- POST -- 200 -- SUCCESS
+URL: https://jollibee-ap.appspot.com/api/v1/menu/member.json
+RESPONSE: {"data":{"id":617698293,"name":"","create":1731680833169,"email":"ug.h@gmail.com","converted":false,"limited":false,"type":"user","source":"MangInasal","enabled":true,"readOnly":false,"guest":false,"infoCompleted":false,"upgrade":false,"images":{},"update":1731680833169,"sessionTimeout":0,"method":"crm","marketing":true,"expired":false,"verified":false,"autoExpire":0,"mfa":false},"duration":102,"time":1731680833169,"status":"1"}
+
+electric heating company -- POST -- 200 -- SUCCESS
+URL: https://www.electric-heatingcompany.co.uk/wp-admin/admin-ajax.php
+RESPONSE: {"status":"error","msg":"Sorry, your auth did not verify."}
+
+parcelmonkey -- POST -- 200 -- SUCCESS
+URL: https://www.parcelmonkey.co.uk/register.php
+RESPONSE: <!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8"/>    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>    <meta http-equiv="content-language" content="en-gb">    <link rel="shortcut icon" type="image/ico" href="/deviceicons/favicon.ico?v=1"/>    <title>Thank you for registering</title>    <script type="text/javascript">                (function () {            var htmlEl = document.getElementsByTagName('html')[0];            htmlEl.className = htmlEl.className + ' has-js';        })();    </script>    <script type="text/javascript">                /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */        !function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),a=n||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",a.pare
+
+kanceptkrama.by -- POST -- 200 -- SUCCESS
+URL: https://kanceptkrama.by/create-account/
+RESPONSE: <!DOCTYPE html>      <html dir="ltr" lang="ru">         <head>            <meta charset="utf-8">            <meta name="viewport" content="width=device-width, initial-scale=1">            <meta http-equiv="X-UA-Compatible" content="IE=edge">            <title>Учётная запись успешно создана!</title>            <base href="https://kanceptkrama.by/" />                                      <meta property="og:title" content="Учётная запись успешно создана!" />            <meta property="og:type" content="website" />            <meta property="og:url" content="https://kanceptkrama.by/index.php?route=account/success" />                        <meta property="og:image" content="https://kanceptkrama.by/image/catalog/logotype.png" />            <meta property="og:locale" content="ru_RU">                        <meta property="og:site_name" content="kanceptkrama.by" />            <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js?v1.2.0" type="text/javascript"></script>            <l
+
+islamicfinder -- POST -- 200 -- SUCCESS
+URL: https://www.islamicfinder.org/signup/
+RESPONSE: <!DOCTYPE html><html lang="en" class="no-js" dir="ltr"><head><script data-cfasync="false" type="text/javascript">(function(w, d) {var s = d.createElement('script');s.src = '//cdn.adpushup.com/42355/adpushup.js';s.type = 'text/javascript';s.async = true;(d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);})(window, document);</script><script type="text/javascript">!function(e,t){var siteId = "43592";var r,a;let o=function(){var e=t.createElement("script");e.id="lzORaekbHNiuS",e["data-cfasync"]="false",e.src="//html-load.com/loader.min.js",e.charset="UTF-8",e.data="svmmawaaasa0njevas3ascattafa3aga6katacaseva05atkevarkka0asaga05qkacasa0kema0ayfevevasagara6ketacasngauefa03gatnafa3asa7cayattafa3a7as9e2",e.onload=function(){let e=!1,t=Math.random().toString(),r="html-load.com";window.addEventListener("message",r=>{r.data===t+"_as_res"&&(e=!0)}),window.setTimeout(()=>{if(!e){let t="Failed to load website properly since "+r+" is blocked. Please allow "+r;thr
+
+smartsheet -- POST -- 200 -- SUCCESS
+URL: https://app.smartsheet.com/loginv2/otp/sendRedirect
+RESPONSE: <!doctype html><html lang="en">  <head>    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Log In | Smartsheet</title>    <style>      body {        margin: 0;        padding: 0;      }    </style>    <script type="module" crossorigin src="./verify.BD78Bcw2.es.js"></script>  </head>  <body>    <div id="root"></div>  </body></html>
+
+scribble together -- POST -- 200 -- SUCCESS
+URL: https://scribbletogether.com/api/profile/register
+RESPONSE: {"device":{"id":1158097,"tempSecret":"agWe6Ts10sZX3QHrEWL-AO4nk2sg_WHSeJrn"},"status":{"unmergedAccounts":false},"user":{"email":"ug.h@gmail.com","featureFlags":{},"id":886169,"name":"17316808326540382xvtan"}}
+
+women's health magazine -- POST -- 200 -- SUCCESS
+URL: https://preferencecenter.hearstmags.com/api/preference/signup
+RESPONSE: {"cached":true,"code":200,"data":{"preferences":[{"optinValue":"H","preferenceId":"972F2D27-B3B8-4F75-9227-7EFAAF2E9AF2"}],"userId":"36e384151ec3ecf0201bda84dd2951fa"},"esp":{"email":"ug.h@gmail.com","keys":{"cookie":"cce6d816facee05a84c376704daa0f4367375a4143fa6013b904f1161f6f4b8328fa86439efec9519430eb5a","email":"ug.h@gmail.com","sid":"67375a4143fa6013b904f116"},"list_id":"Womenshealth_WMH_Weekly_Newsletter","template_name":"welcome1"},"message":"Successfully Subscribed to Email Preference","status":200}
+
+ironvest -- POST -- 200 -- SUCCESS
+URL: https://api.ironvest.com/v1/user/verifyEmail
+RESPONSE: {"status":"success","hash":"c091aad61796ea0f9cf29d782df602d54501d5cc6f3b574d46d54be8b9e264b8","message":null}
+
+donna fashion -- POST -- 200 -- SUCCESS
+URL: https://api.flashy.app/thunder/contact?overwrite=true&primary_key=email
+RESPONSE: {"success":true,"data":{"lists":{"22893":true},"birthday":978307200,"created_at":1731680833,"email":"ug.h@gmail.com","first_name":"17316808326510227nbnvx","contact_id":"70801702a90f3be49b3a83742ba53d0f","gravatar":"36e384151ec3ecf0201bda84dd2951fa","primary":"email"}}
+
+goodfood -- POST -- 200 -- SUCCESS
+URL: https://www.bbcgoodfood.com/api/pages/forms/newsletter-signup
+RESPONSE: {"status":200}
+
+tefl -- POST -- 200 -- SUCCESS
+URL: https://www.tefl.org/.netlify/functions/register
+RESPONSE: {"id":295422}
+
+men's health magazine -- POST -- 200 -- SUCCESS
+URL: https://preferencecenter.hearstmags.com/api/preference/signup
+RESPONSE: {"cached":true,"code":200,"data":{"preferences":[{"optinValue":"H","preferenceId":"986687B1-D945-4F70-BE66-21B22779D75D"}],"userId":"36e384151ec3ecf0201bda84dd2951fa"},"esp":{"email":"ug.h@gmail.com","keys":{"cookie":"8da0c31b1511b0489c1b83f67c74dbdd67375a415e0ead525c0aefef04c80f50ab9b4bb43761a990cff4f431","email":"ug.h@gmail.com","sid":"67375a415e0ead525c0aefef"},"list_id":"Menshealth_MHB_Weekly_Newsletter","template_name":"welcome1"},"message":"Successfully Subscribed to Email Preference","status":200}
+
+upcoming -- POST -- 201 -- SUCCESS
+URL: https://upcoming.nl/api/subscribe/esp
+RESPONSE: 
+
+mylands -- POST -- 200 -- SUCCESS
+URL: https://manage.kmail-lists.com/subscriptions/subscribe?g=VZXxnF
+RESPONSE: <!DOCTYPE html>  <link rel="shortcut icon" href="/media/Favicon-16by16.png"/><html lang="en" style="height: 100%"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Consent Pages</title>  <script nonce="RGJmPQLv/MGBYAwQpFks0A==">    function handleSubmit(e) {      e.preventDefault();      // using XMLHttpRequest for browser compatibility      var xhr = new XMLHttpRequest();      xhr.open("POST", window.location.href, true);      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");      xhr.onreadystatechange = function () { // Call a function when the state changes.        if (xhr.readyState === XMLHttpRequest.DONE) {          if (xhr.status === 200) {            // # move to unsubscribe success            document.getElementById('unsubscribe-fallback').style.display = 'none';            document.getElementById('unsubscribe-success-fallback').style.display = 'block';          } else {            alert('So
+
+autour du gateau -- POST -- 200 -- SUCCESS
+URL: https://www.autourdugateau.fr/connexion?create_account=1
+RESPONSE: <!doctype html><html lang="fr">  <head>            <meta charset="utf-8">  <meta http-equiv="x-ua-compatible" content="ie=edge">  <title>Autour du Gâteau | Boutique de cakedesign N°1 en France</title>  <meta name="description" content="Fournisseur et grossiste de matériel cake design et pâtisserie. Trouvez le nécessaire à votre passion : déco de gâteau, pâtes à sucre, ustensiles à pâtisserie, +6000 références livrées en 24/48H.">  <meta name="keywords" content="cake design,deco de gateau,accessoire patisserie,photo comestible,decoration de gateau,pate a sucre,renshaw,saracino,pme,moule a gateau,grossiste cake design,cupcakes,vaiana,frozen,pat patrouille,feuille en sucre personnalisée,funcakes,wilton,lily cook">            <meta name="robots" data-page-name="index" content="index, follow">        <meta name="twitter:title" content="Autour du Gâteau | Boutique de cakedesign N°1 en France">  <meta name="twitter:description" content="Fournisseur et grossiste de matériel cake design et pâti
+
+hatstore -- POST -- 200 -- SUCCESS
+URL: https://hatstore.co.uk/resources/newsletter
+RESPONSE: {}
+
+classic hymers -- POST -- 200 -- SUCCESS
+URL: https://classichymers.co.uk/my-account/
+RESPONSE: <!DOCTYPE html><html class="avada-html-layout-wide avada-html-header-position-top" lang="en-GB" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1" /><title>My Account &#8211; Classic Hymers</title><meta name='robots' content='max-image-preview:large' /><link rel='dns-prefetch' href='//stats.wp.com' /><link rel="alternate" type="application/rss+xml" title="Classic Hymers &raquo; Feed" href="https://classichymers.co.uk/feed/" /><link rel="alternate" type="application/rss+xml" title="Classic Hymers &raquo; Comments Feed" href="https://classichymers.co.uk/comments/feed/" /><meta property="og:locale" content="en_GB"/><meta property="og:type" content="article"/><meta property="og:site_name" content="Classic Hymers"/><meta property="og:title" content="  My Account"/><meta property="og:url" cont
+
+polysil -- POST -- 200 -- SUCCESS
+URL: https://www.polysil.co.uk/my-account/
+RESPONSE: <!DOCTYPE html><html lang="en-GB" dir="ltr" language="en" class="no-js"><head><link rel="profile" href="https://gmpg.org/xfn/11"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name='robots' content='noindex, follow' /><!-- Google Tag Manager for WordPress by gtm4wp.com --><script data-cfasync="false" data-pagespeed-no-defer>var gtm4wp_datalayer_name = "dataLayer";var dataLayer = dataLayer || [];const gtm4wp_use_sku_instead = false;const gtm4wp_currency = 'GBP';const gtm4wp_product_per_impression = 10;const gtm4wp_clear_ecommerce = false;</script><!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- This site is optimized with the Yoast SEO Premium plugin v23.5 (Yoast SEO v23.8) - https://yoast.com/wordpress/plugins/seo/ --><title>My account - Polysil</title><link rel="canonical" href="https://www.polysil.co.uk/my-account/" /><meta property="og:locale" content="en_GB" /><meta property="og:type" content="article" /><meta property="og:title" content="M
+
+ilovefancydress -- POST -- 200 -- SUCCESS
+URL: https://ilovefancydress.com/account/sign-up
+RESPONSE: <!doctype html><html lang="en">    <head>        <meta charset="utf-8">        <title></title>        <meta name="title" content="">        <meta name="description" content="">        <meta name="keywords" content="">        <link href="https://ilovefancydress.com/favicon.png" rel="icon" />                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">        <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>        <meta name="apple-mobile-web-app-status-bar-style" content="black">        <meta property="og:title" content=""/>        <meta property="og:image" content=""/>        <meta property="og:image:width" content=""/>        <meta property="og:image:height" content=""/>        <meta property="og:site_name" content="I Love Fancy Dress"/>        <meta property="og:url" content="https://ilovefancydress.com"/>        <meta property="og:description" content=""/>        <meta name="twitter:card" content
+
+everplans -- POST -- 201 -- SUCCESS
+URL: https://my.everplans.com/api/v1/users
+RESPONSE: {"message":"Signup successful, check your mail for next step"}
+
+sweetgenie -- POST -- 200 -- SUCCESS
+URL: https://www.sweetgenie.co.uk/my-account/
+RESPONSE: <!doctype html ><html lang="en-GB" ><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="preconnect" href="https://fonts.googleapis.com">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap"          rel="stylesheet">    <script src="https://cookiehub.net/c2/7edd21ee.js"></script><script type="text/javascript">document.addEventListener("DOMContentLoaded", function(event) {var cpm = {  };window.cookiehub.load(cpm);});</script><script>window.cookiehub_wordpress = {};</script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('consent', 'default', {'ad_storage': 'denied', 'analytics_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500});</script><title>My account - Sweet Genie</title><meta name="dc.tit
+
+buzzard reptile -- POST -- 200 -- SUCCESS
+URL: https://buzzardreptile.co.uk/
+RESPONSE: <!DOCTYPE html><html lang="en-GB" class="loading-site no-js"><head><meta charset="UTF-8" /><link rel="profile" href="https://gmpg.org/xfn/11" /><link rel="pingback" href="https://buzzardreptile.co.uk/xmlrpc.php" /><script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><!-- Google Tag Manager for WordPress by gtm4wp.com --><script data-cfasync="false" data-pagespeed-no-defer>var gtm4wp_datalayer_name = "dataLayer";var dataLayer = dataLayer || [];</script><!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Google tag (gtag.js) Consent Mode dataLayer added by Site Kit --><script id='google_gtagjs-js-consent-mode-data-layer'>win
+
+kaiber.ai -- POST -- 201 -- SUCCESS
+URL: https://kaiber.ai/api/auth/register
+RESPONSE: Created
+
+love and lemons -- POST -- 200 -- SUCCESS
+URL: https://www.loveandlemons.com/subscribe/?form=1950445
+RESPONSE: <!DOCTYPE html><htmllang=en-US><head><metacharset="UTF-8"><metaproperty="og:site_name" content="Love and Lemons"><metaproperty="fb:pages" content="253349134732302"><title>Subscribe to our Email Newsletter - Love and Lemons</title><linkrel=publisher href=https://plus.google.com/101834470125987202960><linkrel=profile href=http://gmpg.org/xfn/11><style media=all>/*<![CDATA[*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align:baseline}:focus{outline:0}body{background:#fff;line-height:1}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{font-weight:normal;text-align:left}blockquote:before,blockquote:after,q:before,q:after{
+
+glace-hdg -- POST -- 200 -- SUCCESS
+URL: https://www.glace-hdg.com/connexion?create_account=1
+RESPONSE: <!doctype html><html lang="fr"><head>              <meta charset="utf-8">  <meta http-equiv="x-ua-compatible" content="ie=edge">      <title>Vente de glaces artisanales en ligne - L&#039;artisan glacier HDG</title>      <meta name="description" content="Découvrez toutes nos glaces artisanales et sorbets plein fruit 100% français, livré sous 7 jours. Choisissez parmi + de 50 parfums : glaces &amp; sorbets plein fruit.">  <meta name="keywords" content="">                    <meta property="og:title" content="Vente de glaces artisanales en ligne - L&#039;artisan glacier HDG"/>    <meta property="og:url" content="https://www.glace-hdg.com/"/>    <meta property="og:site_name" content="HDG"/>    <meta property="og:description" content="Découvrez toutes nos glaces artisanales et sorbets plein fruit 100% français, livré sous 7 jours. Choisissez parmi + de 50 parfums : glaces &amp; sorbets plein fruit.">    <meta property="og:type" content="website">          <meta property="og:image" content="
+
+glasses store -- POST -- 200 -- SUCCESS
+URL: https://glassesstore.co.uk/my-account/edit-account/
+RESPONSE: <!doctype html><html lang="en-GB" prefix="og: https://ogp.me/ns#" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" /> <!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ --><title>My Account | Glasses Store</title><meta name="robots" content="noindex, follow"/><meta property="og:locale" content="en_GB" /><meta property="og:type" content="article" /><meta property="og:title" content="My Account | Glasses Store" /><meta property="og:url" content="https://glassesstore.co.uk/my-account/" /><meta property="og:site_name" content="Glasses Store" /><meta property="article:publisher" content="https://www.facebook.com/61560201443528/" /><meta property="article:author" content="https://www.facebook.com/profile.php?id=61559618957782" /><meta property="og:updated_time" content="2024-07-07T21:35:11+01:00" /><meta property="og:image" content="https://glassesstore.co.uk/wp-content/uploads/2024/06/Glasses
+
+toystreet -- POST -- 200 -- SUCCESS
+URL: https://www.toystreet.co.uk/my-account/
+RESPONSE: <!doctype html><html lang="en-GB"><head>    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1" />    <link rel="profile" href="https://gmpg.org/xfn/11" />    <meta content="width=device-width, initial-scale=1.0" name="viewport">            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Raleway:wght@300;600;900&display=swap" rel="stylesheet">    <link href="https://www.toystreet.co.uk/wp-content/themes/toystreet/css/owl.carousel.min.css" rel="stylesheet">    <link href="https://www.toystreet.co.uk/wp-content/themes/toystreet/css/owl.theme.default.min.css" rel="stylesheet">    <link href="https://www.toystreet.co.uk/wp-content/themes/toystreet/css/bootstrap.css?pckg=wineeatcheese" rel="stylesheet">    <meta name="facebook-domain-verification" content="ztahpen201l70j31zmmiyi2hcuvia2" />    <script>        window.dataLayer = window.dataLayer || [];        function gtag() {            dataLayer.push(arg
+
+privatesportshop -- POST -- 200 -- SUCCESS
+URL: https://raven.privatesportshop.com/api/7/v2.0.0/auth/user/email/signup/
+RESPONSE: {"message":"Registration successful","result":{"email":"ug.h@gmail.com"}}
+
+my candle shop france -- POST -- 200 -- SUCCESS
+URL: https://my-candle-shop.fr/mon-compte/
+RESPONSE: <!doctype html><html lang="fr-FR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><meta name='robots' content='noindex, follow' /><script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/6d161967b6d43d2fc02946d7/script.js"></script><!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ --><title>My Candle Shop - Boutique en ligne de bougies | Yankee Candle - WoodWick - JewelCandle...</title><meta name="description" content="Plus de 500 références de bougies parfumées + nos abonnements mensuel box de bougies multi-marques. Bougies crépitantes, bougies bijoux, bouquets parfumés..." /><link rel="canonical" href="https://my-candle-shop.fr/mon-compte/" /><meta property="og:locale" content="fr_FR" /><meta property="og:type" content="article" /><meta property="og:title" content="My Candle Shop - Boutique en ligne de 
+
+home bargains -- POST -- 201 -- SUCCESS
+URL: https://home.bargains/api/authentication/register
+RESPONSE: {"data":{"meta":{"expiry":"2025-02-13T14:27:14.000Z"},"personal":{"nameFirst":"Adam","nameLast":"Gay"},"searchPersonalisation":{"enabled":true,"id":"814fcd03-7106-4080-ad25-60a511392cf8"}}}
+
+well -- POST -- 200 -- SUCCESS
+URL: https://api.well.co.uk/users/v3/register?redirect_to=/vicks/
+RESPONSE: {"userId":"1744b365-6027-4a27-8233-bb08b64f0bda","duplicate":false,"idToken":"eyJraWQiOiJMTGhxQzY2eTdWOFJCZkpOY0pLTVFabXpBaEhTUksrSnZRZDhEODg0dXFJPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNzQ0YjM2NS02MDI3LTRhMjctODIzMy1iYjA4YjY0ZjBiZGEiLCJhdWQiOiJlM2RtN2U2OTRoMnFmb3Qwam90azY3ajlsIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV2ZW50X2lkIjoiNmFjMjI0YTItNjQ3Ni00YzZiLWE0ZmItNGFmMTU2MjZhMzk5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MzE2ODA4MzQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTIuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0yX09rTXgybmcyNCIsImNvZ25pdG86dXNlcm5hbWUiOiIxNzQ0YjM2NS02MDI3LTRhMjctODIzMy1iYjA4YjY0ZjBiZGEiLCJleHAiOjE3MzE2ODI2MzQsImlhdCI6MTczMTY4MDgzNCwiZW1haWwiOiJ1Zy5oQGdtYWlsLmNvbSJ9.ukV0q3BR7eQwV3sJKWA-hsz49_wZNlX91ynUpdxRd0Tq2hVjUbD13BWxMVfXz4Ku5qOgzPCuYwHVGLacmUTVWeKKxc-DcsTHKMatlksjkH7I9sSK2D316HwUL-Qa8ubkRM1FaUMCMt8QUWTKsnMkIkgL5i3wKtrox75_LxZ7UKYpbV5i1G9ywAAUU_GXDQQHZkKMJLppRlkuIkeXRfDlMhiDdgoDG5NwPTVvANARUmlseG-UguRrQiltxJ1NguGznMRCPBjQt65zH1xCPWbqF3sw5JzXSYd1wrC0p9RXYrH2EnoE_uYBTiPL8B_om
+
+merlin -- POST -- 200 -- SUCCESS
+URL: https://www.merlinentertainments.biz/newsroom/subscription-centre/
+RESPONSE: <!DOCTYPE html><html lang="en"><head>        <script type="text/javascript" src="https://cdn.cookielaw.org/consent/368aecee-0032-44ea-b243-944c27348656/OtAutoBlock.js"></script>    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="368aecee-0032-44ea-b243-944c27348656"></script>    <script type="text/javascript">        function OptanonWrapper() { }    </script>    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    <meta name="format-detection" content="telephone=no">    <meta charset="utf-8">    <meta property="og:locale" content="en_GB" />    <meta property="og:title" content="Subscription centre">    <meta property="og:description" content="Sign up to our news alerts and get the latest corporate and brand updates in our subscription centre">    <meta property="og:url" content="https://www.merlinentertainments.biz/newsroom/subscription-centre/">    <meta property="og:si
+
+guitarguitar -- GET -- 200 -- SUCCESS
+URL: https://guitarguitar.activehosted.com/proc.php
+RESPONSE: window.top.location.href = "https://www.guitarguitar.co.uk/page/newsletter-thank-you?vgo_ee=hlKBSr0pBtFe3XBrB%2Fv7abVI7FGkCDYpPMxZijLs%3Au9jLbGgHN82oCR5P1h8DVlzFHK1c5M5R";
+
+stereogum -- POST -- 200 -- SUCCESS
+URL: https://login.stereogum.com/dbconnections/signup
+RESPONSE: {"name":"why fuck","user_id":"67375a4279e1cc0385829d29","email":"ug.h@gmail.com","email_verified":false,"username":"173168083266038rusna"}
+
+software city -- POST -- 422 -- FAILURE
+URL: https://webflow.com/api/v1/form/637cea42f55f4c602965f7a4
+RESPONSE: {"msg":"Could not process the form submission. Please contact the site owner","code":422}
+
+joe and sephs -- POST -- 200 -- SUCCESS
+URL: https://www.joeandsephs.co.uk/login?action=register&returnurl=
+RESPONSE: <!doctype html><html lang="en" ><head>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  <title> | Joe &amp; Seph's Popcorn</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="keywords" content="joe, sephs, gourmet, popcorn, handmade, air, popped, corn, flavours" />  <meta name="description" content="Award-winning, handmade popcorn and caramel sauces, in over 50 flavours!" />  <meta name="geo.country" content="GB">  <link rel="apple-touch-icon" href="https://www.joeandsephs.co.uk/images/apple-touch-icons/touch-icon-iphone-60x60.png">  <link rel="apple-touch-icon" sizes="60x60" href="https://www.joeandsephs.co.uk/images/apple-touch-icons/touch-icon-ipad-76x76.png">  <link rel="apple-touch-icon" sizes="114x114" href="https://www.joeandsephs.co.uk/images/apple-touch-icons/touch-icon-iphone-retina-120x120.png">  <link rel="apple-touch-icon" sizes="144x144" href="https://www.joeandsephs.co.uk/images/apple-touch-icons/touch-icon-
+
+webby awards -- POST -- 200 -- SUCCESS
+URL: https://api.recogmedia.net/api/Account/Register
+RESPONSE: 
+
+world of books -- POST -- 200 -- SUCCESS
+URL: https://www.worldofbooks.com/en-gb/account
+RESPONSE: <!doctype html>  <html class="no-js" lang="en">    <head><!-- Start of Shoplift scripts --><!-- 2024-09-16T12:03:55.0234044Z --><style>.shoplift-hide { opacity: 0 !important; }</style><script type="text/javascript">(function(rootPath, template, themeRole, themeId, isThemePreview){ /* Generated on 2024-11-13T07:54:56.8271314Z */var T=Object.defineProperty;var C=(g,d,h)=>d in g?T(g,d,{enumerable:!0,configurable:!0,writable:!0,value:h}):g[d]=h;var r=(g,d,h)=>C(g,typeof d!="symbol"?d+"":d,h);(function(){"use strict";var g=" daum[ /]| deusu/| yadirectfetcher|(?:^|[^g])news(?!sapphire)|(?<! (?:channel/|google/))google(?!(app|/google| pixel))|(?<! cu)bots?(?:\\b|_)|(?<!(?: ya| yandex|^job|inapp;) ?)search|(?<!(?:lib))http|(?<![hg]m)score|@[a-z][\\w-]+\\.|\\(\\)|\\.com|\\b\\d{13}\\b|^<|^[\\w \\.\\-\\(?:\\):]+(?:/v?\\d+(?:\\.\\d+)?(?:\\.\\d{1,10})*?)?(?:,|$)|^[^ ]{50,}$|^\\d+\\b|^\\w+/[\\w\\(\\)]*$|^active|^ad muncher|^amaya|^avsdevicesdk/|^biglotron|^bot|^bw/|^clamav[ /]|^client/|^cobweb/|^cus
+
+barnowltrust -- POST -- 200 -- SUCCESS
+URL: https://www.barnowltrust.org.uk/shop/my-account/
+RESPONSE: <!DOCTYPE html><html lang="en-GB"><head><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="pingback" href="https://www.barnowltrust.org.uk/xmlrpc.php" /><script type="text/javascript">document.documentElement.className = 'js';</script><!--||  JM Twitter Cards by jmau111 v14.1.0  ||--><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@BarnOwlTrust"><meta name="twitter:site" content="@BarnOwlTrust"><meta property="og:title" content="My Account"><meta property="og:image" content="https://www.barnowltrust.org.uk/wp-content/uploads/SM004464-denoise_Russel-Savory.png"><!--||  /JM Twitter Cards by jmau111 v14.1.0  ||--><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-divi-open-sans-inline-css">/* Original: https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap *//* User
+
+furniturevillage -- GET -- 200 -- SUCCESS
+URL: https://www.furniturevillage.co.uk/on/demandware.store/Sites-fv-Site/en_GB/Newsletter-Subscribe
+RESPONSE: {"success":true,"hashedEmail":"054c02b8cdd685f9898f212c9ebe8727beae6b9fa5fa92db0011c5bd07afa27d"}
+
+giftstore -- POST -- 200 -- SUCCESS
+URL: https://www.giftstore.co.uk/api/user/register
+RESPONSE: {  "title": null,  "message": null,  "error": null,  "detailedErrors": [],  "hasDetailedErrors": false,  "redirectUrl": "https://www.giftstore.co.uk/my-account"}
+
+substack -- POST -- 200 -- SUCCESS
+URL: https://substack.com/api/v1/reader/signup/just_email
+RESPONSE: {"emailConfirmationRequired":true}
+
+character.ai -- POST -- 200 -- SUCCESS
+URL: https://character.ai/api/trpc/auth.login?batch=1
+RESPONSE: [{"result":{"data":{"json":"a0b68816-85ac-432b-8820-1f1c92914433"}}}]
+
+syntystore -- POST -- 200 -- SUCCESS
+URL: https://syntystore.com/en-gb/account
+RESPONSE: <!doctype html><html class="no-js" lang="en">  <head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width,initial-scale=1">    <meta name="theme-color" content="">    <link rel="canonical" href="https://syntystore.com/en-gb">    <meta name="google-site-verification" content="6eiOfzdZAQCDya6ZvxasftS-liuU7nx1JT2iC9z0EsM">            <script>      window['otkConsent'] = {"security_storage":true,"functionality_storage":true,"ad_user_data":true,"ad_personalization":true,"ad_storage":true,"analytics_storage":true,"personalization_storage":true,"ads_data_redaction":false,"url_passthrough":false,"shop_id":null,"shop":"synty-store.myshopify.com"};function _gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],function(e,t){e.otCookiesGCM={},e.otCookiesGCM={url_passthrough:!1,ads_data_redaction:!1,config:{ad_user_data:"denied",ad_personalization:"denied",ad_storage:"denied",analytics_storage:"den
+
+timeout -- POST -- 200 -- SUCCESS
+URL: https://auth.timeout.com/api/subscribe
+RESPONSE: {"user_id":"-3","message":"id::36e384151ec3ecf0201bda84dd2951fa","hashes":{"md5":"36e384151ec3ecf0201bda84dd2951fa","sha1":"94c43c328b6812c61c20c433b225ada3d40aeead","sha256":"054c02b8cdd685f9898f212c9ebe8727beae6b9fa5fa92db0011c5bd07afa27d"},"success":"True"}
+
+farmfoods -- POST -- 200 -- SUCCESS
+URL: https://www.farmfoods.co.uk/includes/mailing_list/join-club.php
+RESPONSE: {"status":"error","message":"There was an error completing your request."}
+
+9/11 memorial -- POST -- 200 -- SUCCESS
+URL: https://www.911memorial.org/user/register
+RESPONSE: <!DOCTYPE html><html lang="en" dir="ltr">  <head>      <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(100877954);</script><script async src="//static.getclicky.com/js"></script><script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-5638262-7', 'auto');  ga('require', 'GTM-NCVSFKW');  ga('send', 'pageview');</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM

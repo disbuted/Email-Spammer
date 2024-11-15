@@ -1,29 +1,54 @@
-# WORKS ON ALL OF THESE, YET TO TEST MORE MAINSTREAM EMAIL SERVICE PROVIDERS 
-# https://mail.tm/en/
-# https://mail.gw/en/
-# https://temp-mail.io/en
-# https://tempmailo.com/
+# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗    ██╗  ██╗    ███╗   ███╗ █████╗ ██╗  ██╗
+# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝    ██║  ██║    ████╗ ████║██╔══██╗╚██╗██╔╝
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝ 
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗ 
+# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║         ██║    ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗
+# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝         ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+# What Ive Worked On:
+# Removed the sys.exit() function and replaced with a return to main/restarting the main function
+# Got a list of website email lists to find 
+# Just general fucking around and seeing if shit works etc etc
+# Gonna potentially work on the external config.json file for the; size, cap, random threads etc. its just gonna be a lot of work :(
+
+# Email lists they work on:
+# mail.tm
+# mail.gw
+# temp-mail.io
+# tempmailo.com
+# gmail.com
+# protonmail.com
+# outlook.com
 
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading
 from pystyle import Colors, Colorate, Center
 from colorama import Fore, Style, init
 
 # need to move this configuration to an external config.json file
-size = 600 # Threads + Process / Iteration
+size = 600  # Threads + Process / Iteration
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
-random_threads = True # True = Threads Random. False = They Arent Random
+random_threads = True  # True = Threads Random. False = They Arent Random
+include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
 timeout = aiohttp.ClientTimeout(total=20)
 
+def restart_main():
+    asyncio.run(main())
+
 def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    
+    os.system("cls" if os.name == "nt" else "clear")
+
 def update_title():
     while True:
-        title = "[t.me/influenceable] " + ''.join(random.choices("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30))
-        os.system(f"title {title}" if os.name == 'nt' else f"\033]0;{title}\007")
-        time.sleep(0.1)   
+        title = "[t.me/influenceable]" + "".join(
+            random.choices(
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30
+            )
+        )
+        os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
+        time.sleep(0.1)
 
     # skidded from chatgpt
+
+
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
@@ -47,20 +72,25 @@ def generate_email_variants(email):
     results = [email] + random.sample(data, k=len(data))
     return results
 
+
 def generate(length: int = 5):
-    ba = bytearray(os.urandom(length)) 
+    ba = bytearray(os.urandom(length))
     for i, b in enumerate(ba):
         ba[i] = ord("a") + b % 26
     return str(time.time()).replace(".", "") + ba.decode("ascii")
 
+
 def validate_email(email):
     return re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email)
+
 
 def is_html_string(text: str) -> bool:
     return bool(re.compile(r"<[^>]+>").search(text))
 
+
 def clamp(value, min_value, max_value):
     return max(min_value, min(value, max_value))
+
 
 def divide():
     print("-" * 40)
@@ -80,8 +110,10 @@ def update_progress():
     if progress >= total:
         print("\r")
 
+
 status_codes = {}
 working = []
+
 
 async def fetch(
     session: aiohttp.ClientSession,
@@ -171,6 +203,7 @@ async def fetch(
         pass
     return update_progress()
 
+
 text = """   
                         ███████╗██████╗  █████╗ ███╗   ███╗███╗   ███╗███████╗██████╗ 
                         ██╔════╝██╔══██╗██╔══██╗████╗ ████║████╗ ████║██╔════╝██╔══██╗
@@ -179,22 +212,21 @@ text = """
                         ███████║██║     ██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║  ██║
                         ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
                                                                     t.me/influenceable
+                                                                      pls use a vpn :)
 """
 
-# refer to here if u wann change the color :3 
+# refer to here if u wann change the color :3
 # https://github.com/venaxyt/fade
-faded_text = fade.pinkred(text)
-# just come basic [-] for color coding with different meanings!
-# makes my life so much fucking easier
+
+faded_text = fade.purpleblue(text)
 
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
 
 async def main():
-  # threading.Thread(target=update_title, daemon=True).start()
-  # currently running into problems with linux where this causes an error so i need to find a work around for this  ^^^
-    clear_console() # This is for if its being ran in console. Itll clear the previous commands so itll be clear :3
+    threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
+    clear_console()
     print(Center.XCenter(faded_text))
     try:
         async with aiohttp.ClientSession() as session:
@@ -207,7 +239,7 @@ async def main():
                 print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
                 time.sleep(0.5)
                 clear_console()
-                print(Center.XCenter(faded_text)) 
+                print(Center.XCenter(faded_text))
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
@@ -215,14 +247,25 @@ async def main():
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
-                    print(Center.XCenter(faded_text)) 
-                    # Connection successful! If error, will go to error string and close 
-                    print(f"\r[{green_dash}] Backup Valid! Program Should Be Working Now.")
+                    print(Center.XCenter(faded_text))
+                    # Connection successful! If error, will go to error string and close
+                    print(
+                        f"\r[{green_dash}] Backup Valid! Program Should Be Working Now."
+                    )
                     time.sleep(1.5)
                     clear_console()
-                    print(Center.XCenter(faded_text)) 
+                    print(Center.XCenter(faded_text))
 
-            functions = {i: functions[i] for i in list(functions)[:-1]}
+            # functions = {i: functions[i] for i in list(functions)[:-1]}
+            functions = {
+                i: functions[i]
+                for i in list(functions)
+                if i != "example"
+                and (
+                    (include_nsfw_sites == True and functions[i].get("nsfw"))
+                    or not functions[i].get("nsfw")
+                )
+            }
             global progress, total, password, threads
             password = ""
             # randomising password or something idfk
@@ -233,33 +276,45 @@ async def main():
 
             email = None
             while True:
-                email = input(f"\r[{yellow_dash}] Enter Your Email Address: ").strip().lower()
+                email = (
+                    input(f"\r[{yellow_dash}] Enter Your Email Address: ")
+                    .strip()
+                    .lower()
+                )
                 if validate_email(email):
                     break
                 clear_console()
-                print(Center.XCenter(faded_text)) 
+                print(Center.XCenter(faded_text))
                 # invalid email or the user is just slow :d
                 print(f"\r[{red_dash}] That isnt a fucking email address you retard")
+                print(f"\r[{green_dash}] Lets try that again :)")
                 time.sleep(2)
-                sys.exit()
+                await main()
 
             variants = generate_email_variants(email)
             threads = None
             while True:
                 try:
                     limit = clamp(len(variants), 1, cap or float("inf"))
-                    threads = input(f"\r[{yellow_dash}] threads per batch (1-{limit}): ")
+                    threads = (
+                        input(f"\r[{yellow_dash}] Threads per batch (1-{limit}): ")
+                        .strip()
+                        .lower()
+                    )
                     if threads == "":
                         threads = cap // 2
                     threads = clamp(int(threads), 1, limit)
                     break
-                except:
+                except Exception:
                     clear_console()
-                    print(Center.XCenter(faded_text)) 
+                    print(Center.XCenter(faded_text))
                     # Amount of threads needed, not a word, just numbers :3
-                    print(f"\r[{red_dash}] Are you fucking retarded? That isnt a number 🤬🤬")
-                    time.sleep(3)
-                    sys.exit()
+                    print(
+                        f"\r[{red_dash}] Are you fucking retarded? That is not a number 🤬🤬"
+                    )
+                    print(f"\r[{green_dash}] Lets try that again :)")
+                    time.sleep(2)
+                    await main()  # removed sys exit function :)
 
             variants = random.sample(variants, k=threads)
             total = len(functions) * len(variants)
@@ -272,13 +327,17 @@ async def main():
                 "EMAIL": email,
                 "PASSWORD": password,
                 "THREADS": threads,
-                "DEBUG MODE": debug,
+                "ENDPOINTS": len(functions),
+                "NSFW SITES": str(include_nsfw_sites).lower(),
+                "DEBUG MODE": str(debug).lower(),
             }
             print("\n".join([f"{k.upper()}: {v}" for k, v in info.items()]))
             divide()
             if debug:
                 testlast = (
-                    input(f"\r[{yellow_dash}] Debug Mode is active, type Y to only test the last function")
+                    input(
+                        f"\r[{yellow_dash}] Debug Mode is active, type Y to only test the last function "
+                    )
                     .strip()
                     .lower()
                     == "y"
@@ -288,7 +347,9 @@ async def main():
                     functions = dict([next(reversed(functions.items()))])
             else:
                 # Testing endpoints, need to ask max for more soon or the tutorial on how to get valid ones :(
-                print(f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥!!!")
+                print(
+                    f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
+                )
                 test_tasks = [
                     asyncio.create_task(fetch(session, email, values, name, True))
                     for name, values in functions.items()
@@ -299,28 +360,20 @@ async def main():
                 except Exception:
                     pass
                 working = [k for k, v in status_codes.items() if v.get("status") < 400]
-                print(f"\r[{yellow_dash}] {len(working)} of {len(test_tasks)} endpoints may be working")
+                print(
+                    f"\r[{yellow_dash}] {len(working)}/{len(test_tasks)} endpoints may be working"
+                )
                 functions = {k: v for k, v in functions.items() if k in working}
                 variants = variants[1:]
-                print(f"\r[{green_dash}] {len(test_tasks):,} endpoints have been tested -- {round((len(functions)/len(test_tasks))*100, 1):.1f}% success rate")
+                print(
+                    f"\r[{green_dash}] {len(test_tasks):,} endpoints have been tested -- {round((len(functions)/len(test_tasks))*100, 1):.1f}% success rate"
+                )
                 total = len(functions) * len(variants)
                 progress = 0
-            with open(
-                os.path.join(directory, "results.txt"), "w", encoding="utf-8"
-            ) as file:
-                e = "\n\n".join(
-                    [
-                        (
-                            f"{name or 'Unknown'} -- {values.get('method')} -- {values.get('status')} -- {values.get('evaluation')}\nURL: {values.get('url')}\nRESPONSE: {values.get('resp')}"
-                        )
-                        for name, values in status_codes.items()
-                    ]
-                )
-                file.write(e)
             print(f"\r[{green_dash}] Initializing threads...")
             start = time.time()
             global timeout
-            timeout = aiohttp.ClientTimeout(total=3)
+            timeout = aiohttp.ClientTimeout(total=5)
             queue = [
                 (session, sub, values, name)
                 for sub in variants
@@ -341,16 +394,18 @@ async def main():
                 await asyncio.sleep(0)
             taken = time.time() - start
             minutes, seconds = int(taken // 60), int(taken % 60)
-            print(f"\r[{green_dash}] Attempted to send {total:,} emails in {minutes}:{seconds:02}")
-            print(f"\r[{yellow_dash}] remember that some emails will be delayed or never arrive")
+            print(
+                f"\r[{green_dash}] Attempted to send {total:,} emails in {minutes}:{seconds:02}"
+            )
+            print(
+                f"\r[{yellow_dash}] Remember that some emails will arrive late or never"
+            )
             async with session.get(
-                "https://raw.githack.com/Inkthirsty/cute-email-spammer/main/adjectives.json" # Valid working CDN as of 11/11/2024 
+                "https://raw.githack.com/Inkthirsty/cute-email-spammer/main/adjectives.json"  # Valid working CDN as of 11/11/2024
             ) as resp:
                 words = ", ".join(random.sample(await resp.json(), k=5))
             prefix = "an" if words[0] in "aeiou" else "a"
             print(f"\r[{green_dash}] I hope you have {prefix} {words} day ^_^")
-            time.sleep(2)
-            sys.exit()
             with open(
                 os.path.join(directory, "results.txt"), "w", encoding="utf-8"
             ) as file:
@@ -363,13 +418,17 @@ async def main():
                     ]
                 )
                 file.write(e)
+            time.sleep(2)
+            sys.exit()
     except Exception as error:
         print(error)
         # Program died due to an error :(
-        print(f"\r[{red_dash}] It seems like the program has died before pope francis :(( womp womp")
-        await asyncio.sleep(5)  
-        time.sleep(2)
+        print(
+            f"\r[{red_dash}] It seems like the program has died before pope francis :(( womp womp"
+        )
+        await asyncio.sleep(5)
         sys.exit()
+
 
 if __name__ == "__main__":
     try:
