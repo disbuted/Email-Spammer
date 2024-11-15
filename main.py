@@ -1,12 +1,12 @@
 # ███╗   ██╗ ██████╗ ████████╗███████╗███████╗    ██╗  ██╗    ███╗   ███╗ █████╗ ██╗  ██╗
 # ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝    ██║  ██║    ████╗ ████║██╔══██╗╚██╗██╔╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝ 
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗ 
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗
 # ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║         ██║    ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗
 # ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝         ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 # What Ive Worked On:
 # Removed the sys.exit() function and replaced with a return to main/restarting the main function
-# Title bar function for linux is now working!
+# Linux title bar still not working :(
 
 # Email lists they work on:
 # mail.tm
@@ -16,16 +16,17 @@
 # gmail.com
 # outlook.com
 
-import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, platform
+import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, platform, logging
 from pystyle import Colors, Colorate, Center
 from colorama import Fore, Style, init
+logging.getLogger("asyncio").setLevel(logging.CRITICAL)
 
 # need to move this configuration to an external config.json file
 size = 600  # Threads + Process / Iteration
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
-timeout = aiohttp.ClientTimeout(total=20)
+timeout = aiohttp.ClientTimeout(total=10)
 os.system("mode con: cols=120 lines=30")
 
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
@@ -42,9 +43,9 @@ def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(random.choices("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30))
         if platform.system() == "Windows":
-            os.system(f"title {title}")  
+            os.system(f"title {title}")
         elif platform.system() == "Linux":
-            print(f"\033]0;{title}\007")  
+            print(f"\033]0;{title}\007")
         else:
             print("Title Bar Function Is Not Supported")
             break
@@ -197,20 +198,20 @@ async def fetch(
         pass
     return update_progress()
 
-text = """   
-                        ███████╗██████╗  █████╗ ███╗   ███╗███╗   ███╗███████╗██████╗ 
-                        ██╔════╝██╔══██╗██╔══██╗████╗ ████║████╗ ████║██╔════╝██╔══██╗
-                        ███████╗██████╔╝███████║██╔████╔██║██╔████╔██║█████╗  ██████╔╝
-                        ╚════██║██╔═══╝ ██╔══██║██║╚██╔╝██║██║╚██╔╝██║██╔══╝  ██╔══██╗
-                        ███████║██║     ██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║  ██║
-                        ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-                                                                    t.me/influenceable
-                                                                      pls use a vpn :)
+text = """
+                              ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗
+                              ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                              █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                              ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                              ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                              ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                                                           t.me/influenceable
+                                                               use a vpn :)
 """
 faded_text = fade.purpleblue(text)
 
 async def main():
-    threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
+ #  threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -219,8 +220,8 @@ async def main():
             try:
                 with open(os.path.join(directory, "functions.json"), "r") as file:
                     functions = json.load(file)
-            except Exception:
-                print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")  
+            except Exception:                          
+                print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
                 time.sleep(0.5)
                 clear_console()
                 print(Center.XCenter(faded_text))
@@ -260,7 +261,7 @@ async def main():
             email = None
             while True:
                 email = (
-                    input(f"\r[{yellow_dash}] Enter Your Email Address: ") 
+                    input(f"\r[{yellow_dash}] Enter Your Email Address: ")
                     .strip()
                     .lower()
                 )
@@ -337,7 +338,7 @@ async def main():
                 ]
                 total = len(test_tasks)
                 try:
-                    await asyncio.gather(*test_tasks)
+                    await asyncio.gather(*test_tasks, return_exceptions=True)
                 except Exception:
                     pass
                 working = [k for k, v in status_codes.items() if v.get("status") < 400]
@@ -369,7 +370,7 @@ async def main():
                     asyncio.create_task(fetch(*task)) for task in queue[j : j + size]
                 ]
                 try:
-                    await asyncio.gather(*tasks)
+                    await asyncio.gather(*tasks, return_exceptions=True)
                 except Exception:
                     pass
                 await asyncio.sleep(0)
