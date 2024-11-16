@@ -1,1629 +1,1684 @@
 {
-  "substack": {
+    "substack": {
       "url": "https://substack.com/api/v1/reader/signup/just_email",
       "json": {
-          "publicationIds": "458709,10845,556800,329241,35345,471923,737237",
-          "email": "{email}"
+        "publicationIds": "458709,10845,556800,329241,35345,471923,737237",
+        "email": "{email}"
       }
-  },
-  "kaiber.ai": {
+    },
+    "kaiber.ai": {
       "url": "https://kaiber.ai/api/auth/register",
       "json": {
-          "email": "{email}",
-          "password": "{password}",
-          "passwordConfirmation": "{password}",
-          "newsletter": true,
-          "referrerId": null,
-          "affiliateLinkToken": null,
-          "impactPartnerId": null,
-          "impactPartnerToken": null
+        "email": "{email}",
+        "password": "{password}",
+        "passwordConfirmation": "{password}",
+        "newsletter": true,
+        "referrerId": null,
+        "affiliateLinkToken": null,
+        "impactPartnerId": null,
+        "impactPartnerToken": null
       }
-  },
-  "bbc news": {
+    },
+    "bbc news": {
       "note": "sends 2 emails: verify and a reminder",
       "url": "https://account.bbc.com/auth/v2/register?ab=o13&action=register&clientId=Account&isCasso=false&lang=en-GB&nonce=byboJgSb-4O3GvcZHwj2AdTgy18S6QeXX0MY&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2F&realm=%2F&redirectUri=https%3A%2F%2Fsession.bbc.co.uk%2Fsession%2Fcallback%3Frealm%3D%2F&sequenceId=fba4af75-c4d5-453d-8a9a-3151e4626c9b&service=IdSignInService",
       "json": {
-          "location": "gb",
-          "password": "{password}",
-          "dateOfBirthMonth": "9",
-          "dateOfBirthDay": "11",
-          "dateOfBirthYear": "2001",
-          "postcode": "EH52JH",
-          "gender": "male",
-          "email": "{email}"
+        "location": "gb",
+        "password": "{password}",
+        "dateOfBirthMonth": "9",
+        "dateOfBirthDay": "11",
+        "dateOfBirthYear": "2001",
+        "postcode": "EH52JH",
+        "gender": "male",
+        "email": "{email}"
       }
-  },
-  "home bargains": {
+    },
+    "home bargains": {
       "url": "https://home.bargains/api/authentication/register",
       "json": {
-          "email": "{email}",
-          "password": "{password}",
-          "passwordConfirm": "{password}",
-          "nameFirst": "Adam",
-          "nameLast": "Gay"
+        "email": "{email}",
+        "password": "{password}",
+        "passwordConfirm": "{password}",
+        "nameFirst": "Adam",
+        "nameLast": "Gay"
       }
-  },
-  "wh smith": {
+    },
+    "wh smith": {
       "url": "https://www.whsmith.co.uk/register-customer",
       "json": {
-          "password": "{password}",
-          "customer": {
-              "login": "{email}",
-              "title": "Mr",
-              "email": "{email}",
-              "first_name": "Adam",
-              "last_name": "gay"
-          }
+        "password": "{password}",
+        "customer": {
+          "login": "{email}",
+          "title": "Mr",
+          "email": "{email}",
+          "first_name": "Adam",
+          "last_name": "gay"
+        }
       }
-  },
-  "falconcomputers": {
+    },
+    "falconcomputers": {
       "url": "https://www.falconcomputers.co.uk/myaccount/register",
       "data": {
-          "email": "{email}",
-          "password": "{password}",
-          "confirmemail": "{email}",
-          "confirmpassword": "{password}"
+        "email": "{email}",
+        "password": "{password}",
+        "confirmemail": "{email}",
+        "confirmpassword": "{password}"
       }
-  },
-  "goodfood": {
+    },
+    "goodfood": {
       "note": "likes to spam every few days",
       "url": "https://www.bbcgoodfood.com/api/pages/forms/newsletter-signup",
       "data": {
-          "newsletter": "nl_bbcgf_health--850",
-          "email": "{email}"
+        "newsletter": "nl_bbcgf_health--850",
+        "email": "{email}"
       },
       "headers": {
-          "Host": "www.bbcgoodfood.com",
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0"
+        "Host": "www.bbcgoodfood.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0"
       }
-  },
-  "islamicfinder": {
+    },
+    "islamicfinder": {
       "url": "https://www.islamicfinder.org/signup/",
       "data": {
-          "name": "why",
-          "email": "{email}",
-          "password": "{password}",
-          "newsletterSubscribe": "on"
+        "name": "why",
+        "email": "{email}",
+        "password": "{password}",
+        "newsletterSubscribe": "on"
       }
-  },
-  "bakingmad": {
+    },
+    "bakingmad": {
       "url": "https://www.bakingmad.com/api/newsletter",
       "json": {
-          "email": "{email}",
-          "addressBookCodeName": "baking_mad_newsletter"
+        "email": "{email}",
+        "addressBookCodeName": "baking_mad_newsletter"
       }
-  },
-  "alton towers": {
+    },
+    "alton towers": {
       "url": "https://www.altontowers.com/umbraco/api/signupform/submit",
       "json": {
-          "__RequestVerificationToken": "",
-          "Language": "en",
-          "Attraction": "PAT",
-          "Campaign": "brandsite",
-          "Source": "Website",
-          "SourceDetail": "www.altontowers.com/sign-up/",
-          "ConsentType": "Merlin Global",
-          "FallbackCountry": "GB",
-          "EnableRecaptcha": "False",
-          "Email": "{email}",
-          "FirstName": "{random}",
-          "Lastname": "Floyd",
-          "Permission": "on"
+        "__RequestVerificationToken": "",
+        "Language": "en",
+        "Attraction": "PAT",
+        "Campaign": "brandsite",
+        "Source": "Website",
+        "SourceDetail": "www.altontowers.com/sign-up/",
+        "ConsentType": "Merlin Global",
+        "FallbackCountry": "GB",
+        "EnableRecaptcha": "False",
+        "Email": "{email}",
+        "FirstName": "{random}",
+        "Lastname": "Floyd",
+        "Permission": "on"
       }
-  },
-  "lush": {
+    },
+    "lush": {
       "url": "https://auth.lush.com/dbconnections/signup",
       "json": {
-          "client_id": "8vJNDjyQ8jORlIwTeIgbP6ijF4HGdXh6",
-          "state": "hKFo2SBVTnpCRXZBWjhUZU9KWmxiVVhjV1NTWXlEWHBmOXdJUqFupWxvZ2luo3RpZNkgR0tESk41RmY2LWFMUDBUbmx6UkExZTBWanZqRFNOZTGjY2lk2SA4dkpORGp5UThqT1JsSXdUZUlnYlA2aWpGNEhHZFhoNg",
-          "connection": "Username-Password-Authentication",
-          "email": "{email}",
-          "password": "{password}",
-          "user_metadata": {
-              "newsletter": "true",
-              "channel": "uk"
-          }
+        "client_id": "8vJNDjyQ8jORlIwTeIgbP6ijF4HGdXh6",
+        "state": "hKFo2SBVTnpCRXZBWjhUZU9KWmxiVVhjV1NTWXlEWHBmOXdJUqFupWxvZ2luo3RpZNkgR0tESk41RmY2LWFMUDBUbmx6UkExZTBWanZqRFNOZTGjY2lk2SA4dkpORGp5UThqT1JsSXdUZUlnYlA2aWpGNEhHZFhoNg",
+        "connection": "Username-Password-Authentication",
+        "email": "{email}",
+        "password": "{password}",
+        "user_metadata": {
+          "newsletter": "true",
+          "channel": "uk"
+        }
       }
-  },
-  "glasses store": {
+    },
+    "glasses store": {
       "url": "https://glassesstore.co.uk/my-account/edit-account/",
       "data": {
-          "email": "{email}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https%3A%2F%2Fwww.google.com%2F",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https%3A%2F%2Fglassesstore.co.uk%2F",
-          "wc_order_attribution_session_start_time": "2024-08-14 20%3A10%3A42",
-          "wc_order_attribution_session_pages": "2",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%3B+rv%3A129.0%29+Gecko%2F20100101+Firefox%2F129.0",
-          "woocommerce-register-nonce": "d4fe4797d0",
-          "_wp_http_referer": "%2Fmy-account%2Fedit-account%2F",
-          "register": "Register"
+        "email": "{email}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https%3A%2F%2Fwww.google.com%2F",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https%3A%2F%2Fglassesstore.co.uk%2F",
+        "wc_order_attribution_session_start_time": "2024-08-14 20%3A10%3A42",
+        "wc_order_attribution_session_pages": "2",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%3B+rv%3A129.0%29+Gecko%2F20100101+Firefox%2F129.0",
+        "woocommerce-register-nonce": "d4fe4797d0",
+        "_wp_http_referer": "%2Fmy-account%2Fedit-account%2F",
+        "register": "Register"
       }
-  },
-  "eldon square": {
+    },
+    "eldon square": {
       "url": "https://r1.ddlnk.net/signup.ashx",
       "data": {
-          "ci_isconsentform": "true",
-          "userid": "314712",
-          "SIGbbc19621835a769351795e4f3db1acb9448aaac6c4a6ecd3b5ed27db8881955b": "",
-          "addressbookid": "1117410",
-          "ReturnURL": "https://r1.dotdigital-pages.com/p/6QU0-2GV/subscriptionconfirmation",
-          "ci_userConsentText": "Yes,+I+do+want+to+stay+up+to+date+with+the+latest+events,+retailer+discounts+and+news+from+Eldon+Square.",
-          "ci_consenturl": "https://eldonsquare.co.uk/newsletter/",
-          "cd_FIRSTNAME": "Bee",
-          "cd_SURNAME": "Eater",
-          "email": "{email}",
-          "cd_DATE_OF_BIRTH": "2001-11-09",
-          "cd_POSTCODE": "Poo1234",
-          "ci_userConsentCheckBox": "on",
-          "btnsubmit": ""
+        "ci_isconsentform": "true",
+        "userid": "314712",
+        "SIGbbc19621835a769351795e4f3db1acb9448aaac6c4a6ecd3b5ed27db8881955b": "",
+        "addressbookid": "1117410",
+        "ReturnURL": "https://r1.dotdigital-pages.com/p/6QU0-2GV/subscriptionconfirmation",
+        "ci_userConsentText": "Yes,+I+do+want+to+stay+up+to+date+with+the+latest+events,+retailer+discounts+and+news+from+Eldon+Square.",
+        "ci_consenturl": "https://eldonsquare.co.uk/newsletter/",
+        "cd_FIRSTNAME": "Bee",
+        "cd_SURNAME": "Eater",
+        "email": "{email}",
+        "cd_DATE_OF_BIRTH": "2001-11-09",
+        "cd_POSTCODE": "Poo1234",
+        "ci_userConsentCheckBox": "on",
+        "btnsubmit": ""
       }
-  },
-  "merlin": {
+    },
+    "merlin": {
       "url": "https://www.merlinentertainments.biz/newsroom/subscription-centre/",
       "data": {
-          "__RequestVerificationToken": "0w3cHbNH3gORwAiyaIIlqyDym3_4DxCe4LuJWLJywK0mU3b3fxlV1soaleGksYeQuzEfZSCJZ6h99jIMgi1EXsnkS7ARDqHPZoMmOO_qvmc1",
-          "EmailAddress": "{email}",
-          "FullName": "",
-          "Company": "",
-          "Role": "Institutional Investor",
-          "AllNewsTypes[0].IsChecked": "true",
-          "AllNewsTypes[0].Name": "Brand and attraction news",
-          "AllNewsTypes[1].IsChecked": "false",
-          "AllNewsTypes[1].Name": "Corporate and business news",
-          "AllNewsTypes[2].IsChecked": "true",
-          "AllNewsTypes[2].Name": "All News",
-          "ConsentChecked": "true",
-          "ufprt": "8E060B2BBCEC57E4216C73155BD4C7A3895ADE5A17BFBFE55B0CD78B8B6FFEC5C9E2A8C12AB9F8CE7B56F660333BE3B6E4ED9A9F90C6D70024D4CBFDAD4183242C8C4138E2B726267B41AF867730D20DB890457765EDF993EC59F30CF0859E821E9FC81DD78BAD978A4181B434EB3A2D0C95FA932D55AE5ABFF0B71DE1EDB688"
+        "__RequestVerificationToken": "0w3cHbNH3gORwAiyaIIlqyDym3_4DxCe4LuJWLJywK0mU3b3fxlV1soaleGksYeQuzEfZSCJZ6h99jIMgi1EXsnkS7ARDqHPZoMmOO_qvmc1",
+        "EmailAddress": "{email}",
+        "FullName": "",
+        "Company": "",
+        "Role": "Institutional Investor",
+        "AllNewsTypes[0].IsChecked": "true",
+        "AllNewsTypes[0].Name": "Brand and attraction news",
+        "AllNewsTypes[1].IsChecked": "false",
+        "AllNewsTypes[1].Name": "Corporate and business news",
+        "AllNewsTypes[2].IsChecked": "true",
+        "AllNewsTypes[2].Name": "All News",
+        "ConsentChecked": "true",
+        "ufprt": "8E060B2BBCEC57E4216C73155BD4C7A3895ADE5A17BFBFE55B0CD78B8B6FFEC5C9E2A8C12AB9F8CE7B56F660333BE3B6E4ED9A9F90C6D70024D4CBFDAD4183242C8C4138E2B726267B41AF867730D20DB890457765EDF993EC59F30CF0859E821E9FC81DD78BAD978A4181B434EB3A2D0C95FA932D55AE5ABFF0B71DE1EDB688"
       }
-  },
-  "hatstore": {
+    },
+    "hatstore": {
       "url": "https://hatstore.co.uk/resources/newsletter",
       "json": {
-          "email": "{email}",
-          "siteKey": "hsuk"
+        "email": "{email}",
+        "siteKey": "hsuk"
       }
-  },
-  "bloq": {
+    },
+    "bloq": {
       "url": "https://futureplc.eu.auth0.com/dbconnections/signup",
       "json": {
-          "client_id": "JRKr0EFukuD1sJvmCPwYGLYQNEyOlhDB",
-          "state": "hKFo2SByN21lUGNLeHp4TVhFWHZVaTFBWWZuZWlIdEN4RFJSMKFupWxvZ2luo3RpZNkgcGlWRzEwRkY3dEVCcUYzNTkyMFNYa29sX2pRYnJlVVejY2lk2SBKUktyMEVGdWt1RDFzSnZtQ1B3WUdMWVFORXlPbGhEQg",
-          "connection": "Username-Password-Authentication",
-          "email": "{email}",
-          "password": "{password}",
-          "user_metadata": {
-              "_json_site_first_visited": "{\"label\":\"creativebloq_en-gb\",\"site_name\":\"Creative Bloq\",\"logo_url\":\"https://cdn.mos.cms.futurecdn.net/flexiimages/idqwjvled01651145119.png\",\"color_primary\":\"#EA4E1B\"}",
-              "newsletter": "true",
-              "contact_other_brands": "true"
-          }
+        "client_id": "JRKr0EFukuD1sJvmCPwYGLYQNEyOlhDB",
+        "state": "hKFo2SByN21lUGNLeHp4TVhFWHZVaTFBWWZuZWlIdEN4RFJSMKFupWxvZ2luo3RpZNkgcGlWRzEwRkY3dEVCcUYzNTkyMFNYa29sX2pRYnJlVVejY2lk2SBKUktyMEVGdWt1RDFzSnZtQ1B3WUdMWVFORXlPbGhEQg",
+        "connection": "Username-Password-Authentication",
+        "email": "{email}",
+        "password": "{password}",
+        "user_metadata": {
+          "_json_site_first_visited": "{\"label\":\"creativebloq_en-gb\",\"site_name\":\"Creative Bloq\",\"logo_url\":\"https://cdn.mos.cms.futurecdn.net/flexiimages/idqwjvled01651145119.png\",\"color_primary\":\"#EA4E1B\"}",
+          "newsletter": "true",
+          "contact_other_brands": "true"
+        }
       }
-  },
-  "furniturevillage": {
+    },
+    "furniturevillage": {
       "url": "https://www.furniturevillage.co.uk/on/demandware.store/Sites-fv-Site/en_GB/Newsletter-Subscribe",
       "method": "GET",
       "params": {
-          "email": "{email}",
-          "subscribe": "true",
-          "subscribedFrom": "popup",
-          "device": "desktop",
-          "showType": "timed",
-          "pageID": "storefront"
+        "email": "{email}",
+        "subscribe": "true",
+        "subscribedFrom": "popup",
+        "device": "desktop",
+        "showType": "timed",
+        "pageID": "storefront"
       }
-  },
-  "cbn": {
+    },
+    "cbn": {
       "url": "https://www2.cbn.com/register?_wrapper_format=drupal_modal&_wrapper_format=drupal_ajax&ajax_form=1",
       "data": {
-          "email_address": "{email}",
-          "pass": "{password}",
-          "display_name": "ralinaguilty",
-          "form_build_id": "form-biqvzV3bqYBlCkx6O9b_bOjIH93EzGlAL5CING6aTjs",
-          "form_id": "cbn_courses_registration_form",
-          "_triggering_element_name": "op",
-          "_triggering_element_value": "Create+Account",
-          "_drupal_ajax": "1",
-          "ajax_page_state[theme]": "cbn_emulsify",
-          "ajax_page_state[theme_token]": "",
-          "ajax_page_state[libraries]": "addtoany/addtoany.front,cbn_ad_server/cbn_ad_server,cbn_analytics/cbn_analytics.data_layer,cbn_core/cookieSettings,cbn_core/form_focus,cbn_emulsify/biblify,cbn_emulsify/fonts,cbn_emulsify/global,cbn_emulsify/global-js,cbn_emulsify/interactive-map,cbn_emulsify/logo-carousel,cbn_emulsify/media-carousel,cbn_emulsify/vid_watch_live,cbn_login/cbn_login,core/drupal.autocomplete,core/drupal.dialog.ajax,core/internal.jquery.form,core/picturefill,datalayer/behaviors,paragraphs/drupal.paragraphs.unpublished,search_api_autocomplete/search_api_autocomplete,system/base"
+        "email_address": "{email}",
+        "pass": "{password}",
+        "display_name": "ralinaguilty",
+        "form_build_id": "form-biqvzV3bqYBlCkx6O9b_bOjIH93EzGlAL5CING6aTjs",
+        "form_id": "cbn_courses_registration_form",
+        "_triggering_element_name": "op",
+        "_triggering_element_value": "Create+Account",
+        "_drupal_ajax": "1",
+        "ajax_page_state[theme]": "cbn_emulsify",
+        "ajax_page_state[theme_token]": "",
+        "ajax_page_state[libraries]": "addtoany/addtoany.front,cbn_ad_server/cbn_ad_server,cbn_analytics/cbn_analytics.data_layer,cbn_core/cookieSettings,cbn_core/form_focus,cbn_emulsify/biblify,cbn_emulsify/fonts,cbn_emulsify/global,cbn_emulsify/global-js,cbn_emulsify/interactive-map,cbn_emulsify/logo-carousel,cbn_emulsify/media-carousel,cbn_emulsify/vid_watch_live,cbn_login/cbn_login,core/drupal.autocomplete,core/drupal.dialog.ajax,core/internal.jquery.form,core/picturefill,datalayer/behaviors,paragraphs/drupal.paragraphs.unpublished,search_api_autocomplete/search_api_autocomplete,system/base"
       }
-  },
-  "yoto": {
+    },
+    "yoto": {
       "url": "https://login.yotoplay.com/dbconnections/signup",
       "json": {
-          "client_id": "m0rjxtdp2NdikrVi5gsv5hPMbKus4Vw9",
-          "connection": "Username-Password-Authentication",
-          "email": "{email}",
-          "password": "{password}",
-          "name": "_anonymous_",
-          "user_metadata": {
-              "language": "en",
-              "consentTerms": "I agree to Yoto <a href='https://www.yotoplay.com/pages/terms-conditions' target='_blank'>Terms and conditions</a> and <a href='https://www.yotoplay.com/pages/privacy-policy'  target='_blank'>Privacy policy</a>",
-              "sourceDomain": "uk.yotoplay.com",
-              "sourceUrl": "https://uk.yotoplay.com/my-account"
-          }
+        "client_id": "m0rjxtdp2NdikrVi5gsv5hPMbKus4Vw9",
+        "connection": "Username-Password-Authentication",
+        "email": "{email}",
+        "password": "{password}",
+        "name": "_anonymous_",
+        "user_metadata": {
+          "language": "en",
+          "consentTerms": "I agree to Yoto <a href='https://www.yotoplay.com/pages/terms-conditions' target='_blank'>Terms and conditions</a> and <a href='https://www.yotoplay.com/pages/privacy-policy'  target='_blank'>Privacy policy</a>",
+          "sourceDomain": "uk.yotoplay.com",
+          "sourceUrl": "https://uk.yotoplay.com/my-account"
+        }
       }
-  },
-  "clockify": {
+    },
+    "clockify": {
       "url": "https://eu-central-1.api.clockify.me/auth/verification/code/{email}",
       "json": {
-          "terms": [
-              {
-                  "term": "Cake"
-              }
-          ],
-          "timeZone": "Europe/London",
-          "currentLang": "en",
-          "abTestingTrackingRequest": {
-              "test": "Mega menu changed - A"
+        "terms": [
+          {
+            "term": "Cake"
           }
+        ],
+        "timeZone": "Europe/London",
+        "currentLang": "en",
+        "abTestingTrackingRequest": {
+          "test": "Mega menu changed - A"
+        }
       }
-  },
-  "parcelmonkey": {
+    },
+    "parcelmonkey": {
       "url": "https://www.parcelmonkey.co.uk/register.php",
       "data": {
-          "UserFirstname": "What",
-          "UserLastname": "Dafuq",
-          "UserEmail": "{email}",
-          "UserEmailConfirm": "{email}",
-          "UserPassword": "{password}",
-          "UserConfirmPassword": "{password}",
-          "UserTncs": "Y",
-          "UserUnsubscribed": "N"
+        "UserFirstname": "What",
+        "UserLastname": "Dafuq",
+        "UserEmail": "{email}",
+        "UserEmailConfirm": "{email}",
+        "UserPassword": "{password}",
+        "UserConfirmPassword": "{password}",
+        "UserTncs": "Y",
+        "UserUnsubscribed": "N"
       }
-  },
-  "bethanys": {
+    },
+    "bethanys": {
       "url": "https://bethanys.co.uk/shop/ajax/cartform",
       "data": {
-          "first_name": "Adam",
-          "last_name": "Gay",
-          "email": "{email}",
-          "phone": "",
-          "password": "{password}",
-          "op": "conventional_reg"
+        "first_name": "Adam",
+        "last_name": "Gay",
+        "email": "{email}",
+        "phone": "",
+        "password": "{password}",
+        "op": "conventional_reg"
       },
       "headers": {
-          "Host": "bethanys.co.uk",
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
-          "Accept": "application/json, text/javascript, */*; q=0.01",
-          "Accept-Language": "en-GB,en;q=0.5",
-          "Accept-Encoding": "gzip, deflate, br, zstd",
-          "Prefer": "safe",
-          "Referer": "https://bethanys.co.uk/",
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-          "X-Requested-With": "XMLHttpRequest",
-          "Content-Length": "115",
-          "Origin": "https://bethanys.co.uk",
-          "DNT": "1",
-          "Sec-GPC": "1",
-          "Connection": "keep-alive",
-          "Cookie": "PHPSESSID=ubion3n90pi6d5hjb04v56ti5l; session_id=eJwrtjI0tVIqTi0ujjc0NzI2M7cwMbNUsgYATf8F%2Fw%3D%3D; css_framework=bootstrap; last_accessed_url=https%3A%2F%2Fbethanys.co.uk%2Fflower-delivery-sunderland",
-          "Sec-Fetch-Dest": "empty",
-          "Sec-Fetch-Mode": "cors",
-          "Sec-Fetch-Site": "same-origin"
+        "Host": "bethanys.co.uk",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "en-GB,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Prefer": "safe",
+        "Referer": "https://bethanys.co.uk/",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Length": "115",
+        "Origin": "https://bethanys.co.uk",
+        "DNT": "1",
+        "Sec-GPC": "1",
+        "Connection": "keep-alive",
+        "Cookie": "PHPSESSID=ubion3n90pi6d5hjb04v56ti5l; session_id=eJwrtjI0tVIqTi0ujjc0NzI2M7cwMbNUsgYATf8F%2Fw%3D%3D; css_framework=bootstrap; last_accessed_url=https%3A%2F%2Fbethanys.co.uk%2Fflower-delivery-sunderland",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
       }
-  },
-  "giftstore": {
+    },
+    "giftstore": {
       "url": "https://www.giftstore.co.uk/api/user/register",
       "data": {
-          "firstName": "gay",
-          "lastName": "monkey",
-          "email": "{email}",
-          "telephone": "1234567890",
-          "altTelephone": "",
-          "oneTimePassword": "",
-          "password": "{password}",
-          "passwordConfirm": "{password}",
-          "okToMail": "true",
-          "agreeToTerms": "true"
+        "firstName": "gay",
+        "lastName": "monkey",
+        "email": "{email}",
+        "telephone": "1234567890",
+        "altTelephone": "",
+        "oneTimePassword": "",
+        "password": "{password}",
+        "passwordConfirm": "{password}",
+        "okToMail": "true",
+        "agreeToTerms": "true"
       }
-  },
-  "stereogum": {
+    },
+    "stereogum": {
       "url": "https://login.stereogum.com/dbconnections/signup",
       "data": {
-          "client_id": "PujEZT9lXY7zvV4oYSossFKnPruPcayn",
-          "connection": "DB-Stereogum",
-          "email": "{email}",
-          "name": "why fuck",
-          "password": "{password}",
-          "state": "hKFo2SAtYnpkUUNRcWtzcUloS2RFMTJUSGwzek1tOWpQWUNlaqFupWxvZ2luo3RpZNkgbV9mbXV0el9VSnRwTzNuM3FJOS1hWThScmd1ZTRDM1qjY2lk2SBQdWpFWlQ5bFhZN3p2VjRvWVNvc3NGS25QcnVQY2F5bg",
-          "user_metadata": {},
-          "username": "{username}"
+        "client_id": "PujEZT9lXY7zvV4oYSossFKnPruPcayn",
+        "connection": "DB-Stereogum",
+        "email": "{email}",
+        "name": "why fuck",
+        "password": "{password}",
+        "state": "hKFo2SAtYnpkUUNRcWtzcUloS2RFMTJUSGwzek1tOWpQWUNlaqFupWxvZ2luo3RpZNkgbV9mbXV0el9VSnRwTzNuM3FJOS1hWThScmd1ZTRDM1qjY2lk2SBQdWpFWlQ5bFhZN3p2VjRvWVNvc3NGS25QcnVQY2F5bg",
+        "user_metadata": {},
+        "username": "{username}"
       }
-  },
-  "toystreet": {
+    },
+    "toystreet": {
       "url": "https://www.toystreet.co.uk/my-account/",
       "data": {
-          "username": "{username}",
-          "email": "{email}",
-          "password": "{password}",
-          "customer_opt_field": "1",
-          "woocommerce-register-nonce": "aa120b050e",
-          "_wp_http_referer": "/my-account/",
-          "register": "Register"
+        "username": "{username}",
+        "email": "{email}",
+        "password": "{password}",
+        "customer_opt_field": "1",
+        "woocommerce-register-nonce": "aa120b050e",
+        "_wp_http_referer": "/my-account/",
+        "register": "Register"
       }
-  },
-  "privatesportshop": {
+    },
+    "privatesportshop": {
       "url": "https://raven.privatesportshop.com/api/7/v2.0.0/auth/user/email/signup/",
       "data": {
-          "firstname": "dma",
-          "lastname": "gey",
-          "gender": "123",
-          "storeId": "29",
-          "selectedFrequency": "128",
-          "newsletterActionTaken": "1",
-          "newsletter_special_offers": "true",
-          "signup_terms_and_conditions": "true",
-          "email": "{email}",
-          "password": "{password}",
-          "storeType": "7",
-          "referrer": "https://www.privatesportshop.com/new"
+        "firstname": "dma",
+        "lastname": "gey",
+        "gender": "123",
+        "storeId": "29",
+        "selectedFrequency": "128",
+        "newsletterActionTaken": "1",
+        "newsletter_special_offers": "true",
+        "signup_terms_and_conditions": "true",
+        "email": "{email}",
+        "password": "{password}",
+        "storeType": "7",
+        "referrer": "https://www.privatesportshop.com/new"
       }
-  },
-  "polysil": {
+    },
+    "polysil": {
       "url": "https://www.polysil.co.uk/my-account/",
       "data": {
-          "email": "{email}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https://www.polysil.co.uk/product/silicone-rubber-kits/",
-          "wc_order_attribution_session_start_time": "2024-08-16+15:14:18",
-          "wc_order_attribution_session_pages": "2",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:129.0)+Gecko/20100101+Firefox/129.0",
-          "woocommerce-register-nonce": "1103282b8c",
-          "_wp_http_referer": "/my-account/",
-          "register": "Register"
+        "email": "{email}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https://www.polysil.co.uk/product/silicone-rubber-kits/",
+        "wc_order_attribution_session_start_time": "2024-08-16+15:14:18",
+        "wc_order_attribution_session_pages": "2",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:129.0)+Gecko/20100101+Firefox/129.0",
+        "woocommerce-register-nonce": "1103282b8c",
+        "_wp_http_referer": "/my-account/",
+        "register": "Register"
       }
-  },
-  "workflowy": {
+    },
+    "workflowy": {
       "url": "https://workflowy.com/signup-landing-form/",
       "data": {
-          "email": "{email}"
+        "email": "{email}"
       }
-  },
-  "freefy": {
+    },
+    "freefy": {
       "url": "https://freefy.app/auth/register",
       "json": {
-          "email": "{email}",
-          "password": "{password}",
-          "password_confirmation": "{password}",
-          "S77Ho1": true,
-          "vLsnoH": true
+        "email": "{email}",
+        "password": "{password}",
+        "password_confirmation": "{password}",
+        "S77Ho1": true,
+        "vLsnoH": true
       }
-  },
-  "cvetochka.by": {
+    },
+    "cvetochka.by": {
       "url": "https://cvetochka.by/auth/register",
       "data": {
-          "login": "{email}",
-          "p1": "Ju'4>GT^zX7Z^]#",
-          "p2": "Ju'4>GT^zX7Z^]#"
+        "login": "{email}",
+        "p1": "Ju'4>GT^zX7Z^]#",
+        "p2": "Ju'4>GT^zX7Z^]#"
       }
-  },
-  "kanceptkrama.by": {
+    },
+    "kanceptkrama.by": {
       "url": "https://kanceptkrama.by/create-account/",
       "data": {
-          "customer_group_id": "1",
-          "firstname": "Adam",
-          "lastname": "gay",
-          "email": "{email}",
-          "telephone": "1234",
-          "address_1": "you are so gay",
-          "custom_field[address][1]": "gay",
-          "city": "for",
-          "postcode": "you",
-          "country_id": "20",
-          "zone_id": "343",
-          "password": "{password}",
-          "confirm": "{password}",
-          "newsletter": "1",
-          "agree": "1"
+        "customer_group_id": "1",
+        "firstname": "Adam",
+        "lastname": "gay",
+        "email": "{email}",
+        "telephone": "1234",
+        "address_1": "you are so gay",
+        "custom_field[address][1]": "gay",
+        "city": "for",
+        "postcode": "you",
+        "country_id": "20",
+        "zone_id": "343",
+        "password": "{password}",
+        "confirm": "{password}",
+        "newsletter": "1",
+        "agree": "1"
       }
-  },
-  "wizishop": {
+    },
+    "wizishop": {
       "url": "https://wizishop.com/api/shops",
       "data": {
-          "prospect": "",
-          "firstname": "adam",
-          "lastname": "gay",
-          "email": "{email}",
-          "password": "^+TWsf47En=?rGE",
-          "login": "",
-          "monoproduct": "0",
-          "secondary": "#252626",
-          "background": "#fff",
-          "timespent": "0",
-          "isAlreadyUser": "false",
-          "id_customer": "",
-          "primary": "#06476D",
-          "type": "wz_default"
+        "prospect": "",
+        "firstname": "adam",
+        "lastname": "gay",
+        "email": "{email}",
+        "password": "^+TWsf47En=?rGE",
+        "login": "",
+        "monoproduct": "0",
+        "secondary": "#252626",
+        "background": "#fff",
+        "timespent": "0",
+        "isAlreadyUser": "false",
+        "id_customer": "",
+        "primary": "#06476D",
+        "type": "wz_default"
       }
-  },
-  "pubmeeple": {
+    },
+    "pubmeeple": {
       "url": "https://pubapi.pubmeeple.com/user/",
       "json": {
-          "name": "registerUser",
-          "param": {
-              "email": "{email}",
-              "name": "{username}"
-          }
+        "name": "registerUser",
+        "param": {
+          "email": "{email}",
+          "name": "{username}"
+        }
       }
-  },
-  "speedrun": {
+    },
+    "speedrun": {
       "url": "https://www.speedrun.com/api/v2/PutAuthSignup",
       "json": {
-          "name": "{username}",
-          "password": "{password}",
-          "email": "{email}",
-          "areaId": "as"
+        "name": "{username}",
+        "password": "{password}",
+        "email": "{email}",
+        "areaId": "as"
       }
-  },
-  "character.ai": {
+    },
+    "character.ai": {
       "url": "https://character.ai/api/trpc/auth.login?batch=1",
       "json": {
-          "0": {
-              "json": {
-                  "email": "{email}"
-              }
+        "0": {
+          "json": {
+            "email": "{email}"
           }
+        }
       }
-  },
-  "oslo sweaters": {
+    },
+    "oslo sweaters": {
       "url": "https://oslosweatershop.com/en/login",
       "data": {
-          "id_gender": "1",
-          "customer_firstname": "gay",
-          "customer_lastname": "boy",
-          "email": "{email}",
-          "passwd": "{password}",
-          "days": "11",
-          "months": "9",
-          "years": "2001",
-          "newsletter": "1",
-          "email_create": "1",
-          "is_new_customer": "1",
-          "back": "my-account",
-          "submitAccount": ""
+        "id_gender": "1",
+        "customer_firstname": "gay",
+        "customer_lastname": "boy",
+        "email": "{email}",
+        "passwd": "{password}",
+        "days": "11",
+        "months": "9",
+        "years": "2001",
+        "newsletter": "1",
+        "email_create": "1",
+        "is_new_customer": "1",
+        "back": "my-account",
+        "submitAccount": ""
       }
-  },
-  "seal france": {
+    },
+    "seal france": {
       "url": "https://www.seal-france.shop/private",
       "data": {
-          "id_customer": "",
-          "firstname": "monkey",
-          "lastname": "adamisgay",
-          "email_account": "{email}",
-          "password": "{password}",
-          "newsletter": "1",
-          "submitCreate": "1"
+        "id_customer": "",
+        "firstname": "monkey",
+        "lastname": "adamisgay",
+        "email_account": "{email}",
+        "password": "{password}",
+        "newsletter": "1",
+        "submitCreate": "1"
       }
-  },
-  "my candle shop france": {
+    },
+    "my candle shop france": {
       "url": "https://my-candle-shop.fr/mon-compte/",
       "data": {
-          "username": "{username}",
-          "email": "{email}",
-          "password": "{password}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https://my-candle-shop.fr/",
-          "wc_order_attribution_session_start_time": "2024-08-23+19:33:30",
-          "wc_order_attribution_session_pages": "2",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:129.0)+Gecko/20100101+Firefox/129.0",
-          "woocommerce-register-nonce": "3c8b1b741b",
-          "_wp_http_referer": "/mon-compte/",
-          "register": "Sâ€™enregistrer"
+        "username": "{username}",
+        "email": "{email}",
+        "password": "{password}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https://my-candle-shop.fr/",
+        "wc_order_attribution_session_start_time": "2024-08-23+19:33:30",
+        "wc_order_attribution_session_pages": "2",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:129.0)+Gecko/20100101+Firefox/129.0",
+        "woocommerce-register-nonce": "3c8b1b741b",
+        "_wp_http_referer": "/mon-compte/",
+        "register": "Sâ€™enregistrer"
       }
-  },
-  "autour du gateau": {
+    },
+    "autour du gateau": {
       "url": "https://www.autourdugateau.fr/connexion?create_account=1",
       "data": {
-          "id_customer": "",
-          "id_gender": "1",
-          "firstname": "fuck",
-          "lastname": "you",
-          "email": "{email}",
-          "password": "{password}",
-          "birthday": "09/11/2001",
-          "psgdpr": "1",
-          "sponsorship": "",
-          "submitCreate": "1"
+        "id_customer": "",
+        "id_gender": "1",
+        "firstname": "fuck",
+        "lastname": "you",
+        "email": "{email}",
+        "password": "{password}",
+        "birthday": "09/11/2001",
+        "psgdpr": "1",
+        "sponsorship": "",
+        "submitCreate": "1"
       }
-  },
-  "chezbogato": {
+    },
+    "chezbogato": {
       "url": "https://chezbogato.fr/module/leoquicklogin/leocustomer",
       "data": {
-          "ajax": "1",
-          "action": "create-account",
-          "lql-register-firstname": "adam",
-          "lql-register-lastname": "gay",
-          "lql-register-email": "{email}",
-          "lql-register-pass": "{password}"
+        "ajax": "1",
+        "action": "create-account",
+        "lql-register-firstname": "adam",
+        "lql-register-lastname": "gay",
+        "lql-register-email": "{email}",
+        "lql-register-pass": "{password}"
       }
-  },
-  "indiamart": {
+    },
+    "indiamart": {
       "url": "https://utils.imimg.com/header/js/login.php",
       "data": {
-          "username": "{email}",
-          "iso": "FR",
-          "modid": "IMHOME",
-          "format": "JSON",
-          "create_user": "1",
-          "originalreferer": "https://www.indiamart.com/?srsltid=AfmBOoq3G6P-QF4jtOe4iGJTsGj2H6oKq-KXNc5KopPzMz6Uqe6iDU-u",
-          "GEOIP_COUNTRY_ISO": "FR",
-          "ip": "185.176.148.160",
-          "screen_name": "Sign+IN+Form+Desktop",
-          "Lat_val": "",
-          "Long_val": "",
-          "country": "France",
-          "service_code": "5"
+        "username": "{email}",
+        "iso": "FR",
+        "modid": "IMHOME",
+        "format": "JSON",
+        "create_user": "1",
+        "originalreferer": "https://www.indiamart.com/?srsltid=AfmBOoq3G6P-QF4jtOe4iGJTsGj2H6oKq-KXNc5KopPzMz6Uqe6iDU-u",
+        "GEOIP_COUNTRY_ISO": "FR",
+        "ip": "185.176.148.160",
+        "screen_name": "Sign+IN+Form+Desktop",
+        "Lat_val": "",
+        "Long_val": "",
+        "country": "France",
+        "service_code": "5"
       }
-  },
-  "ilovefancydress": {
+    },
+    "ilovefancydress": {
       "url": "https://ilovefancydress.com/account/sign-up",
       "data": {
-          "_token": "",
-          "first_name": "stupid",
-          "last_name": "person",
-          "email": "{email}",
-          "mobile": "1234567890",
-          "password": "{password}",
-          "password_confirmation": "{password}"
+        "_token": "",
+        "first_name": "stupid",
+        "last_name": "person",
+        "email": "{email}",
+        "mobile": "1234567890",
+        "password": "{password}",
+        "password_confirmation": "{password}"
       }
-  },
-  "pixlr": {
+    },
+    "pixlr": {
       "url": "https://pixlr.com/auth/register",
       "json": {
-          "country": "RO",
-          "email": "{email}",
-          "newsletter": true,
-          "password": "{password}"
+        "country": "RO",
+        "email": "{email}",
+        "newsletter": true,
+        "password": "{password}"
       }
-  },
-  "9/11 memorial": {
+    },
+    "9/11 memorial": {
       "url": "https://www.911memorial.org/user/register",
       "data": {
-          "mail": "{email}",
-          "name": "{username}",
-          "pass[pass1]": "sorry123_AA",
-          "pass[pass2]": "sorry123_AA",
-          "field_address[given_name]": "Michael",
-          "field_address[family_name]": "Jackson",
-          "registry_address[country_code]": "",
-          "registry_address[langcode]": "",
-          "registry_phone": "",
-          "registry_website": "",
-          "patron_id": "",
-          "is_subscribe": "1",
-          "form_build_id": "form-sfwrQ8notWGt6qZMvrB88Q181mzhOVlEZHAJqWV9LxA",
-          "form_id": "user_register_form",
-          "honeypot_time": "Zo79Gmi_hhrBQsHqYb846uVAmCEOSY4zzto-2ptgImw",
-          "op": "Create+new+account",
-          "url": ""
+        "mail": "{email}",
+        "name": "{username}",
+        "pass[pass1]": "sorry123_AA",
+        "pass[pass2]": "sorry123_AA",
+        "field_address[given_name]": "Michael",
+        "field_address[family_name]": "Jackson",
+        "registry_address[country_code]": "",
+        "registry_address[langcode]": "",
+        "registry_phone": "",
+        "registry_website": "",
+        "patron_id": "",
+        "is_subscribe": "1",
+        "form_build_id": "form-sfwrQ8notWGt6qZMvrB88Q181mzhOVlEZHAJqWV9LxA",
+        "form_id": "user_register_form",
+        "honeypot_time": "Zo79Gmi_hhrBQsHqYb846uVAmCEOSY4zzto-2ptgImw",
+        "op": "Create+new+account",
+        "url": ""
       }
-  },
-  "get pronounce": {
+    },
+    "get pronounce": {
       "url": "https://kapi.getpronounce.com/auth",
       "json": {
-          "email": "{email}"
+        "email": "{email}"
       }
-  },
-  "i am midnight": {
+    },
+    "i am midnight": {
       "url": "https://www.iammidnight.com/_api/wix-forms/v1/submit-form",
       "json": {
-          "emailConfig": {
-              "sendToOwnerAndEmails": {
-                  "emailIds": []
-              }
-          },
-          "fields": [
-              {
-                  "email": {
-                      "tag": "main",
-                      "value": "{email}"
-                  },
-                  "fieldId": "comp-leo26jkr",
-                  "label": "E MAIL"
-              }
-          ],
-          "formProperties": {
-              "formId": "comp-leo26jko",
-              "formName": "Newsletter 3"
-          },
-          "labelKeys": [
-              "custom.newsletter-3"
-          ],
-          "viewMode": "Site"
+        "emailConfig": {
+          "sendToOwnerAndEmails": {
+            "emailIds": []
+          }
+        },
+        "fields": [
+          {
+            "email": {
+              "tag": "main",
+              "value": "{email}"
+            },
+            "fieldId": "comp-leo26jkr",
+            "label": "E MAIL"
+          }
+        ],
+        "formProperties": {
+          "formId": "comp-leo26jko",
+          "formName": "Newsletter 3"
+        },
+        "labelKeys": [
+          "custom.newsletter-3"
+        ],
+        "viewMode": "Site"
       }
-  },
-  "farmfoods": {
+    },
+    "farmfoods": {
       "note": "only works with trusted emails like gmail, hotmail, yahoo, etc",
       "url": "https://www.farmfoods.co.uk/includes/mailing_list/join-club.php",
       "data": {
-          "email_address": "{email}",
-          "campaign": ""
+        "email_address": "{email}",
+        "campaign": ""
       }
-  },
-  "hubspot": {
+    },
+    "hubspot": {
       "url": "https://app.hubspot.com/api/signup/v1/crm/initialInterest?hs_static_app=signup-ui-lego&hs_static_app_version=1.15010",
       "json": {
-          "email": "{email}",
-          "experimentParameters": [
-              "acq-0149-group-control"
-          ],
-          "flowKey": "crm",
-          "languageOptions": "en",
-          "legalConsent": {
-              "consentText": "Weâ€™re committed to your privacy. HubSpot uses the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our https://legal.hubspot.com/privacy-policy",
-              "legitimateInterest": true
-          },
-          "locale": "English",
-          "pageName": "HubSpot Signup Interest Form",
-          "pageUri": "https://app.hubspot.com/signup-hubspot/",
-          "queryParams": {
-              "hubs_signup-cta": "login-signup-cta",
-              "hubs_signup-url": "app.hubspot.com/login",
-              "step": "code_verification",
-              "uuid": "6c19e42b-30fd-43ed-86e4-e54caefa24ae"
-          },
-          "referrerData": {
-              "hostName": "app.hubspot.com",
-              "href": "https://app.hubspot.com/login",
-              "pathName": "/login",
-              "search": ""
-          },
-          "shouldSkipValidation": true,
-          "signupProperties": {
-              "signupDevice": "desktop",
-              "signupMode": "standalone",
-              "signupType": "CrmSignup",
-              "signupVersion": "odyssey"
-          },
-          "signupVerificationType": "email-by-code"
+        "email": "{email}",
+        "experimentParameters": [
+          "acq-0149-group-control"
+        ],
+        "flowKey": "crm",
+        "languageOptions": "en",
+        "legalConsent": {
+          "consentText": "Weâ€™re committed to your privacy. HubSpot uses the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our https://legal.hubspot.com/privacy-policy",
+          "legitimateInterest": true
+        },
+        "locale": "English",
+        "pageName": "HubSpot Signup Interest Form",
+        "pageUri": "https://app.hubspot.com/signup-hubspot/",
+        "queryParams": {
+          "hubs_signup-cta": "login-signup-cta",
+          "hubs_signup-url": "app.hubspot.com/login",
+          "step": "code_verification",
+          "uuid": "6c19e42b-30fd-43ed-86e4-e54caefa24ae"
+        },
+        "referrerData": {
+          "hostName": "app.hubspot.com",
+          "href": "https://app.hubspot.com/login",
+          "pathName": "/login",
+          "search": ""
+        },
+        "shouldSkipValidation": true,
+        "signupProperties": {
+          "signupDevice": "desktop",
+          "signupMode": "standalone",
+          "signupType": "CrmSignup",
+          "signupVersion": "odyssey"
+        },
+        "signupVerificationType": "email-by-code"
       }
-  },
-  "lemonde": {
+    },
+    "lemonde": {
       "url": "https://secure.lemonde.fr/sfuser/register",
       "data": {
-          "mail": "{email}",
-          "password": "{password}",
-          "optin_lemonde": "1",
-          "optin_partner": "1",
-          "newsletters": "[]",
-          "article": "",
-          "origin": "web",
-          "c3FlK213YUt5RkxQNnl4VU1OT2FBQT09": "RE83NHNuSkFHeU5Sc0l2L0RIRjU0QT09"
+        "mail": "{email}",
+        "password": "{password}",
+        "optin_lemonde": "1",
+        "optin_partner": "1",
+        "newsletters": "[]",
+        "article": "",
+        "origin": "web",
+        "c3FlK213YUt5RkxQNnl4VU1OT2FBQT09": "RE83NHNuSkFHeU5Sc0l2L0RIRjU0QT09"
       }
-  },
-  "nude project": {
+    },
+    "nude project": {
       "url": "https://nude-project.com/contact",
       "data": {
-          "form_type": "customer",
-          "utf8": "âœ“",
-          "contact[tags]": "newsletter",
-          "contact[email]": "{email}",
-          "form_key": "dpuwi6ga47bdz7o46pithwm6miaq3eqt"
+        "form_type": "customer",
+        "utf8": "âœ“",
+        "contact[tags]": "newsletter",
+        "contact[email]": "{email}",
+        "form_key": "dpuwi6ga47bdz7o46pithwm6miaq3eqt"
       }
-  },
-  "united nude": {
+    },
+    "united nude": {
       "url": "https://unitednude.com/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "âœ“",
-          "customer[first_name]": "Great",
-          "customer[last_name]": "Hound",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "7dbc67c3-8558-4c6a-9e97-b3db40d57856"
+        "form_type": "create_customer",
+        "utf8": "âœ“",
+        "customer[first_name]": "Great",
+        "customer[last_name]": "Hound",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "7dbc67c3-8558-4c6a-9e97-b3db40d57856"
       }
-  },
-  "semilac": {
+    },
+    "semilac": {
       "url": "https://semilac.co.uk/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "âœ“",
-          "customer[first_name]": "gay",
-          "customer[last_name]": "poop",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "a66be7f9-10c9-4d0e-9c47-f7b61feb647a"
+        "form_type": "create_customer",
+        "utf8": "âœ“",
+        "customer[first_name]": "gay",
+        "customer[last_name]": "poop",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "a66be7f9-10c9-4d0e-9c47-f7b61feb647a"
       }
-  },
-  "love and lemons": {
+    },
+    "love and lemons": {
       "url": "https://www.loveandlemons.com/subscribe/?form=1950445",
       "data": {
-          "email": "{email}",
-          "first_name": "lime",
-          "ak_bib": "1724873530065",
-          "ak_bfs": "1724873531990",
-          "ak_bkpc": "7",
-          "ak_bkp": "110;213,76;131,70;84,68;186,14;173;133,71;",
-          "ak_bmc": "82;83,1504;103,722;",
-          "ak_bmcc": "3",
-          "ak_bmk": "",
-          "ak_bck": "",
-          "ak_bmmc": "3",
-          "ak_btmc": "0",
-          "ak_bsc": "0",
-          "ak_bte": "",
-          "ak_btec": "0",
-          "ak_bmm": "443,1181;313,294;520,1137;"
+        "email": "{email}",
+        "first_name": "lime",
+        "ak_bib": "1724873530065",
+        "ak_bfs": "1724873531990",
+        "ak_bkpc": "7",
+        "ak_bkp": "110;213,76;131,70;84,68;186,14;173;133,71;",
+        "ak_bmc": "82;83,1504;103,722;",
+        "ak_bmcc": "3",
+        "ak_bmk": "",
+        "ak_bck": "",
+        "ak_bmmc": "3",
+        "ak_btmc": "0",
+        "ak_bsc": "0",
+        "ak_bte": "",
+        "ak_btec": "0",
+        "ak_bmm": "443,1181;313,294;520,1137;"
       }
-  },
-  "glace-hdg": {
+    },
+    "glace-hdg": {
       "url": "https://www.glace-hdg.com/connexion?create_account=1",
       "data": {
-          "id_gender": "1",
-          "firstname": "poo",
-          "lastname": "pee",
-          "email": "{email}",
-          "password": "{password}",
-          "birthday": "09/11/2001",
-          "optin": "1",
-          "customer_privacy": "1",
-          "newsletter": "1",
-          "psgdpr": "1",
-          "submitCreate": "1"
+        "id_gender": "1",
+        "firstname": "poo",
+        "lastname": "pee",
+        "email": "{email}",
+        "password": "{password}",
+        "birthday": "09/11/2001",
+        "optin": "1",
+        "customer_privacy": "1",
+        "newsletter": "1",
+        "psgdpr": "1",
+        "submitCreate": "1"
       }
-  },
-  "sweetgenie": {
+    },
+    "sweetgenie": {
       "url": "https://www.sweetgenie.co.uk/my-account/",
       "data": {
-          "email": "{email}",
-          "password": "{password}",
-          "woocommerce-register-nonce": "01450c3630",
-          "_wp_http_referer": "/my-account/",
-          "register": "Register"
+        "email": "{email}",
+        "password": "{password}",
+        "woocommerce-register-nonce": "01450c3630",
+        "_wp_http_referer": "/my-account/",
+        "register": "Register"
       }
-  },
-  "zatu": {
+    },
+    "zatu": {
       "url": "https://www.board-game.co.uk/my-account/?state=register",
       "data": {
-          "email": "{email}",
-          "password": "asdfasdf",
-          "customer_opt_field": "1",
-          "woocommerce-register-nonce": "908774ff86",
-          "_wp_http_referer": "/my-account/",
-          "register": "Register"
+        "email": "{email}",
+        "password": "asdfasdf",
+        "customer_opt_field": "1",
+        "woocommerce-register-nonce": "908774ff86",
+        "_wp_http_referer": "/my-account/",
+        "register": "Register"
       }
-  },
-  "joe and sephs": {
+    },
+    "joe and sephs": {
       "url": "https://www.joeandsephs.co.uk/login?action=register&returnurl=",
       "data": {
-          "UserEmail": "{email}",
-          "UserEmailConfirm": "{email}",
-          "UserPassword": "{password}",
-          "UserPasswordConfirm": "{password}",
-          "UserFirstname": "bleed",
-          "UserLastname": "itout",
-          "newsletter": "Y"
+        "UserEmail": "{email}",
+        "UserEmailConfirm": "{email}",
+        "UserPassword": "{password}",
+        "UserPasswordConfirm": "{password}",
+        "UserFirstname": "bleed",
+        "UserLastname": "itout",
+        "newsletter": "Y"
       }
-  },
-  "upcoming": {
+    },
+    "upcoming": {
       "url": "https://upcoming.nl/api/subscribe/esp",
       "json": {
-          "email": "{email}",
-          "isDirty": true,
-          "isValid": true
+        "email": "{email}",
+        "isDirty": true,
+        "isValid": true
       }
-  },
-  "software city": {
+    },
+    "software city": {
       "note": "works but has long delay",
       "url": "https://webflow.com/api/v1/form/637cea42f55f4c602965f7a4",
       "data": {
-          "name": "Newsletter+Signup",
-          "pageId": "646f69d282334172e6e5670b",
-          "elementId": "2713e924-4ab4-2ada-6a0c-671725efa756",
-          "source": "https://www.sunderlandsoftwarecity.com/",
-          "test": "false",
-          "fields[First%20Name]": "adam",
-          "fields[Last%20Name]": "gay",
-          "fields[Email]": "{email}",
-          "fields[Consent]": "true",
-          "dolphin": "false"
+        "name": "Newsletter+Signup",
+        "pageId": "646f69d282334172e6e5670b",
+        "elementId": "2713e924-4ab4-2ada-6a0c-671725efa756",
+        "source": "https://www.sunderlandsoftwarecity.com/",
+        "test": "false",
+        "fields[First%20Name]": "adam",
+        "fields[Last%20Name]": "gay",
+        "fields[Email]": "{email}",
+        "fields[Consent]": "true",
+        "dolphin": "false"
       }
-  },
-  "syntystore": {
+    },
+    "syntystore": {
       "url": "https://syntystore.com/en-gb/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "adadada",
-          "customer[last_name]": "afasfsaf",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "8aeb28c8-65ba-40be-8a67-828b052ffb3f"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "adadada",
+        "customer[last_name]": "afasfsaf",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "8aeb28c8-65ba-40be-8a67-828b052ffb3f"
       }
-  },
-  "clipchamp": {
+    },
+    "clipchamp": {
       "url": "https://app.clipchamp.com/v2/auth/email",
       "json": {
-          "email": "{email}",
-          "locale": "en-US"
+        "email": "{email}",
+        "locale": "en-US"
       }
-  },
-  "world of books": {
+    },
+    "world of books": {
       "url": "https://www.worldofbooks.com/en-gb/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "ffffff",
-          "customer[last_name]": "ggggggg",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "customer[accepts_marketing]": [
-              "false",
-              "on"
-          ],
-          "accepts-terms": "on"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "ffffff",
+        "customer[last_name]": "ggggggg",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "customer[accepts_marketing]": [
+          "false",
+          "on"
+        ],
+        "accepts-terms": "on"
       }
-  },
-  "yell": {
+    },
+    "yell": {
       "url": "https://login.yell.com/dbconnections/signup",
       "json": {
-          "client_id": "OgiDK4Rr7lovV0E6iWCKRVjpWQFv8qY9",
-          "connection": "CAS-DB",
-          "email": "{email}",
-          "password": "{password}",
-          "state": "hKFo2SBfVnNaM1RYN2xpbU1vNXJMOS1EYlFWa2dPRG40ZHVOMaFupWxvZ2luo3RpZNkgcnBqZDV6d1M0eGd3VmVmeXQyZHR3QklFN2g3UTRUM2-jY2lk2SBPZ2lESzRScjdsb3ZWMEU2aVdDS1JWanBXUUZ2OHFZOQ",
-          "user_metadata": {
-              "first_name": "eeeee",
-              "last_name": "gggggg",
-              "receive_marketing": "true"
-          }
+        "client_id": "OgiDK4Rr7lovV0E6iWCKRVjpWQFv8qY9",
+        "connection": "CAS-DB",
+        "email": "{email}",
+        "password": "{password}",
+        "state": "hKFo2SBfVnNaM1RYN2xpbU1vNXJMOS1EYlFWa2dPRG40ZHVOMaFupWxvZ2luo3RpZNkgcnBqZDV6d1M0eGd3VmVmeXQyZHR3QklFN2g3UTRUM2-jY2lk2SBPZ2lESzRScjdsb3ZWMEU2aVdDS1JWanBXUUZ2OHFZOQ",
+        "user_metadata": {
+          "first_name": "eeeee",
+          "last_name": "gggggg",
+          "receive_marketing": "true"
+        }
       }
-  },
-  "email your future self": {
+    },
+    "email your future self": {
       "note": "not only will they receive an email now but they will also receive one 10 years later XD.. wait 2029 is closer than that wtf",
       "url": "https://www.emailyourfutureself.com/email",
       "data": {
-          "note": "remember+to+drink+water",
-          "email": "{email}",
-          "name": "Pisser",
-          "send_at": "2029-01-01"
+        "note": "remember+to+drink+water",
+        "email": "{email}",
+        "name": "Pisser",
+        "send_at": "2029-01-01"
       }
-  },
-  "ironvest": {
+    },
+    "ironvest": {
       "url": "https://api.ironvest.com/v1/user/verifyEmail",
       "json": {
-          "browser": "Firefox",
-          "deviceId": "9BAE1BB2DDEE4D9289F2A0372A87314D",
-          "email": "{email}",
-          "firstName": "",
-          "product": "Webapp",
-          "tag": "webapp",
-          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
-          "version": "web-8.2.1223"
+        "browser": "Firefox",
+        "deviceId": "9BAE1BB2DDEE4D9289F2A0372A87314D",
+        "email": "{email}",
+        "firstName": "",
+        "product": "Webapp",
+        "tag": "webapp",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+        "version": "web-8.2.1223"
       }
-  },
-  "trashmail": {
+    },
+    "trashmail": {
       "note": "the email includes your ip address so if ur paranoid then use a vpn",
       "url": "https://trashmail.com/?api=1&cmd=register_account&lang=en",
       "json": {
-          "email": "{email}",
-          "newsletter": true,
-          "pass": "{password}",
-          "pass-cfrm": "{password}",
-          "user": "{username}"
+        "email": "{email}",
+        "newsletter": true,
+        "pass": "{password}",
+        "pass-cfrm": "{password}",
+        "user": "{username}"
       }
-  },
-  "tefl": {
+    },
+    "tefl": {
       "url": "https://www.tefl.org/.netlify/functions/register",
       "json": {
-          "country": "GB",
-          "dateOfBirth": null,
-          "email": "{email}",
-          "firstname": "aaa",
-          "lastname": "bbbbbbb",
-          "line1": null,
-          "line2": null,
-          "password": "{password}",
-          "postcode": null,
-          "region": null,
-          "title": null,
-          "town": null
+        "country": "GB",
+        "dateOfBirth": null,
+        "email": "{email}",
+        "firstname": "aaa",
+        "lastname": "bbbbbbb",
+        "line1": null,
+        "line2": null,
+        "password": "{password}",
+        "postcode": null,
+        "region": null,
+        "title": null,
+        "town": null
       }
-  },
-  "barnowltrust": {
+    },
+    "barnowltrust": {
       "url": "https://www.barnowltrust.org.uk/shop/my-account/",
       "data": {
-          "email": "{email}",
-          "password": "{password}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https://www.barnowltrust.org.uk/",
-          "wc_order_attribution_session_start_time": "2024-09-25+15:11:10",
-          "wc_order_attribution_session_pages": "2",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
-          "woocommerce-register-nonce": "a24d3959d1",
-          "_wp_http_referer": "/shop/my-account/",
-          "register": "Register"
+        "email": "{email}",
+        "password": "{password}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https://www.barnowltrust.org.uk/",
+        "wc_order_attribution_session_start_time": "2024-09-25+15:11:10",
+        "wc_order_attribution_session_pages": "2",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
+        "woocommerce-register-nonce": "a24d3959d1",
+        "_wp_http_referer": "/shop/my-account/",
+        "register": "Register"
       }
-  },
-  "ilcentres": {
+    },
+    "ilcentres": {
       "url": "https://smtpjs.com/v3/smtpjs.aspx?",
       "data": {
-          "{\"SecureToken\":\"75acbe6e-3900-45cb-b428-502465ba7aa4\",\"To\":\"{email}\",\"From\":\"webapplication@ilcentres.com\",\"Subject\":\"Message Sent ILC\",\"Body\":\"Hey aaaaa! We will get back to you within 48 hours.\",\"nocache\":505489,\"Action\":\"Send\"}": ""
+        "{\"SecureToken\":\"75acbe6e-3900-45cb-b428-502465ba7aa4\",\"To\":\"{email}\",\"From\":\"webapplication@ilcentres.com\",\"Subject\":\"Message Sent ILC\",\"Body\":\"Hey aaaaa! We will get back to you within 48 hours.\",\"nocache\":505489,\"Action\":\"Send\"}": ""
       }
-  },
-  "solgar": {
+    },
+    "solgar": {
       "url": "https://solgar.co.uk/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "aaaaaaaa",
-          "customer[last_name]": "ffffffff",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "96bcd524-35c2-4a38-b46b-be090437476e"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "aaaaaaaa",
+        "customer[last_name]": "ffffffff",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "96bcd524-35c2-4a38-b46b-be090437476e"
       }
-  },
-  "avogel": {
+    },
+    "avogel": {
       "url": "https://www.avogel.co.uk/my-avogel/",
       "data": {
-          "__usedField[]": [
-              "Username",
-              "Password",
-              "Password2"
-          ],
-          "s[Username]": "{email}",
-          "s[Password]": "{password}",
-          "s[Password2]": "{password}",
-          "register": "",
-          "s[MyAVogel_User]": "1"
+        "__usedField[]": [
+          "Username",
+          "Password",
+          "Password2"
+        ],
+        "s[Username]": "{email}",
+        "s[Password]": "{password}",
+        "s[Password2]": "{password}",
+        "register": "",
+        "s[MyAVogel_User]": "1"
       }
-  },
-  "firehouse subs": {
+    },
+    "firehouse subs": {
       "note": "works, just super delayed",
       "url": "https://use1-prod-fhs-gateway.rbictg.com/graphql",
       "json": {
-          "operationName": "SignUp",
-          "query": "mutation SignUp($input: SignUpUserInput!) {\n  signUp(userInfo: $input)\n}\n",
-          "variables": {
-              "input": {
-                  "country": "USA",
-                  "dob": "",
-                  "name": "ff",
-                  "phoneNumber": "+12312341234",
-                  "platform": "web",
-                  "stage": "prod",
-                  "userName": "{email}",
-                  "wantsPromotionalEmails": true,
-                  "zipcode": ""
-              }
+        "operationName": "SignUp",
+        "query": "mutation SignUp($input: SignUpUserInput!) {\n  signUp(userInfo: $input)\n}\n",
+        "variables": {
+          "input": {
+            "country": "USA",
+            "dob": "",
+            "name": "ff",
+            "phoneNumber": "+12312341234",
+            "platform": "web",
+            "stage": "prod",
+            "userName": "{email}",
+            "wantsPromotionalEmails": true,
+            "zipcode": ""
           }
+        }
       }
-  },
-  "part two": {
+    },
+    "part two": {
       "url": "https://notification.parttwo.com/api/v1.0/Notification/CreateNewLead",
       "json": {
-          "country": "EU",
-          "email": "{email}",
-          "firstName": "ddddd",
-          "gender": "1",
-          "lastName": "hhhhhhhhhhhh",
-          "marketingSource": 1
+        "country": "EU",
+        "email": "{email}",
+        "firstName": "ddddd",
+        "gender": "1",
+        "lastName": "hhhhhhhhhhhh",
+        "marketingSource": 1
       }
-  },
-  "mylands": {
+    },
+    "mylands": {
       "url": "https://manage.kmail-lists.com/subscriptions/subscribe?g=VZXxnF",
       "data": {
-          "$email": "{email}",
-          "$first_name": "aaaaa",
-          "$last_name": "gggggggg"
+        "$email": "{email}",
+        "$first_name": "aaaaa",
+        "$last_name": "gggggggg"
       }
-  },
-  "classic hymers": {
+    },
+    "classic hymers": {
       "note": "sometimes delay but sends eventually",
       "url": "https://classichymers.co.uk/my-account/",
       "data": {
-          "email": "{email}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_session_entry": "https://classichymers.co.uk/t-shirt-shop/blueprint-A5bdf388be447427a4cba944b?productType=812&sellable=QzbreGrjqzsNx2R8MB7e-812-7&appearance=2",
-          "wc_order_attribution_session_start_time": "2024-09-25+18:05:27",
-          "wc_order_attribution_session_pages": "2",
-          "wc_order_attribution_session_count": "2",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
-          "woocommerce-register-nonce": "063513d579",
-          "im not a nonce": ":(",
-          "_wp_http_referer": "/my-account/",
-          "register": "Register"
+        "email": "{email}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_session_entry": "https://classichymers.co.uk/t-shirt-shop/blueprint-A5bdf388be447427a4cba944b?productType=812&sellable=QzbreGrjqzsNx2R8MB7e-812-7&appearance=2",
+        "wc_order_attribution_session_start_time": "2024-09-25+18:05:27",
+        "wc_order_attribution_session_pages": "2",
+        "wc_order_attribution_session_count": "2",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
+        "woocommerce-register-nonce": "063513d579",
+        "im not a nonce": ":(",
+        "_wp_http_referer": "/my-account/",
+        "register": "Register"
       }
-  },
-  "seabirds ltd": {
+    },
+    "seabirds ltd": {
       "url": "https://api.ekmresponse.com/api/recipient/signup",
       "data": {
-          "Email": "{email}",
-          "UserID": "17499",
-          "GroupID": "46598",
-          "Hash2": "a823e4017a1963bf027651050f44a7bf"
+        "Email": "{email}",
+        "UserID": "17499",
+        "GroupID": "46598",
+        "Hash2": "a823e4017a1963bf027651050f44a7bf"
       }
-  },
-  "enfield council": {
+    },
+    "enfield council": {
       "url": "https://enfield-council.msgfocus.com/k/Enfield-Council/sign_up",
       "data": {
-          "email_22": "{email}",
-          "submit": "Submit"
+        "email_22": "{email}",
+        "submit": "Submit"
       }
-  },
-  "justgeek": {
+    },
+    "justgeek": {
       "url": "https://www.justgeek.com/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "gggg",
-          "customer[last_name]": "hhhhhhhh",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "gggg",
+        "customer[last_name]": "hhhhhhhh",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}"
       }
-  },
-  "onepagelove": {
+    },
+    "onepagelove": {
       "url": "https://assets.mailerlite.com/jsonp/329724/forms/101631485514089599/subscribe",
       "params": {
-          "callback": "jQuery18307765256266183702_1727373695399",
-          "fields[email]": "{email}",
-          "ml-submit": "1",
-          "anticsrf": "true",
-          "ajax": "1",
-          "guid": "40cd1442-229c-5cbe-409a-7f7252ba24c4",
-          "_": "{timestamp}"
+        "callback": "jQuery18307765256266183702_1727373695399",
+        "fields[email]": "{email}",
+        "ml-submit": "1",
+        "anticsrf": "true",
+        "ajax": "1",
+        "guid": "40cd1442-229c-5cbe-409a-7f7252ba24c4",
+        "_": "{timestamp}"
       }
-  },
-  "scribble together": {
+    },
+    "scribble together": {
       "note": "super fucking delayed but sends after like an hour",
       "url": "https://scribbletogether.com/api/profile/register",
       "json": {
-          "user": {
-              "email": "{email}",
-              "emailSubscription": true,
-              "name": "{username}",
-              "termsConditions": true
-          }
+        "user": {
+          "email": "{email}",
+          "emailSubscription": true,
+          "name": "{username}",
+          "termsConditions": true
+        }
       }
-  },
-  "cnet": {
+    },
+    "cnet": {
       "url": "https://login.cnet.com/dbconnections/signup",
       "json": {
-          "client_id": "6kopmG6cro0U8IegelHewQXqyABV5uxH",
-          "connection": "Username-Password-Authentication",
-          "email": "{email}",
-          "password": "{password}"
+        "client_id": "6kopmG6cro0U8IegelHewQXqyABV5uxH",
+        "connection": "Username-Password-Authentication",
+        "email": "{email}",
+        "password": "{password}"
       }
-  },
-  "jo cooks": {
+    },
+    "jo cooks": {
       "note": "WHO THE FUCK IS JOE.. sorry",
       "url": "https://jocooks.us10.list-manage.com/subscribe/post-json",
       "params": {
-          "u": "5ba57158846b6743ab030d3cb",
-          "id": "aba32560a5",
-          "f_id": "0027cbe1f0",
-          "c": "jQuery19009157912783843248_1727375939161",
-          "FNAME": "aaaaaaaaaa",
-          "EMAIL": "{email}",
-          "b_5ba57158846b6743ab030d3cb_aba32560a5": "",
-          "subscribe": "Join Now!",
-          "_": "{timestamp}"
+        "u": "5ba57158846b6743ab030d3cb",
+        "id": "aba32560a5",
+        "f_id": "0027cbe1f0",
+        "c": "jQuery19009157912783843248_1727375939161",
+        "FNAME": "aaaaaaaaaa",
+        "EMAIL": "{email}",
+        "b_5ba57158846b6743ab030d3cb_aba32560a5": "",
+        "subscribe": "Join Now!",
+        "_": "{timestamp}"
       }
-  },
-  "everplans": {
+    },
+    "everplans": {
       "url": "https://my.everplans.com/api/v1/users",
       "json": {
-          "agreementAccepted": true,
-          "email": "{email}",
-          "ep_ref_data": "{\"ep_ref\":\"\"}",
-          "password": "{password}",
-          "password_confirmation": "{password}",
-          "sign_up_medium": "web standard signup"
+        "agreementAccepted": true,
+        "email": "{email}",
+        "ep_ref_data": "{\"ep_ref\":\"\"}",
+        "password": "{password}",
+        "password_confirmation": "{password}",
+        "sign_up_medium": "web standard signup"
       }
-  },
-  "webby awards": {
+    },
+    "webby awards": {
       "url": "https://api.recogmedia.net/api/Account/Register",
       "json": {
-          "AppTypeID": 1,
-          "ConfirmPassword": "{password}",
-          "Email": "{email}",
-          "FirstName": "Dog",
-          "LastName": "Cat",
-          "Organization": "Dog food",
-          "OrganizationUrl": "https://dogtime.com",
-          "Password": "{password}",
-          "PropertyID": 1,
-          "ProvidedConsent": true,
-          "Title": "Master Baiter"
+        "AppTypeID": 1,
+        "ConfirmPassword": "{password}",
+        "Email": "{email}",
+        "FirstName": "Dog",
+        "LastName": "Cat",
+        "Organization": "Dog food",
+        "OrganizationUrl": "https://dogtime.com",
+        "Password": "{password}",
+        "PropertyID": 1,
+        "ProvidedConsent": true,
+        "Title": "Master Baiter"
       }
-  },
-  "buzzard reptile": {
+    },
+    "buzzard reptile": {
       "url": "https://buzzardreptile.co.uk/",
       "data": {
-          "email": "{email}",
-          "password": "{password}",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https://buzzardreptile.co.uk/",
-          "wc_order_attribution_session_start_time": "2024-09-26+19:43:40",
-          "wc_order_attribution_session_pages": "1",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
-          "automatewoo_optin": "on",
-          "woocommerce-register-nonce": "6ba42568c4",
-          "_wp_http_referer": "/",
-          "register": "Register"
+        "email": "{email}",
+        "password": "{password}",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https://buzzardreptile.co.uk/",
+        "wc_order_attribution_session_start_time": "2024-09-26+19:43:40",
+        "wc_order_attribution_session_pages": "1",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:130.0)+Gecko/20100101+Firefox/130.0",
+        "automatewoo_optin": "on",
+        "woocommerce-register-nonce": "6ba42568c4",
+        "_wp_http_referer": "/",
+        "register": "Register"
       }
-  },
-  "mykeeper": {
+    },
+    "mykeeper": {
       "url": "https://api.prod.keeper.memorial/v1/auth/user/signup",
       "json": {
-          "main": {
-              "email": "{email}",
-              "first_name": "aaaaaaaaa",
-              "gender": "O",
-              "last_name": "aaaaaaaaaaaaaaaa",
-              "password": "{password}"
-          },
-          "org_uuid": null,
-          "signup_type": "self"
+        "main": {
+          "email": "{email}",
+          "first_name": "aaaaaaaaa",
+          "gender": "O",
+          "last_name": "aaaaaaaaaaaaaaaa",
+          "password": "{password}"
+        },
+        "org_uuid": null,
+        "signup_type": "self"
       }
-  },
-  "wyse london": {
+    },
+    "wyse london": {
       "url": "https://www.wyselondon.com/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "return_to": [
-              "/account",
-              "/account"
-          ],
-          "customer[first_name]": "aaaaaaaaa",
-          "customer[last_name]": "wegeerffffffffds",
-          "customer[email]": "{email}",
-          "customer[note][birthday]": "1966-08-01",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "3c5742f7-c2f7-43a7-a6cd-2c1c5e565822"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "return_to": [
+          "/account",
+          "/account"
+        ],
+        "customer[first_name]": "aaaaaaaaa",
+        "customer[last_name]": "wegeerffffffffds",
+        "customer[email]": "{email}",
+        "customer[note][birthday]": "1966-08-01",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "3c5742f7-c2f7-43a7-a6cd-2c1c5e565822"
       }
-  },
-  "women's health magazine": {
+    },
+    "women's health magazine": {
       "note": "for women ^_^",
       "url": "https://preferencecenter.hearstmags.com/api/preference/signup",
       "json": {
-          "analyticString1": "",
-          "analyticString2": "",
-          "email": "{email}",
-          "majorSource": "WNL",
-          "minorSource": "MODAL",
-          "preferences": [
-              {
-                  "optinValue": "H",
-                  "preferenceId": "972F2D27-B3B8-4F75-9227-7EFAAF2E9AF2"
-              }
-          ],
-          "sendToEsp": true
+        "analyticString1": "",
+        "analyticString2": "",
+        "email": "{email}",
+        "majorSource": "WNL",
+        "minorSource": "MODAL",
+        "preferences": [
+          {
+            "optinValue": "H",
+            "preferenceId": "972F2D27-B3B8-4F75-9227-7EFAAF2E9AF2"
+          }
+        ],
+        "sendToEsp": true
       },
       "headers": {
-          "Host": "preferencecenter.hearstmags.com",
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
-          "Accept": "*/*",
-          "Origin": "https://www.womenshealthmag.com",
-          "Connection": "keep-alive",
-          "Sec-Fetch-Dest": "empty",
-          "Sec-Fetch-Mode": "no-cors",
-          "Sec-Fetch-Site": "cross-site",
-          "Content-Type": "application/json",
-          "Referer": "https://www.womenshealthmag.com/"
+        "Host": "preferencecenter.hearstmags.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+        "Accept": "*/*",
+        "Origin": "https://www.womenshealthmag.com",
+        "Connection": "keep-alive",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Site": "cross-site",
+        "Content-Type": "application/json",
+        "Referer": "https://www.womenshealthmag.com/"
       }
-  },
-  "men's health magazine": {
+    },
+    "men's health magazine": {
       "note": "for men ^_^",
       "url": "https://preferencecenter.hearstmags.com/api/preference/signup",
       "json": {
-          "email": "{email}",
-          "majorSource": "NOSTO",
-          "minorSource": "Module",
-          "preferences": [
-              {
-                  "optinValue": "H",
-                  "preferenceId": "986687B1-D945-4F70-BE66-21B22779D75D"
-              }
-          ],
-          "sendToEsp": true
+        "email": "{email}",
+        "majorSource": "NOSTO",
+        "minorSource": "Module",
+        "preferences": [
+          {
+            "optinValue": "H",
+            "preferenceId": "986687B1-D945-4F70-BE66-21B22779D75D"
+          }
+        ],
+        "sendToEsp": true
       },
       "headers": {
-          "Host": "preferencecenter.hearstmags.com",
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
-          "Accept": "*/*",
-          "Origin": "https://www.womenshealthmag.com",
-          "Connection": "keep-alive",
-          "Sec-Fetch-Dest": "empty",
-          "Sec-Fetch-Mode": "no-cors",
-          "Sec-Fetch-Site": "cross-site",
-          "Content-Type": "application/json",
-          "Referer": "https://membership.menshealth.com/"
+        "Host": "preferencecenter.hearstmags.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+        "Accept": "*/*",
+        "Origin": "https://www.womenshealthmag.com",
+        "Connection": "keep-alive",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Site": "cross-site",
+        "Content-Type": "application/json",
+        "Referer": "https://membership.menshealth.com/"
       }
-  },
-  "genius": {
+    },
+    "genius": {
       "url": "https://genius.com/api/users",
       "json": {
-          "text_format": "html,markdown",
-          "user": {
-              "device_fingerprint": "errored-react",
-              "email": "{email}",
-              "login": "{username}",
-              "password": "{password}"
-          }
+        "text_format": "html,markdown",
+        "user": {
+          "device_fingerprint": "errored-react",
+          "email": "{email}",
+          "login": "{username}",
+          "password": "{password}"
+        }
       }
-  },
-  "electric heating company": {
+    },
+    "electric heating company": {
       "url": "https://www.electric-heatingcompany.co.uk/wp-admin/admin-ajax.php",
       "data": {
-          "action": "newsletter",
-          "nonce": "107fa606eb",
-          "email": "{email}"
+        "action": "newsletter",
+        "nonce": "107fa606eb",
+        "email": "{email}"
       }
-  },
-  "mang inasal": {
+    },
+    "mang inasal": {
       "note": "sends 2 emails",
       "url": "https://jollibee-ap.appspot.com/api/v1/menu/member.json",
       "data": {
-          "verify": "before",
-          "type": "email",
-          "brandId": "4806394001752064",
-          "crmId": "4806394001752064",
-          "email": "{email}",
-          "locale": "en"
+        "verify": "before",
+        "type": "email",
+        "brandId": "4806394001752064",
+        "crmId": "4806394001752064",
+        "email": "{email}",
+        "locale": "en"
       }
-  },
-  "donatello": {
+    },
+    "donatello": {
       "note": "sends 2 emails",
       "url": "https://donatellotr.com/en/registration/",
       "data": {
-          "email": "{email}",
-          "password": "{password}",
-          "wc_order_attribution_source_type": "typein",
-          "wc_order_attribution_referrer": "(none)",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "(direct)",
-          "wc_order_attribution_utm_medium": "(none)",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_session_entry": "https://donatellotr.com/en/product/gomlek-kamel-g00038/",
-          "wc_order_attribution_session_start_time": "2024-10-01+21:32:44",
-          "wc_order_attribution_session_pages": "3",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:131.0)+Gecko/20100101+Firefox/131.0",
-          "woocommerce-register-nonce": "631dcd5508",
-          "_wp_http_referer": "/en/registration/",
-          "register": "Register"
+        "email": "{email}",
+        "password": "{password}",
+        "wc_order_attribution_source_type": "typein",
+        "wc_order_attribution_referrer": "(none)",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "(direct)",
+        "wc_order_attribution_utm_medium": "(none)",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_session_entry": "https://donatellotr.com/en/product/gomlek-kamel-g00038/",
+        "wc_order_attribution_session_start_time": "2024-10-01+21:32:44",
+        "wc_order_attribution_session_pages": "3",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:131.0)+Gecko/20100101+Firefox/131.0",
+        "woocommerce-register-nonce": "631dcd5508",
+        "_wp_http_referer": "/en/registration/",
+        "register": "Register"
       }
-  },
-  "donna fashion": {
+    },
+    "donna fashion": {
       "note": "unique subject = no stack ^_^",
       "url": "https://api.flashy.app/thunder/contact?overwrite=true&primary_key=email",
       "json": {
-          "account_id": 8440,
-          "contact": {
-              "birthday": "978307200",
-              "email": "{email}",
-              "first_name": "{random}",
-              "flsid": null,
-              "lists": {
-                  "22893": true
-              },
-              "popup_id": 33742
-          }
+        "account_id": 8440,
+        "contact": {
+          "birthday": "978307200",
+          "email": "{email}",
+          "first_name": "{random}",
+          "flsid": null,
+          "lists": {
+            "22893": true
+          },
+          "popup_id": 33742
+        }
       }
-  },
-  "ruby woo boutique": {
+    },
+    "ruby woo boutique": {
       "note": "idk what triggers it but it has a chance to send an ad",
       "url": "https://www.rubywooboutique.com/",
       "data": {
-          "email": "{email}",
-          "mailchimp_woocommerce_newsletter": "1",
-          "wc_order_attribution_source_type": "organic",
-          "wc_order_attribution_referrer": "https://www.google.com/",
-          "wc_order_attribution_utm_campaign": "(none)",
-          "wc_order_attribution_utm_source": "google",
-          "wc_order_attribution_utm_medium": "organic",
-          "wc_order_attribution_utm_content": "(none)",
-          "wc_order_attribution_utm_id": "(none)",
-          "wc_order_attribution_utm_term": "(none)",
-          "wc_order_attribution_utm_source_platform": "(none)",
-          "wc_order_attribution_utm_creative_format": "(none)",
-          "wc_order_attribution_utm_marketing_tactic": "(none)",
-          "wc_order_attribution_session_entry": "https://www.rubywooboutique.com/",
-          "wc_order_attribution_session_start_time": "2024-10-01+22:05:41",
-          "wc_order_attribution_session_pages": "1",
-          "wc_order_attribution_session_count": "1",
-          "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:131.0)+Gecko/20100101+Firefox/131.0",
-          "woocommerce-register-nonce": "9fda3136e4",
-          "_wp_http_referer": "/",
-          "register": "Register",
-          "ak_bib": "1727820434256",
-          "ak_bfs": "1727820434869",
-          "ak_bkpc": "1",
-          "ak_bkp": "108;",
-          "ak_bmc": "107;128,4108;81,491;",
-          "ak_bmcc": "3",
-          "ak_bmk": "",
-          "ak_bck": "",
-          "ak_bmmc": "2",
-          "ak_btmc": "0",
-          "ak_bsc": "0",
-          "ak_bte": "",
-          "ak_btec": "0",
-          "ak_bmm": "1110,531;4754,570;"
+        "email": "{email}",
+        "mailchimp_woocommerce_newsletter": "1",
+        "wc_order_attribution_source_type": "organic",
+        "wc_order_attribution_referrer": "https://www.google.com/",
+        "wc_order_attribution_utm_campaign": "(none)",
+        "wc_order_attribution_utm_source": "google",
+        "wc_order_attribution_utm_medium": "organic",
+        "wc_order_attribution_utm_content": "(none)",
+        "wc_order_attribution_utm_id": "(none)",
+        "wc_order_attribution_utm_term": "(none)",
+        "wc_order_attribution_utm_source_platform": "(none)",
+        "wc_order_attribution_utm_creative_format": "(none)",
+        "wc_order_attribution_utm_marketing_tactic": "(none)",
+        "wc_order_attribution_session_entry": "https://www.rubywooboutique.com/",
+        "wc_order_attribution_session_start_time": "2024-10-01+22:05:41",
+        "wc_order_attribution_session_pages": "1",
+        "wc_order_attribution_session_count": "1",
+        "wc_order_attribution_user_agent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64;+rv:131.0)+Gecko/20100101+Firefox/131.0",
+        "woocommerce-register-nonce": "9fda3136e4",
+        "_wp_http_referer": "/",
+        "register": "Register",
+        "ak_bib": "1727820434256",
+        "ak_bfs": "1727820434869",
+        "ak_bkpc": "1",
+        "ak_bkp": "108;",
+        "ak_bmc": "107;128,4108;81,491;",
+        "ak_bmcc": "3",
+        "ak_bmk": "",
+        "ak_bck": "",
+        "ak_bmmc": "2",
+        "ak_btmc": "0",
+        "ak_bsc": "0",
+        "ak_bte": "",
+        "ak_btec": "0",
+        "ak_bmm": "1110,531;4754,570;"
       }
-  },
-  "pink boutique": {
+    },
+    "pink boutique": {
       "note": "this website is so fucking slow i do not recommend visiting, at least the api works",
       "url": "https://www.pinkboutique.co.uk/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "aaaaaa",
-          "customer[last_name]": "ggsdag",
-          "customer[note][Birthday]": "03/04/1979",
-          "customer[note][Dress+Size]": "4",
-          "customer[tags]": "DOB:03/04/1979,+size:4",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "customer[accepts_marketing]": [
-              "",
-              "on"
-          ],
-          "login_with_shop[analytics_trace_id]": "fa891e03-b819-4a7b-b2fe-cc58b3285746"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "aaaaaa",
+        "customer[last_name]": "ggsdag",
+        "customer[note][Birthday]": "03/04/1979",
+        "customer[note][Dress+Size]": "4",
+        "customer[tags]": "DOB:03/04/1979,+size:4",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "customer[accepts_marketing]": [
+          "",
+          "on"
+        ],
+        "login_with_shop[analytics_trace_id]": "fa891e03-b819-4a7b-b2fe-cc58b3285746"
       }
-  },
-  "american treasures": {
+    },
+    "american treasures": {
       "url": "https://americantreasures.co.uk/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "adam",
-          "customer[last_name]": "monkey",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}",
-          "login_with_shop[analytics_trace_id]": "c5ad6367-4afe-425b-ade2-9399b19d2acb"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "adam",
+        "customer[last_name]": "monkey",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}",
+        "login_with_shop[analytics_trace_id]": "c5ad6367-4afe-425b-ade2-9399b19d2acb"
       }
-  },
-  "pitchfork": {
+    },
+    "pitchfork": {
       "note": "sends 3 emails ^_^",
       "url": "https://pitchfork.com/api/savePreference",
       "json": {
-          "amgUUID": "",
-          "email": "{email}",
-          "isLoggedIn": false,
-          "metadata": {
-              "client": "Verso-Pitchfork",
-              "formname": "newsletter-subscribe-multiple",
-              "source": "subscribe-page"
-          },
-          "sailthruId": null,
-          "variables": {
-              "consents": [
-                  {
-                      "id": "248912",
-                      "status": true,
-                      "timestamp": "2024-10-05T22:36:16.850Z",
-                      "type": "newsletter"
-                  },
-                  {
-                      "id": "248945",
-                      "status": true,
-                      "timestamp": "2024-10-05T22:36:16.850Z",
-                      "type": "newsletter"
-                  },
-                  {
-                      "id": "248913",
-                      "status": true,
-                      "timestamp": "2024-10-05T22:36:16.850Z",
-                      "type": "newsletter"
-                  },
-                  {
-                      "id": "657fe98d6be3b0fdf26b81ab",
-                      "status": false,
-                      "timestamp": "2024-10-05T22:36:16.850Z",
-                      "type": "marketing"
-                  },
-                  {
-                      "id": "657fe98d6be3b0fdf26b81ac",
-                      "status": false,
-                      "timestamp": "2024-10-05T22:36:16.850Z",
-                      "type": "marketing"
-                  }
-              ]
-          }
+        "amgUUID": "",
+        "email": "{email}",
+        "isLoggedIn": false,
+        "metadata": {
+          "client": "Verso-Pitchfork",
+          "formname": "newsletter-subscribe-multiple",
+          "source": "subscribe-page"
+        },
+        "sailthruId": null,
+        "variables": {
+          "consents": [
+            {
+              "id": "248912",
+              "status": true,
+              "timestamp": "2024-10-05T22:36:16.850Z",
+              "type": "newsletter"
+            },
+            {
+              "id": "248945",
+              "status": true,
+              "timestamp": "2024-10-05T22:36:16.850Z",
+              "type": "newsletter"
+            },
+            {
+              "id": "248913",
+              "status": true,
+              "timestamp": "2024-10-05T22:36:16.850Z",
+              "type": "newsletter"
+            },
+            {
+              "id": "657fe98d6be3b0fdf26b81ab",
+              "status": false,
+              "timestamp": "2024-10-05T22:36:16.850Z",
+              "type": "marketing"
+            },
+            {
+              "id": "657fe98d6be3b0fdf26b81ac",
+              "status": false,
+              "timestamp": "2024-10-05T22:36:16.850Z",
+              "type": "marketing"
+            }
+          ]
+        }
       }
-  },
-  "void.cat": {
+    },
+    "void.cat": {
       "url": "https://void.cat/auth/register",
       "json": {
-          "captcha": "",
-          "password": "{password}",
-          "username": "{email}"
+        "captcha": "",
+        "password": "{password}",
+        "username": "{email}"
       }
-  },
-  "smartsheet": {
+    },
+    "smartsheet": {
       "url": "https://app.smartsheet.com/loginv2/otp/sendRedirect",
       "note": "infinitely resend emails ^_^",
       "data": {
-          "loginEmail": "{email}"
+        "loginEmail": "{email}"
       }
-  },
-  "delli market": {
+    },
+    "delli market": {
       "url": "https://delli.market/account",
       "data": {
-          "form_type": "create_customer",
-          "utf8": "✓",
-          "customer[first_name]": "Fuck",
-          "customer[last_name]": "You",
-          "customer[email]": "{email}",
-          "customer[password]": "{password}"
+        "form_type": "create_customer",
+        "utf8": "✓",
+        "customer[first_name]": "Fuck",
+        "customer[last_name]": "You",
+        "customer[email]": "{email}",
+        "customer[password]": "{password}"
       }
-  },
-  "barbican": {
+    },
+    "barbican": {
       "url": "https://spektrix.barbican.org.uk/barbicancentre/api/v3/customer?$expand=AgreedStatements,AllStatements,subscriptions/membership,tags,storedCards",
       "json": {
-          "agreedStatements": [
-              "201AGBHDRLQHNHPHKKMPKLGPMDRDTDMVL"
-          ],
-          "email": "{email}",
-          "firstName": "Kill",
-          "lastName": "Yourself",
-          "password": "{password}"
+        "agreedStatements": [
+          "201AGBHDRLQHNHPHKKMPKLGPMDRDTDMVL"
+        ],
+        "email": "{email}",
+        "firstName": "Kill",
+        "lastName": "Yourself",
+        "password": "{password}"
       }
-  },
-  "moss": {
+    },
+    "moss": {
       "url": "https://www.moss.co.uk/ajax/newsletter",
       "method": "GET",
       "params": {
-          "email": "{email}",
-          "source": "dy-overlay"
+        "email": "{email}",
+        "source": "dy-overlay"
       }
-  },
-  "timeout": {
+    },
+    "timeout": {
       "url": "https://auth.timeout.com/api/subscribe",
       "note": "emails take 50 years to arrive + api is SUPER SLOW",
       "data": {
-          "element": "newsletter-inline-banner",
-          "email": "{email}",
-          "locale": "en-GB",
-          "platform": "s=GP&p=newsletter-inline-banner&d=xl&u=420d9e9284b4efe191b081e008bad81b&c=0001",
-          "referrer": "https://www.timeout.com/london/shopping/the-best-christmas-shops-in-london",
-          "site": "uk-london"
+        "element": "newsletter-inline-banner",
+        "email": "{email}",
+        "locale": "en-GB",
+        "platform": "s=GP&p=newsletter-inline-banner&d=xl&u=420d9e9284b4efe191b081e008bad81b&c=0001",
+        "referrer": "https://www.timeout.com/london/shopping/the-best-christmas-shops-in-london",
+        "site": "uk-london"
       }
-  },
-  "well": {
+    },
+    "well": {
       "url": "https://api.well.co.uk/users/v3/register?redirect_to=/vicks/",
       "json": {
-          "email": "{email}",
-          "first_name": "Rivers",
-          "last_name": "Cuomo",
-          "marketing_consent": true,
-          "password": "{password}",
-          "target": "customer-web",
-          "terms_and_conditions": true
+        "email": "{email}",
+        "first_name": "Rivers",
+        "last_name": "Cuomo",
+        "marketing_consent": true,
+        "password": "{password}",
+        "target": "customer-web",
+        "terms_and_conditions": true
       }
-  },
-  "bondara": {
+    },
+    "bondara": {
       "nsfw": true,
       "note": "delayed emails, this is a sex toy website (u could tell i was running out of ideas )",
       "url": "https://newsletters.bondara.co.uk/public/quickstart/signup_footer.jsp",
       "data": {
-          "email": "{email}"
+        "email": "{email}"
       }
-  },
-  "guitarguitar": {
+    },
+    "guitarguitar": {
       "url": "https://guitarguitar.activehosted.com/proc.php",
       "method": "GET",
       "params": {
-          "u": "67355D873C225",
-          "f": "15",
-          "s": "",
-          "c": "0",
-          "m": "0",
-          "act": "sub",
-          "v": "2",
-          "or": "40caafed48bb8fa76a35e1a54c0e3c54",
-          "fullname": "Michael Jackson",
-          "email": "{email}",
-          "field[11]": "Guitars",
-          "field[12][]": [
-              "~|",
-              "Guitars",
-              "Bass",
-              "Effects",
-              "Home Recording/Midi/Controllers",
-              "PA & Live gear",
-              "Pianos",
-              "Synths",
-              "Drums"
-          ],
-          "field[13]": "Glasgow",
-          "jsonp": "true"
+        "u": "67355D873C225",
+        "f": "15",
+        "s": "",
+        "c": "0",
+        "m": "0",
+        "act": "sub",
+        "v": "2",
+        "or": "40caafed48bb8fa76a35e1a54c0e3c54",
+        "fullname": "Michael Jackson",
+        "email": "{email}",
+        "field[11]": "Guitars",
+        "field[12][]": [
+          "~|",
+          "Guitars",
+          "Bass",
+          "Effects",
+          "Home Recording/Midi/Controllers",
+          "PA & Live gear",
+          "Pianos",
+          "Synths",
+          "Drums"
+        ],
+        "field[13]": "Glasgow",
+        "jsonp": "true"
       }
-  },
-  "kansa craft": {
+    },
+    "kansa craft": {
       "note": "sends 2 emails",
       "url": "https://www.kansacraft.co.uk/stainedglass18/upload/index.php?route=account/register",
       "data": {
-          "customer_group_id": "1",
-          "firstname": "Patrick",
-          "lastname": "Stump",
-          "email": "{email}",
-          "telephone": "1234",
-          "password": "{password}",
-          "confirm": "{password}",
-          "newsletter": "1",
-          "agree": "1"
+        "customer_group_id": "1",
+        "firstname": "Patrick",
+        "lastname": "Stump",
+        "email": "{email}",
+        "telephone": "1234",
+        "password": "{password}",
+        "confirm": "{password}",
+        "newsletter": "1",
+        "agree": "1"
       }
-  },
-  "yellow tom": {
+    },
+    "yellow tom": {
       "note": "the email shows your ip address",
       "url": "https://www.yellowtom.co.uk/review_new_advertiser.php",
       "data": {
-          "recId": "1076028",
-          "rate": "3",
-          "name": "Your Local Sigmas",
-          "mail": "{email}",
-          "review": "Please fix your backend :) -Ego x Max",
-          "tel_landline": "KzQ0IDE5MSA1NDkgMDg2MA",
-          "groupID": "386",
-          "rec_name": "K-Craft Glass",
-          "advert_email": ""
+        "recId": "1076028",
+        "rate": "3",
+        "name": "Your Local Sigmas",
+        "mail": "{email}",
+        "review": "Please fix your backend :) -Ego x Max",
+        "tel_landline": "KzQ0IDE5MSA1NDkgMDg2MA",
+        "groupID": "386",
+        "rec_name": "K-Craft Glass",
+        "advert_email": ""
       }
+    },
+    "gumtree": {
+      "url": "https://my.gumtree.com/create-account",
+      "data": {
+        "form.firstName": "Liam",
+        "form.lastName": "Payne",
+        "form.emailAddress": "{email}",
+        "form.password": "{password}",
+        "form.optInMarketing": "on"
+      }
+    },
+    "elfster": {
+      "url": "https://www.elfster.com/v1/auth/.request-email-verification-code",
+      "json": {
+        "email": "{email}"
+      }
+    },
+    "d16.pl": {
+      "url": "https://userarea.d16.pl/create_account/action",
+      "data": {
+        "email": "{email}",
+        "email_re": "{email}",
+        "password_first": "{password}",
+        "password_second": "{password}",
+        "communication": "1"
+      }
+    },
+    "unison audio": {
+      "url": "https://unison.audio/wp-admin/admin-ajax.php",
+      "data": {
+          "action": "cs_registration_true",
+          "regusername": "{username}",
+          "regupass": "{password}",
+          "regumail": "{email}",
+          "sign_up_newsletter": "1"
+      }
+    },
+    "vdocipher": {
+      "url": "https://www.vdocipher.com/api/user/register",
+      "json": {
+          "confirmpassword": "{password}",
+          "email": "{email}",
+          "name": "Faint",
+          "password": "{password}",
+          "phone": ""
+      }
+    },
+    "nebula.tv": {
+      "url": "https://nebula.tv/auth/registration/",
+      "json":{
+          "agreed_to_terms": true,
+          "email": "{email}",
+          "opt_in_to_communications": false,
+          "password": "{password}"
+      }
+    }
   }
-}
