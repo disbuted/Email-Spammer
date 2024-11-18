@@ -1680,5 +1680,15 @@
           "opt_in_to_communications": false,
           "password": "{password}"
       }
+    },
+    "diplomacy": {
+      "url": "https://www.diplomacy.edu/wp-admin/admin-ajax.php",
+      "data":{
+          "action": "process_form_submission",
+          "form_data": "group-1b50ac48d%5B%5D=86484d799e&group-15b50ac48d%5B%5D=74130513f1&group-15b50ac48d%5B%5D=65b8753f5f&group-15b50ac48d%5B%5D=692ab77193&group-15b50ac48d%5B%5D=649f9980df&group-43badd3a06%5B%5D=3688bacdf5&group-43badd3a06%5B%5D=9e69e45f01&group-43badd3a06%5B%5D=15abf6e35b&EMAIL={email}&yikes-mailchimp-honeypot=&yikes-mailchimp-associated-list-id=4510155485&yikes-mailchimp-submitted-form=14&yikes_easy_mc_new_subscriber=47250172b9&_wp_http_referer=%2Fsubscribe%2F",
+          "form_id": "14",
+          "page_data": "233740",
+          "ajax_security_nonce": "10c34c2947"
+      }
     }
   }
