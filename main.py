@@ -29,6 +29,7 @@ timeout = aiohttp.ClientTimeout(total=20)
 
 # Optional Webhook Logging: 
 # WEBHOOK_URL = ""
+# response = requests.post(WEBHOOK_URL, json=data)
 
 def restart_main():
     asyncio.run(main())
@@ -71,8 +72,6 @@ def info():
     data = {
         "embeds": [embed]
     }
-
-    response = requests.post(WEBHOOK_URL, json=data)
 
     # skidded from chatgpt
 def generate_email_variants(email):
