@@ -1,34 +1,29 @@
-# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗    ██╗  ██╗    ███╗   ███╗ █████╗ ██╗  ██╗
-# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝    ██║  ██║    ████╗ ████║██╔══██╗╚██╗██╔╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗    ███████║    ██╔████╔██║███████║ ╚███╔╝
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║    ╚════██║    ██║╚██╔╝██║██╔══██║ ██╔██╗
-# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║         ██║    ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗
-# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝         ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗   
+# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝   
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗  
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║   
+# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║       
+# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝       
 # What Ive Worked On:
-# Added optional discord webhook logging. i am gonna improve some shit to it to make it actually worth using
+# removed the discord webhook logging feature for the moment
+# New menu / "Frontend" UI :3 + credits etc
 
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests
 from pystyle import Center
-from colorama import Fore, Style
+from colorama import Fore, Style, init
 
 size = 600  # Threads + Process / Iteration
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
 timeout = aiohttp.ClientTimeout(total=20)
-
-# Optional Webhook Logging Below:
-# WEBHOOK_URL = ""
-# response = requests.post(WEBHOOK_URL, json=data)
-
+init(autoreset=True)
 
 def restart_main():
     asyncio.run(main())
 
-
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
-
 
 def update_title():
     while True:
@@ -40,23 +35,15 @@ def update_title():
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
         time.sleep(0.1)
 
-
-def info():
-    embed = {
-        "title": "E-Bomb Executed",
-        "description": "Webhook Is Working! Logs Will Be Sent Here",
-        "color": 0x00FF00,  # Green color
-        "fields": [
-            {"name": "Status", "value": "Success", "inline": True},
-            {"name": "Execution Time", "value": "Program Is Working", "inline": True},
-        ],
-        "footer": {"text": "https://github.com/disbuted/Email-Spammer"},
-    }
-
-    data = {"embeds": [embed]}
+# fuck this looks so ugly but it works
+def credit():
+    clear_console()
+    time.sleep(0.5)
+    clear_console()
+    print(Center.XCenter(faded_credits))
+    time.sleep(5)
 
     # skidded from chatgpt
-    
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
@@ -105,7 +92,6 @@ def divide():
 
 
 progress = 0
-
 
 def update_progress():
     global progress
@@ -225,14 +211,44 @@ text = """
                                                         pls use a vpn :)
 """
 
+credits = """   
+                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝i
+                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                        
+                        
+                                          =+= Credits =+=
+                                            Email Bomber
+                                         Founder: Inkthirsty
+                                         Sigma Dev: Disbuted
+                                    =+= Keep Open Source Open =+=
+""" 
+
+def menu():
+    threading.Thread(target=update_title, daemon=True).start()
+    clear_console()
+    print(Center.XCenter(faded_text))
+    print(f"\r\n                                                     [{blue_dash}] Main Menu:")
+    print(f"\r                                                     [{blue_dash}] 1. Start E-Bomb")
+    print(f"\r                                                     [{blue_dash}] 2. Credits")
+    print(f"\r                                                     [{blue_dash}] 3. Exit")
+    choice = input("                                                     Enter your choice: ")
+    return choice
+
 faded_text = fade.purpleblue(text)
+faded_credits = fade.purpleblue(credits)
+
+# Main Colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
+blue_dash = f"{Fore.BLUE}-{Style.RESET_ALL}"
 
 
 async def main():
-    threading.Thread(target=update_title, daemon=True).start()
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -423,6 +439,7 @@ async def main():
                 )
                 file.write(e)
             time.sleep(2)
+          # asyncio.run(main()) # Need to get this fixed :(
             sys.exit()
     except Exception as error:
         print(error)
@@ -438,5 +455,19 @@ if __name__ == "__main__":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     except Exception:
         pass
-    info()
-    asyncio.run(main())
+    while True:
+        choice = menu()  
+        if choice == "1":
+            info()
+            asyncio.run(main())
+        elif choice == "2":
+            credit()
+        elif choice == "3":
+            clear_console()
+            print(Center.XCenter(faded_text))
+            print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
+            time.sleep(20)
+            sys.exit()
+        else:
+            clear_console()
+            print("Invalid choice. Please try again.")
