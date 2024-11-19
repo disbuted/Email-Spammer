@@ -33,7 +33,7 @@ def update_title():
             )
         )
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
-        time.sleep(0.1)
+        time.sleep(0.2)
 
 # fuck this looks so ugly but it works
 def credit():
