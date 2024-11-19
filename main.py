@@ -12,7 +12,7 @@ import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle,
 from pystyle import Center
 from colorama import Fore, Style, init
 
-size = 600  # Threads + Process / Iteration
+size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
@@ -238,7 +238,7 @@ credits = """
                         ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
                         █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
                         ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
-                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝i
+                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
                         ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
                         
                         
@@ -461,7 +461,7 @@ async def main():
                 )
                 file.write(e)
             time.sleep(2)
-          # asyncio.run(main()) # Need to get this fixed :(
+          # asyncio.run(main()) # needs to be async to a recurring loop. will sort when i wanna 
             sys.exit()
     except Exception as error:
         print(error)
