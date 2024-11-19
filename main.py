@@ -480,7 +480,6 @@ if __name__ == "__main__":
     while True:
         choice = menu()  
         if choice == "1":
-            info()
             asyncio.run(main())
         elif choice == "2":
             credit()
