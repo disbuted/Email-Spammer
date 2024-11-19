@@ -1769,5 +1769,14 @@
       "customer[password]": "asdfasdf",
       "login_with_shop[analytics_trace_id]": "this is meant to be a token but can be anything lolololol"
     }
+  },
+  "master of project": {
+    "url": "https://6c76cb50.sibforms.com/serve/MUIEACHpZZSYh-t6g01O23SQes8SxW5zD48CO2dNI8Efn2pJBbjFFisIE9ZaC3gi4fxO9hkiC9aStJqPp1oOCH3D9S1ckhT1pVgNOTCJYsKY6QcY2UzWsBdcQqpbPAyyxqrZSFxNpD8lCG_hdChngHo_GKCznLARyUnSQzNzWlarTh8pn9bOCDU2vNGwqHSiHMYYfR-CH1p4r9YO?isAjax=1",
+    "data": {
+	  "FIRSTNAME": "{random}",
+	  "EMAIL": "{email}",
+	  "email_address_check": "",
+	  "locale": "en"
+	}
   }
 }
