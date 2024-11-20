@@ -35,14 +35,14 @@ def update_title():
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
         time.sleep(0.2)
 
-# fuck this looks so ugly but it works
+# holy fuck i need to work on this and make it more organised
 def credit():
     clear_console()
     time.sleep(0.5)
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
-
+    
     # skidded from chatgpt
 def generate_email_variants(email):
     username, domain = email.split("@")
@@ -242,11 +242,11 @@ credits = """
                         ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
                         
                         
-                                          =+= Credits =+=
-                                            Email Bomber
-                                         Founder: Inkthirsty
-                                         Sigma Dev: Disbuted
-                                    =+= Keep Open Source Open =+=
+                                        =+= Credits =+=
+                                          Email Bomber
+                                       Founder: Inkthirsty
+                                       Sigma Dev: Disbuted  
+                                  =+= Keep Open Source Open =+=
 """ 
 
 def menu():
@@ -260,10 +260,11 @@ def menu():
     choice = input("                                                     Enter your choice: ")
     return choice
 
+# banners
 faded_text = fade.purpleblue(text)
 faded_credits = fade.purpleblue(credits)
 
-# Main Colours
+# ui colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
@@ -315,7 +316,7 @@ async def main():
                 string.ascii_lowercase,
                 string.ascii_uppercase,
                 string.digits,
-                "!@#$%^&*()_+-=[]{}|;:',.<>?/`~",
+                # No more special characters, some websites hate that
             ]
             for _ in samples:
                 password += "".join(random.sample(_, k=5))
@@ -470,7 +471,6 @@ async def main():
         )
         await asyncio.sleep(5)
         sys.exit()
-
 
 if __name__ == "__main__":
     try:
