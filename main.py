@@ -12,6 +12,40 @@ import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle,
 from pystyle import Center
 from colorama import Fore, Style, init
 
+try:
+    import requests
+    import asyncio
+    import aiohttp
+    import time
+    import re
+    import random
+    import string
+    import itertools
+    import os
+    import json
+    import pystyle
+    import fade
+    import sys
+    import colorama
+    import threading
+
+except ModuleNotFoundError:
+    os.system('pip install requests')
+    os.system('pip install asyncio')
+    os.system('pip install aiohttp')
+    os.system('pip install time')
+    os.system('pip install re')
+    os.system('pip install random')
+    os.system('pip install string')
+    os.system('pip install itertools')
+    os.system('pip install os')
+    os.system('pip install json')
+    os.system('pip install pystyle')
+    os.system('pip install fade')
+    os.system('pip install colorama')
+    os.system('pip install threading')
+                            
+                            
 size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
