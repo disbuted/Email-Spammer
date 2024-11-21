@@ -526,7 +526,7 @@ if __name__ == "__main__":
             clear_console()
             print(Center.XCenter(faded_text))
             print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
-            time.sleep(3)
+            time.sleep(3) # why the fuck was this set to 20 seconds.... sigma
             sys.exit()
         else:
             clear_console()
