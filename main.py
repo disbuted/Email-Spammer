@@ -526,7 +526,7 @@ if __name__ == "__main__":
             clear_console()
             print(Center.XCenter(faded_text))
             print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
-            time.sleep(20)
+            time.sleep(3)
             sys.exit()
         else:
             clear_console()
