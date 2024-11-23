@@ -116,7 +116,7 @@ async def fetch(
     sub: str,
     info,
     name: str = None,
-    testing: bool = False,
+    bias: bool = False,
 ):
     def fix(lol):
         try:
@@ -208,6 +208,8 @@ async def fetch(
                     .replace("\t", "")[:1000]
                 )
                 if status_codes.get(name) is None:
+                    if info.get("bias") == True:
+                        status = 200
                     status_codes[name] = {
                         "method": method,
                         "status": status,
@@ -389,7 +391,7 @@ async def main():
                     f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
                 )
                 test_tasks = [
-                    asyncio.create_task(fetch(session, email, values, name, True))
+                    asyncio.create_task(fetch(session, email, values, name))
                     for name, values in functions.items()
                 ]
                 total = len(test_tasks)

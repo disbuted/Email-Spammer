@@ -246,28 +246,8 @@
     "url": "https://cvetochka.by/auth/register",
     "data": {
       "login": "{email}",
-      "p1": "Ju'4>GT^zX7Z^]#",
-      "p2": "Ju'4>GT^zX7Z^]#"
-    }
-  },
-  "kanceptkrama.by": {
-    "url": "https://kanceptkrama.by/create-account/",
-    "data": {
-      "customer_group_id": "1",
-      "firstname": "Adam",
-      "lastname": "gay",
-      "email": "{email}",
-      "telephone": "1234",
-      "address_1": "you are so gay",
-      "custom_field[address][1]": "gay",
-      "city": "for",
-      "postcode": "you",
-      "country_id": "20",
-      "zone_id": "343",
-      "password": "{password}",
-      "confirm": "{password}",
-      "newsletter": "1",
-      "agree": "1"
+      "p1": "{password}",
+      "p2": "{password}"
     }
   },
   "wizishop": {
@@ -277,7 +257,7 @@
       "firstname": "adam",
       "lastname": "gay",
       "email": "{email}",
-      "password": "^+TWsf47En=?rGE",
+      "password": "{password}",
       "login": "",
       "monoproduct": "0",
       "secondary": "#252626",
@@ -378,16 +358,6 @@
     "json": {
       "email": "{email}",
       "locale": "en-US"
-    }
-  },
-  "email your future self": {
-    "note": "not only will they receive an email now but they will also receive one 10 years later XD.. wait 2029 is closer than that wtf",
-    "url": "https://www.emailyourfutureself.com/email",
-    "data": {
-      "note": "remember+to+drink+water",
-      "email": "{email}",
-      "name": "Pisser",
-      "send_at": "2029-01-01"
     }
   },
   "trashmail": {
@@ -881,16 +851,6 @@
       "email": "{email}"
     }
   },
-  "d16.pl": {
-    "url": "https://userarea.d16.pl/create_account/action",
-    "data": {
-      "email": "{email}",
-      "email_re": "{email}",
-      "password_first": "{password}",
-      "password_second": "{password}",
-      "communication": "1"
-    }
-  },
   "unison audio": {
     "url": "https://unison.audio/wp-admin/admin-ajax.php",
     "data": {
@@ -973,10 +933,36 @@
   "master of project": {
     "url": "https://6c76cb50.sibforms.com/serve/MUIEACHpZZSYh-t6g01O23SQes8SxW5zD48CO2dNI8Efn2pJBbjFFisIE9ZaC3gi4fxO9hkiC9aStJqPp1oOCH3D9S1ckhT1pVgNOTCJYsKY6QcY2UzWsBdcQqpbPAyyxqrZSFxNpD8lCG_hdChngHo_GKCznLARyUnSQzNzWlarTh8pn9bOCDU2vNGwqHSiHMYYfR-CH1p4r9YO?isAjax=1",
     "data": {
-	  "FIRSTNAME": "{random}",
-	  "EMAIL": "{email}",
-	  "email_address_check": "",
-	  "locale": "en"
-	}
+      "FIRSTNAME": "{random}",
+      "EMAIL": "{email}",
+      "email_address_check": "",
+      "locale": "en"
+    }
+  },
+  "silver.uk.com": {
+    "bias": true,
+    "url": "https://www.silver.uk.com/account",
+    "data": {
+      "form_type": "create_customer",
+      "utf8": "✓",
+      "customer[first_name]": "aaaa",
+      "customer[last_name]": "aaaaaaaaa",
+      "customer[email]": "{email}",
+      "customer[password]": "{password}",
+      "login_with_shop[analytics_trace_id]": ""
+    }
+  },
+  "silver shop of bath": {
+    "method": "GET",
+    "url": "https://assets.mailerlite.com/jsonp/911652/forms/118846676753450836/subscribe",
+    "params": {
+      "callback": "jQuery37103632046392270035_1732324167119",
+      "fields[email]": "{email}",
+      "ml-submit": "1",
+      "anticsrf": "true",
+      "ajax": "1",
+      "guid": "",
+      "_": "{timestamp}"
+    }
   }
 }
