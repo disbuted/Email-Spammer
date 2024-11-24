@@ -964,5 +964,29 @@
       "guid": "",
       "_": "{timestamp}"
     }
+  },
+  "bloodhoung gang store": {
+    "url": "https://stufftobuy.bloodhoundgang.com/index.php?route=account/register",
+    "data": {
+	  "firstname": "Joe",
+	  "lastname": "Mama",
+	  "email": "{email}",
+	  "telephone": "1234",
+	  "fax": "",
+	  "company": "",
+	  "customer_group_id": "1",
+	  "company_id": "",
+	  "tax_id": "",
+	  "address_1": "asdf",
+	  "address_2": "",
+	  "city": "asdf",
+	  "postcode": "",
+	  "country_id": "223",
+	  "zone_id": "3641",
+	  "password": "{password}",
+	  "confirm": "{password}",
+	  "newsletter": "1",
+	  "agree": "1"
+	}
   }
 }
