@@ -1,9 +1,9 @@
-# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗   
-# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝   
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗  
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║   
-# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║       
-# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝       
+# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
+# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║
+# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║
+# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝
 # What Ive Worked On:
 # removed the discord webhook logging feature for the moment
 # New menu / "Frontend" UI :3 + credits etc
@@ -14,38 +14,17 @@ from colorama import Fore, Style, init
 
 try:
     import requests
-    import asyncio
     import aiohttp
-    import time
-    import re
-    import random
-    import string
-    import itertools
-    import os
-    import json
     import pystyle
     import fade
-    import sys
     import colorama
-    import threading
 
-except ModuleNotFoundError:
-    os.system('pip install requests')
-    os.system('pip install asyncio')
-    os.system('pip install aiohttp')
-    os.system('pip install time')
-    os.system('pip install re')
-    os.system('pip install random')
-    os.system('pip install string')
-    os.system('pip install itertools')
-    os.system('pip install os')
-    os.system('pip install json')
-    os.system('pip install pystyle')
-    os.system('pip install fade')
-    os.system('pip install colorama')
-    os.system('pip install threading')
-                            
-                            
+except ModuleNotFoundError as e:
+    missing_module = str(e).split("'")[1]
+    os.system(f"pip install {missing_module}")
+    print(f"Installed {missing_module}, restarting script...")
+    os.execv(sys.executable, ["python"] + sys.argv)
+
 size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
@@ -53,12 +32,17 @@ include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
 
+
 def restart_main():
     asyncio.run(main())
+
 
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
+
+# thank you c++ to python converter :fire:
+# i didnt wanna write that all again personally
 def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(
@@ -69,14 +53,14 @@ def update_title():
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
         time.sleep(0.2)
 
-# holy fuck i need to work on this and make it more organised
+
+# why the fuck did i have it repeating the clear_console() function and then making it sleep for .5 of a second
+# gotta love 3 in the morning code
 def credit():
-    clear_console()
-    time.sleep(0.5)
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
-    
+
     # skidded from chatgpt
 def generate_email_variants(email):
     username, domain = email.split("@")
@@ -101,29 +85,23 @@ def generate_email_variants(email):
     results = [email] + random.sample(data, k=len(data))
     return results
 
-
 def generate(length: int = 5):
     ba = bytearray(os.urandom(length))
     for i, b in enumerate(ba):
         ba[i] = ord("a") + b % 26
     return str(time.time()).replace(".", "") + ba.decode("ascii")
 
-
 def validate_email(email):
     return re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email)
-
 
 def is_html_string(text: str) -> bool:
     return bool(re.compile(r"<[^>]+>").search(text))
 
-
 def clamp(value, min_value, max_value):
     return max(min_value, min(value, max_value))
 
-
 def divide():
     print("-" * 40)
-
 
 progress = 0
 
@@ -257,47 +235,60 @@ async def fetch(
 
 
 text = """   
-                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
-                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
-                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
-                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
-                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
-                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
-                                                       t.me/influenceable
-                                                        pls use a vpn :)
+                                       ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                                       ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                                       █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                                       ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                                       ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                                       ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                                                                      t.me/influenceable
+                                                                       pls use a vpn :)
                                                         
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                        
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                        
 """
 
 credits = """   
-                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
-                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
-                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
-                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
-                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
-                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
-                        
-                        
-                                        =+= Credits =+=
-                                          Email Bomber
-                                       Founder: Inkthirsty
-                                       Sigma Dev: Disbuted  
-                                  =+= Keep Open Source Open =+=
+                             ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                             ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                             █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                             ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                             ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                             ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                             
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    
+                                               =+= Credits =+=
+                                                 Email Bomber
+                                              Founder: Inkthirsty
+                                              Sigma Dev: Disbuted  
+                                         =+= Keep Open Source Open =+=
                                   
-                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                   
-""" 
+"""
+
 
 def menu():
     threading.Thread(target=update_title, daemon=True).start()
     clear_console()
     print(Center.XCenter(faded_text))
-    print(f"\r\n                                                     [{blue_dash}] Main Menu:")
-    print(f"\r                                                     [{blue_dash}] 1. Start E-Bomb")
-    print(f"\r                                                     [{blue_dash}] 2. Credits")
-    print(f"\r                                                     [{blue_dash}] 3. Exit")
-    choice = input("                                                     Enter your choice: ")
+    print(
+        f"\r\n                                                     [{blue_dash}] Main Menu:"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 1. Start E-Bomb"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 2. Credits"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 3. Exit"
+    )
+    choice = input(
+        "                                                     Enter your choice: "
+    )
     return choice
+
 
 # banners
 faded_text = fade.purpleblue(text)
@@ -327,7 +318,7 @@ async def main():
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
-                    "https://raw.githack.com/disbuted/Email-Spammer/refs/heads/main/functions.json"
+                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json" # changed to max's
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
@@ -355,7 +346,7 @@ async def main():
                 string.ascii_lowercase,
                 string.ascii_uppercase,
                 string.digits,
-                # No more special characters, some websites hate that
+                # No more special characters, some websites hate that :(
             ]
             for _ in samples:
                 password += "".join(random.sample(_, k=5))
@@ -501,7 +492,7 @@ async def main():
                 )
                 file.write(e)
             time.sleep(2)
-          # asyncio.run(main()) # needs to be async to a recurring loop. will sort when i wanna 
+            # asyncio.run(main()) # needs to be async to a recurring loop. will sort when i wanna
             sys.exit()
     except Exception as error:
         print(error)
@@ -511,13 +502,14 @@ async def main():
         await asyncio.sleep(5)
         sys.exit()
 
+
 if __name__ == "__main__":
     try:
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     except Exception:
         pass
     while True:
-        choice = menu()  
+        choice = menu()
         if choice == "1":
             asyncio.run(main())
         elif choice == "2":
@@ -525,8 +517,10 @@ if __name__ == "__main__":
         elif choice == "3":
             clear_console()
             print(Center.XCenter(faded_text))
-            print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
-            time.sleep(3) # why the fuck was this set to 20 seconds.... sigma
+            print(
+                f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!"
+            )
+            time.sleep(3)  # why the fuck was this set to 20 seconds.... sigma
             sys.exit()
         else:
             clear_console()
