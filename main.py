@@ -318,7 +318,7 @@ async def main():
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
-                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json" # changed to max's
+                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json" # changed to
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
