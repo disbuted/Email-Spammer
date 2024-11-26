@@ -1,6 +1,0 @@
-aiohttp
-urllib3
-fade
-pystyle
-colorama
-psutil
