@@ -8,7 +8,7 @@
 # removed the discord webhook logging feature for the moment
 # New menu / "Frontend" UI :3 + credits etc
 
-import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests
+import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests, trio
 from pystyle import Center
 from colorama import Fore, Style, init
 
@@ -18,6 +18,7 @@ try:
     import pystyle
     import fade
     import colorama
+    import trio
 
 except ModuleNotFoundError as e:
     missing_module = str(e).split("'")[1]
@@ -492,8 +493,7 @@ async def main():
                 )
                 file.write(e)
             time.sleep(2)
-            # asyncio.run(main()) # needs to be async to a recurring loop. will sort when i wanna
-            sys.exit()
+            trio.run(menu) # using trio lib so i dont have to make it a loop
     except Exception as error:
         print(error)
         print(
