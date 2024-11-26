@@ -30,7 +30,7 @@ size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
-include_special_characters = True # added if u want to include special characters for the password when ur sending the api requests
+include_special_characters = True  # added if u want to include special characters for the password when ur sending the api requests
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
 
@@ -373,12 +373,14 @@ async def main():
             ]
 
             if include_special_characters:
-                samples.append(string.punctuation) # makes special characters a true or false statement
+                samples.append(
+                    string.punctuation
+                )  # makes special characters a true or false statement
 
             for sample in samples:
                 password += "".join(random.sample(sample, k=5))
 
-            password = "!" + "".join(random.sample(password, k=len(password))) 
+            password = "!" + "".join(random.sample(password, k=len(password)))
 
             email = None
             while True:

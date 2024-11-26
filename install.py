@@ -9,8 +9,9 @@ required_packages = [
     "pystyle",
     "fade",
     "trio",
-    "requests"
+    "requests",
 ]
+
 
 def install_packages():
     print("Checking for required packages...")
@@ -19,7 +20,10 @@ def install_packages():
             __import__(package)
         except ImportError:
             print(f"Package '{package}' is missing. Installing now...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+            subprocess.check_call(
+                [sys.executable, "-m", "pip", "install", package]
+            )
+
 
 def check_python_version():
     print("Checking Python version...")
@@ -28,11 +32,13 @@ def check_python_version():
         sys.exit(1)
     print(f"Python version {sys.version.split()[0]} is compatible.")
 
+
 def main():
     print("Starting installation...")
     check_python_version()
     install_packages()
     print("\nSuccess: Installation Finished, You Can Now Use The Bomber.")
+
 
 if __name__ == "__main__":
     main()
