@@ -1,50 +1,22 @@
-# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
-# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║
-# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║
-# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝
-# What Ive Worked On:
-# removed the discord webhook logging feature for the moment
-# New menu / "Frontend" UI :3 + credits etc
-
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests, trio
 from pystyle import Center
 from colorama import Fore, Style, init
 
-try:
-    import requests
-    import aiohttp
-    import pystyle
-    import fade
-    import colorama
-    import trio
-
-except ModuleNotFoundError as e:
-    missing_module = str(e).split("'")[1]
-    os.system(f"pip install {missing_module}")
-    print(f"Installed {missing_module}, restarting script...")
-    os.execv(sys.executable, ["python"] + sys.argv)
-
 size = 600  # Threads + Process / Iterations
-cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
-random_threads = True  # True = Threads Random. False = They Arent Random
-include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
-include_special_characters = True  # added if u want to include special characters for the password when ur sending the api requests
+cap = None  # thread cap
+random_threads = True  # randomises
+include_nsfw_sites = True  
+include_special_characters = True 
+
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
-
 
 def restart_main():
     asyncio.run(main())
 
-
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
-
-# thank you c++ to python converter :fire:
-# i didnt wanna write that all again personally
 def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(
@@ -56,23 +28,16 @@ def update_title():
         os.system(
             f"title {title}" if os.name == "nt" else f"\033]0;{title}\007"
         )
-        time.sleep(0.2)
+        time.sleep(0.3)
 
-
-# why the fuck did i have it repeating the clear_console() function and then making it sleep for .5 of a second
-# gotta love 3 in the morning code
 def credit():
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
 
-    # skidded from chatgpt
-
-
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
-
     funnylimit = 5000
 
     for i in range(1, len(username)):
@@ -101,25 +66,19 @@ def generate(length: int = 5):
         ba[i] = ord("a") + b % 26
     return str(time.time()).replace(".", "") + ba.decode("ascii")
 
-
 def validate_email(email):
     return re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email)
-
 
 def is_html_string(text: str) -> bool:
     return bool(re.compile(r"<[^>]+>").search(text))
 
-
 def clamp(value, min_value, max_value):
     return max(min_value, min(value, max_value))
-
 
 def divide():
     print("-" * 40)
 
-
 progress = 0
-
 
 def update_progress():
     global progress
@@ -312,11 +271,9 @@ def menu():
     return choice
 
 
-# banners
 faded_text = fade.purpleblue(text)
 faded_credits = fade.purpleblue(credits)
 
-# ui colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
@@ -375,7 +332,7 @@ async def main():
             if include_special_characters:
                 samples.append(
                     string.punctuation
-                )  # makes special characters a true or false statement
+                ) 
 
             for sample in samples:
                 password += "".join(random.sample(sample, k=5))
@@ -540,7 +497,7 @@ async def main():
             f"\r[{red_dash}] It seems like the program has died before pope francis :(( womp womp"
         )
         await asyncio.sleep(5)
-        sys.exit()
+        sys.exit()  
 
 
 if __name__ == "__main__":
