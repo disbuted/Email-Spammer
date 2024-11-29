@@ -1,6 +1,15 @@
+# Notes to self:
+# The title bar still isnt working on arch linux and causes .json errors
+# Need to work on multi-threading when it comes to running the process
+# Adding more logging for the websites when it comes to the errors etc. like the 404, 403, api errors etc
+# Gonna push this to the github later today
+
+
+
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests, trio
 from pystyle import Center
 from colorama import Fore, Style, init
+from pathlib import Path
 
 size = 600  # Threads + Process / Iterations
 cap = None  # thread cap
@@ -280,7 +289,7 @@ green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
 blue_dash = f"{Fore.BLUE}-{Style.RESET_ALL}"
 
 
-async def main():
+async def main(): 
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -297,7 +306,7 @@ async def main():
                 clear_console()
                 print(Center.XCenter(faded_text))
                 print(f"\r[{yellow_dash}] Connecting now...")
-                time.sleep(3)
+                time.sleep(1)
                 async with session.get(
                     "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json"  # changed to
                 ) as resp:
