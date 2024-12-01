@@ -968,25 +968,69 @@
   "bloodhoung gang store": {
     "url": "https://stufftobuy.bloodhoundgang.com/index.php?route=account/register",
     "data": {
-	  "firstname": "Joe",
-	  "lastname": "Mama",
-	  "email": "{email}",
-	  "telephone": "1234",
-	  "fax": "",
-	  "company": "",
-	  "customer_group_id": "1",
-	  "company_id": "",
-	  "tax_id": "",
-	  "address_1": "asdf",
-	  "address_2": "",
-	  "city": "asdf",
-	  "postcode": "",
-	  "country_id": "223",
-	  "zone_id": "3641",
-	  "password": "{password}",
-	  "confirm": "{password}",
-	  "newsletter": "1",
-	  "agree": "1"
-	}
+      "firstname": "Joe",
+      "lastname": "Mama",
+      "email": "{email}",
+      "telephone": "1234",
+      "fax": "",
+      "company": "",
+      "customer_group_id": "1",
+      "company_id": "",
+      "tax_id": "",
+      "address_1": "asdf",
+      "address_2": "",
+      "city": "asdf",
+      "postcode": "",
+      "country_id": "223",
+      "zone_id": "3641",
+      "password": "{password}",
+      "confirm": "{password}",
+      "newsletter": "1",
+      "agree": "1"
+    }
+  },
+  "perma.cc": {
+    "requirements": [
+      {
+        "url": "https://perma.cc/sign-up",
+        "method": "GET",
+        "cookies": [
+          {
+            "key": "csrftoken",
+            "name": "__CSRFTOKEN__"
+          }
+        ]
+      }
+    ],
+    "url": "https://perma.cc/sign-up",
+    "data": {
+      "csrfmiddlewaretoken": "__CSRFTOKEN__",
+      "first_name": "asdf",
+      "last_name": "asdf",
+      "e-address": "{email}",
+      "telephone": "",
+      "javascript": "true"
+    },
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "https://perma.cc/sign-up"
+    }
+  },
+  "jai.vin": {
+    "url": "https://www.jai.vin/api/trpc/auth.sendCode?batch=1",
+    "json": {
+      "0": {
+        "json": {
+          "email": "{email}"
+        }
+      }
+    }
+  },
+  "paramore uk store":{
+	  "url":"https://ukstore.paramore.net/a/app/vice-versa/api/subscribe",
+	  "json":{
+	"countrycode": "GB",
+	"email": "{email}"
+}
   }
 }

@@ -112,45 +112,63 @@ async def fetch(
     sub: str,
     info,
     name: str = None,
-    testing: bool = False,
+    debugging: bool = False
 ):
+    replacements = {}
     def fix(lol):
         try:
             required = isinstance(lol, (dict, tuple, list))
-            result = json.dumps(lol) if required else lol
-            result = (
-                result.replace("{email}", sub)
-                .replace("{password}", password)
-                .replace("{random}", generate())
-                .replace("{username}", generate())
-                .replace(
-                    "{frenchnumber}",
-                    str(random.randint(100_000_000, 999_999_999)).replace(
-                        "{timestamp}", str(int(time.time()))
-                    ),
-                )
-            )
-            result = json.loads(result) if required else result
+            result = (required and json.dumps(lol)) or lol
+            result = result.replace("{email}", sub).replace("{password}", password).replace("{random}", generate()).replace("{username}", generate()).replace("{timestamp}", str(int(time.time())))
+            for k, v in replacements.items():
+                print(k, v)
+                result = result.replace(k, v)
+            result = (required and json.loads(result)) or result
         except Exception:
             import traceback
-
             print(traceback.format_exc())
         return result
 
     try:
+        # asdf
+
+        requirements = info.get("requirements")
+        if requirements:
+            for thing in requirements:
+                async with session.request(
+                    method=thing.get("method", "GET"),
+                    url=thing.get("url"),
+                    headers=info.get("headers")
+                ) as resp:
+                    for cookie in thing.get("cookies", []):
+                        replacements[cookie.get("name")] = resp.cookies.get(cookie.get("key")).value
+                    for header in thing.get("headers", []):
+                        replacements[header.get("name")] = resp.headers.get(header.get("key"))
+
+        print(requirements)
+
+        # asdf
         url = fix(info.get("url"))
         method = info.get("method", "POST").upper()
-        js = info.get("json", None)
+        js = info.get("json")
         if js is not None:
             js = fix(js)
-        data = info.get("data", None)
+        data = info.get("data")
         if data is not None:
             data = fix(data)
-        params = info.get("params", None)
+        params = info.get("params")
         if params is not None:
             params = fix(params)
-        headers = info.get("headers", None)
-        cookies = info.get("cookies", None)
+        headers = info.get("headers", {})
+        cookies = info.get("cookies", {})
+        
+        if debugging == True:
+            print("json:", js)
+            print("data:", data)
+            print("params:", params)
+            print("headers:", headers)
+            print("cookies:", cookies)
+
         async with session.request(
             method=method,
             url=url,
@@ -196,7 +214,7 @@ async def fetch(
                         "An account using this email address has already been registered.",
                         "Permission Denied",
                     ]
-                    if any([word in evaluation.lower() for word in words]):
+                    if any([word in resp.lower() for word in words]):
                         evaluation = "FAILURE"
                         status = 400
                 resp = (
@@ -425,7 +443,7 @@ async def main():
                 )
                 test_tasks = [
                     asyncio.create_task(
-                        fetch(session, email, values, name, True)
+                        fetch(session, email, values, name, debug)
                     )
                     for name, values in functions.items()
                 ]
