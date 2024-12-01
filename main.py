@@ -264,11 +264,11 @@ credits = """
                              
                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     
-                                               =+= Credits =+=
-                                                 Email Bomber
-                                              Founder: Inkthirsty
-                                              Sigma Dev: Disbuted  
-                                         =+= Keep Open Source Open =+=
+                                             =+= Credits =+=
+                                               Email Bomber
+                                            Founder: Inkthirsty
+                                            Sigma Dev: Disbuted  
+                                       =+= Keep Open Source Open =+=
                                   
                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                   
