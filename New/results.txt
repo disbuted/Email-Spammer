@@ -1,0 +1,3 @@
+paramore uk store -- POST -- 200 -- SUCCESS
+URL: https://ukstore.paramore.net/a/app/vice-versa/api/subscribe
+RESPONSE: {"data":{"SuccessFlag":"1","VVConsID":"42748333"},"statusCode":200}
